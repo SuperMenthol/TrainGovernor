@@ -9,6 +9,7 @@ namespace Domain.Models.Dto
         public int Id { get; set; }
 
         [Required(ErrorMessage = "City cannot have not name")]
+        [StringLength(30, MinimumLength = 2, ErrorMessage = "City name must exceed one character")]
         public string Name { get; set; }
 
         public string? ZipCode { get; set; }

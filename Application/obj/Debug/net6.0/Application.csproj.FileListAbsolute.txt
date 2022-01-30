@@ -17,3 +17,4 @@ D:\Repo-website\TrainGovernor\Application\obj\Debug\net6.0\Application.pdb
 D:\Repo-website\TrainGovernor\Application\obj\Debug\net6.0\Application.genruntimeconfig.cache
 D:\Repo-website\TrainGovernor\Application\bin\Debug\net6.0\Infrastructure.dll
 D:\Repo-website\TrainGovernor\Application\bin\Debug\net6.0\Infrastructure.pdb
+D:\Repo-website\TrainGovernor\Application\bin\Debug\net6.0\nlog.config

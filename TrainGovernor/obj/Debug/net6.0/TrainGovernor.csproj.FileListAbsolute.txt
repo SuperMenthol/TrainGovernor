@@ -91,3 +91,7 @@ D:\Repo-website\TrainGovernor\TrainGovernor\bin\Debug\net6.0\Newtonsoft.Json.Bso
 D:\Repo-website\TrainGovernor\TrainGovernor\obj\Debug\net6.0\TrainGovernor.MvcApplicationPartsAssemblyInfo.cs
 D:\Repo-website\TrainGovernor\TrainGovernor\bin\Debug\net6.0\Infrastructure.dll
 D:\Repo-website\TrainGovernor\TrainGovernor\bin\Debug\net6.0\Infrastructure.pdb
+D:\Repo-website\TrainGovernor\TrainGovernor\bin\Debug\net6.0\NLog.dll
+D:\Repo-website\TrainGovernor\TrainGovernor\bin\Debug\net6.0\NLog.Extensions.Logging.dll
+D:\Repo-website\TrainGovernor\TrainGovernor\bin\Debug\net6.0\NLog.Web.AspNetCore.dll
+D:\Repo-website\TrainGovernor\TrainGovernor\bin\Debug\net6.0\nlog.config

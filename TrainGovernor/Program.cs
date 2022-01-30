@@ -1,10 +1,9 @@
 using Application.Controllers;
 using Domain.Interfaces.Controllers;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Infrastructure.Interfaces.Context;
 using Infrastructure.Context.TrainGovernorContext;
+using Infrastructure.Interfaces.Context;
+using Microsoft.EntityFrameworkCore;
+using NLog.Web;
 using System.Reflection;
 
 namespace TrainGovernor
@@ -33,6 +32,10 @@ namespace TrainGovernor
             builder.Services.AddScoped<ITrainGovernorContext, TrainGovernorContext>();
             builder.Services.AddScoped<ITrainStationController, TrainStationController>();
             builder.Services.AddScoped<ICityController, CityController>();
+
+            builder.Logging.ClearProviders();
+            builder.Logging.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
+            builder.Host.UseNLog();
 
             var app = builder.Build();
 

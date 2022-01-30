@@ -2,6 +2,7 @@
 using Domain.Models.Dto;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using Infrastructure.Interfaces.Context;
 
 namespace Application.Controllers
@@ -10,10 +11,12 @@ namespace Application.Controllers
     public class CityController : Controller, ICityController
     {
         protected ITrainGovernorContext _context;
+        private readonly ILogger<CityController> _logger;
 
-        public CityController(ITrainGovernorContext context)
+        public CityController(ITrainGovernorContext context, ILogger<CityController> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
         [HttpGet]
@@ -25,8 +28,9 @@ namespace Application.Controllers
                 .Select(x => new CityOverviewDto(x))
                 .ToListAsync();
             }
-            catch
+            catch (Exception ex)
             {
+                _logger.LogError(ex.ToString());
                 return new List<CityOverviewDto>();
             }
         }
@@ -40,8 +44,9 @@ namespace Application.Controllers
 
                 return new CityOverviewDto(a);
             }
-            catch
+            catch (Exception ex)
             {
+                _logger.LogError(ex.ToString());
                 return null;
             }
         }
@@ -56,8 +61,9 @@ namespace Application.Controllers
                 _context.SaveChanges();
                 return View();
             }
-            catch
+            catch (Exception ex)
             {
+                _logger.LogError(ex.ToString());
                 return false;
             }
         }
@@ -79,8 +85,9 @@ namespace Application.Controllers
                 _context.SaveChanges();
                 return true;
             }
-            catch
+            catch (Exception ex)
             {
+                _logger.LogError(ex.ToString());
                 return false;
             }
         }

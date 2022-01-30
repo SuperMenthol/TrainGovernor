@@ -3,16 +3,19 @@ using Domain.Models.Dto;
 using Infrastructure.Interfaces.Context;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 namespace Application.Controllers
 {
     public class TrainStationController : Controller, ITrainStationController
     {
         private ITrainGovernorContext _context;
+        private ILogger<TrainStationController> _logger;
 
-        public TrainStationController(ITrainGovernorContext context)
+        public TrainStationController(ITrainGovernorContext context, ILogger<TrainStationController> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
         [HttpGet]
@@ -24,8 +27,9 @@ namespace Application.Controllers
                 var stations = await _context.Stations.ToListAsync();
                 return stations.Select(station => new TrainStationDto(station)).ToList();
             }
-            catch
+            catch (Exception ex)
             {
+                _logger.LogError(ex.ToString());
                 return new List<TrainStationDto>();
             }
         }
@@ -39,8 +43,9 @@ namespace Application.Controllers
                 var stations = await _context.Stations.Where(x => x.CityId == cityId).ToListAsync();
                 return stations.Select(x => new TrainStationDto(x)).ToList();
             }
-            catch
+            catch (Exception ex)
             {
+                _logger.LogError(ex.ToString());
                 return new List<TrainStationDto>();
             }
         }
@@ -54,8 +59,9 @@ namespace Application.Controllers
                 var station = await _context.Stations.Where(x => x.Id == id).FirstOrDefaultAsync();
                 return new TrainStationDto(station);
             }
-            catch
+            catch (Exception ex)
             {
+                _logger.LogError(ex.ToString());
                 return null;
             }
         }
@@ -70,8 +76,9 @@ namespace Application.Controllers
                 _context.SaveChanges();
                 return true;
             }
-            catch
+            catch (Exception ex)
             {
+                _logger.LogError(ex.ToString());
                 return false;
             }
         }
@@ -86,8 +93,9 @@ namespace Application.Controllers
                 _context.SaveChanges();
                 return true;
             }
-            catch
+            catch (Exception ex)
             {
+                _logger.LogError(ex.ToString());
                 return false;
             }
         }
