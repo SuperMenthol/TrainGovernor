@@ -1,0 +1,46 @@
+﻿@page
+@using System.Web.Helpers;
+@model TrainGovernor.Pages.Cities.IndexModel
+@{
+}
+@section scripts {
+    <script type="text/javascript">var cities = @Html.Raw(Json.Serialize(Model.Cities));</script>
+    <script src="~/js/Cities/City.js" ></script>
+}
+@section Styles {
+    <link href="~/css/City.css" rel="stylesheet" type="text/css" />
+}
+<div class="out">
+    <div class="main-container">
+        <div class="search-container">
+            <div class="searchbar-container">
+                <select id="citySelect" class="form-select">
+                    <option value=false>Choose your city</option>
+                    @foreach (var city in Model.Cities)
+                    {
+                        <option value=@city.Id>@city.Name</option>
+                    }
+                </select>
+            </div>
+            <button class="btn btn-success" onclick="getAllCities()">Show all cities</button>
+            <button class="btn btn-primary" onclick="location.href='./Cities/Create'">Add new</button>
+        </div>
+        <div class="table-container">
+            <table id="cityTable" class="table table-hover table-striped table-border-top">
+                <tr>
+                    <th>View/Edit</th>
+                    <th>City name</th>
+                    <th>Stations</th>
+                </tr>
+                @foreach (var city in Model.Cities)
+                {
+                    <tr>
+                        <td class="d-md-table-cell"><button class="btn btn-info" onclick="location.href='./Cities/Edit/@city.Id'">View</button></td>
+                        <td>@city.Name</td>
+                        <td>@city.Stations.Count</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>

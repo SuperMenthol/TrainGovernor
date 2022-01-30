@@ -1,0 +1,14 @@
+﻿.stations-header {
+    text-align: center;
+    font-size: 18px;
+    vertical-align: central;
+    background: #506bed;
+    width: inherit;
+    height: 80px;
+    align-content: center;
+}
+
+.stations-title {
+    text-align: center;
+    align-content: center;
+}

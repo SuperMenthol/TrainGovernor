@@ -1,0 +1,60 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = TrainGovernor
+build_property.RootNamespace = TrainGovernor
+build_property.ProjectDir = D:\Repo-website\TrainGovernor\TrainGovernor\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Repo-website\TrainGovernor\TrainGovernor
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Repo-website/TrainGovernor/TrainGovernor/Pages/Cities/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2l0aWVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Repo-website/TrainGovernor/TrainGovernor/Pages/Cities/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2l0aWVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Repo-website/TrainGovernor/TrainGovernor/Pages/Cities/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2l0aWVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Repo-website/TrainGovernor/TrainGovernor/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Repo-website/TrainGovernor/TrainGovernor/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Repo-website/TrainGovernor/TrainGovernor/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Repo-website/TrainGovernor/TrainGovernor/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Repo-website/TrainGovernor/TrainGovernor/Pages/Stations/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhdGlvbnNcTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Repo-website/TrainGovernor/TrainGovernor/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Repo-website/TrainGovernor/TrainGovernor/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Repo-website/TrainGovernor/TrainGovernor/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-ssav6s6vxa

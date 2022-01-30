@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "685d2175-6159-416b-ba6a-e524600dc2aa": {
+      "ProjectGuid": "685d2175-6159-416b-ba6a-e524600dc2aa",
+      "DisplayName": "TrainGovernor",
+      "ColorIndex": 0
+    },
+    "96acb38a-2b0b-4dd2-8fe2-ea3322d35fa5": {
+      "ProjectGuid": "96acb38a-2b0b-4dd2-8fe2-ea3322d35fa5",
+      "DisplayName": "Infrastructure",
+      "ColorIndex": 1
+    },
+    "d90189a7-b319-4237-9b8c-6035c9967d50": {
+      "ProjectGuid": "d90189a7-b319-4237-9b8c-6035c9967d50",
+      "DisplayName": "Domain",
+      "ColorIndex": 2
+    },
+    "8c191aea-e2de-4e5f-a831-03b7db66a171": {
+      "ProjectGuid": "8c191aea-e2de-4e5f-a831-03b7db66a171",
+      "DisplayName": "Application",
+      "ColorIndex": 3
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 4
+}

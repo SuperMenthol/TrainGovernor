@@ -1,0 +1,57 @@
+﻿@page "{cityid:int}"
+@model TrainGovernor.Pages.Cities.EditModel
+@section scripts{
+    <script type="text/javascript">var city = @Html.Raw(Json.Serialize(Model.City));</script>
+    <script type="text/javascript" src="~/js/Cities/Edit.js" ></script>
+}
+@section Styles{
+    <link href="~/css/City.css" rel="stylesheet" type="text/css" />
+}
+
+<div class="out">
+    <div id="main-container" class="main-container">
+        <div id="name-container" class="create-container">
+            <h1 class="h1-style">Name</h1>
+            <div class="separator-div-sm"></div>
+            <div id="oldname-container">
+                <label for="oldname-input">Current name: </label>
+                <input type="text" id="oldname-input" disabled value="@Model.City.Name" class="form-control">
+            </div>
+            <div class="separator-div-sm"></div>
+            <div id="newname-container">
+                <label for="newname-input">New name: </label>
+                <input type="text" id="newname-input" class="form-control">
+            </div>
+        </div>
+        <div class="separator-div-lg"></div>
+        <div id="postcode-container" class="create-container">
+            <h1 class="h1-style">Postcode</h1>
+            <h2 class="h2-style">This post code will be used as default to new stations in this city, but it can be overridden.</h2>
+            <div class="separator-div-sm"></div>
+            <div id="oldcode-container">
+                <label for="oldcode-input">Current post code: </label>
+                <input type="text" id="oldcode-input" disabled value="@Model.City.ZipCode" class="form-control" />
+            </div>
+            <div class="separator-div-sm"></div>
+            <div id="newcode-container">
+                <label for="newcode-input">New post code: </label>
+                <input type="text" id="newcode-input" class="form-control">
+            </div>
+        </div>
+        <div id="stations-container" class="stations-container">
+            <h1 class="h1-style">Stations</h1>
+            <div id="stations" class="stations-div">
+
+            </div>
+        </div>
+        <div class="separator-div-sm"></div>
+        <div id="deactivate-container" class="deactivate-container">
+            <input type="checkbox" id="deactivate-check" checked=@Model.City.IsActive />
+            <label for="deactivate-check">City is active</label>
+        </div>
+        <div id="footer">
+            <button id="savebtn" disabled=true>Save</button>
+            <button id="cancelbtn" onclick="cancelbtn_click()">Cancel</button>
+        </div>
+    </div>
+</div>
