@@ -2960,6 +2960,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Domain": "1.0.0",
+          "Infrastructure": "1.0.0",
           "Microsoft.AspNetCore.Mvc": "2.2.0"
         },
         "compile": {
@@ -9127,8 +9128,8 @@
     },
     "Infrastructure/1.0.0": {
       "type": "project",
-      "path": "../Persistence/Infrastructure.csproj",
-      "msbuildProject": "../Persistence/Infrastructure.csproj"
+      "path": "../Infrastructure/Infrastructure.csproj",
+      "msbuildProject": "../Infrastructure/Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -9180,8 +9181,8 @@
             "D:\\Repo-website\\TrainGovernor\\Domain\\Domain.csproj": {
               "projectPath": "D:\\Repo-website\\TrainGovernor\\Domain\\Domain.csproj"
             },
-            "D:\\Repo-website\\TrainGovernor\\Persistence\\Infrastructure.csproj": {
-              "projectPath": "D:\\Repo-website\\TrainGovernor\\Persistence\\Infrastructure.csproj"
+            "D:\\Repo-website\\TrainGovernor\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "D:\\Repo-website\\TrainGovernor\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }

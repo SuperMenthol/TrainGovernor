@@ -8923,8 +8923,8 @@
     },
     "Infrastructure/1.0.0": {
       "type": "project",
-      "path": "../Persistence/Infrastructure.csproj",
-      "msbuildProject": "../Persistence/Infrastructure.csproj"
+      "path": "../Infrastructure/Infrastructure.csproj",
+      "msbuildProject": "../Infrastructure/Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -8965,6 +8965,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "D:\\Repo-website\\TrainGovernor\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "D:\\Repo-website\\TrainGovernor\\Infrastructure\\Infrastructure.csproj"
+            },
             "D:\\Repo-website\\TrainGovernor\\Persistence\\Infrastructure.csproj": {
               "projectPath": "D:\\Repo-website\\TrainGovernor\\Persistence\\Infrastructure.csproj"
             }
