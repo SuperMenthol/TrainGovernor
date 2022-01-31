@@ -1,33 +1,50 @@
-﻿namespace Domain.Models.ValueObjects.Primitives
+﻿using Domain.Extensions;
+
+namespace Domain.Models.ValueObjects.Primitives
 {
     public class Address
     {
-        private string _postCode;
-        private int _cityId;
-        private string _streetAddress;
-        private string _streetNumber;
+        public string ZipCode { get; set; }
+        public int CityId { get; set; }
+        public string StreetName { get; set; }
+        public string StreetNumber { get; set; }
 
-        public Address(string postCode, int cityId, string street, string streetNumber)
+        public Address(string zipCode, int cityId, string street, string streetNumber)
         {
-            _postCode = postCode;
-            _cityId = cityId;
-            _streetAddress = street;
-            _streetNumber = streetNumber;
+            ZipCode = zipCode;
+            CityId = cityId;
+            StreetName = street;
+            StreetNumber = streetNumber;
         }
 
-        public Address(string postCode, int cityId, string street, int streetNumber)
+        public Address(string zipCode, int cityId, string street, int streetNumber)
         {
-            _postCode = postCode;
-            _cityId = cityId;
-            _streetAddress = street;
-            _streetNumber = streetNumber.ToString();
+            ZipCode = zipCode;
+            CityId = cityId;
+            StreetName = street;
+            StreetNumber = streetNumber.ToString();
+        }
+
+        public Address(string zipCode, int cityId, string streetAddress)
+        {
+            ZipCode=zipCode;
+            CityId=cityId;
+
+            var decomposedAddress = streetAddress.Decompose();
+            StreetName = decomposedAddress[0];
+            StreetNumber = decomposedAddress[1];
+        }
+
+        public Address()
+        {
+
         }
 
         public string FullAddress
         {
             get
             {
-                return _streetAddress + ", " + _streetNumber + ", " + _postCode + " " + _cityId;
+                return StreetAddress + ", " + ZipCode + " " + CityId;
             }
         }
 
@@ -35,7 +52,7 @@
         {
             get
             {
-                return _streetAddress + ", " + _streetNumber;
+                return StreetName + ", " + StreetNumber;
             }
         }
     }

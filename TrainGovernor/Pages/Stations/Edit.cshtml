@@ -1,0 +1,69 @@
+﻿@page "{id:int}"
+@model TrainGovernor.Pages.Stations.EditModel
+@section Styles {
+    <link href="~/css/Station.css" rel="stylesheet" type="text/css" />
+}
+@section Scripts {
+    <script type="text/javascript">
+        var cities = @Html.Raw(Json.Serialize(Model.Cities));
+        var station = @Html.Raw(Json.Serialize(Model.Station));
+    </script>
+    <script type="text/javascript" src="~/js/Stations/Edit.js" ></script>
+}
+
+<div class="out">
+    <div class="main-container">
+        <h1 class="h1-header">Edit station</h1>
+        <div class="input-box">
+            <h1 class="h1-style">Name</h1>
+            <label for="oldname-input">Current name</label>
+            <input id="oldname-input" type="text" class="form-control" disabled value="@Model.Station.Name" />
+            <div class="separator-div-sm"></div>
+            <label for="name-input">New name</label>
+            <input id="name-input" type="text" class="form-control" />
+            @*to do: station code*@
+        </div>
+        <div class="separator-div-md"></div>
+        <div class="input-box">
+            <h1 class="h1-style">Address data</h1>
+            <input id="city-field" class="form-control" disabled />
+            <div class="separator-div-sm"></div>
+            <label for="city-select">Select city:</label>
+            <select id="city-select" class="form-select">
+                <option value=0>Choose a city</option>
+                @foreach (var city in Model.Cities)
+                {
+                    <option value=@city.Id>@city.Name</option>
+                }
+            </select>
+            <div class="separator-div-md"></div>
+            <label for="oldzipcode-input">Current zip code:</label>
+            <input id="oldzipcode-input" type="text" class="form-control" disabled value="@Model.Station.ZipCode" />
+            <div class="separator-div-sm"></div>
+            <label for="zipcode-input">New zip code:</label>
+            <input id="zipcode-input" type="text" class="form-control" />
+            <div class="separator-div-md"></div>
+            <label for="oldstreet1-input">Current street name:</label>
+            <input id="oldstreet1-input" type="text" class="form-control" disabled value="@Model.Station.Address.StreetName" />
+            <div class="separator-div-sm"></div>
+            <label for="street1-input">New street name:</label>
+            <input id="street1-input" type="text" class="form-control" />
+            <div class="separator-div-md"></div>
+            <label for="oldstreet2-input">Current street number:</label>
+            <input id="oldstreet2-input" type="text" class="form-control" disabled value="@Model.Station.Address.StreetNumber" />
+            <div class="separator-div-sm"></div>
+            <label for="street2-input">New street number:</label>
+            <input id="street2-input" type="text" class="form-control" />
+            <div class="separator-div-lg"></div>
+            <input id="active-check" class="form-check-input" type="checkbox" checked="@Model.Station.IsActive" />
+            <label for="active-check">Station is active</label>
+        </div>
+        <div class="separator-div-lg"></div>
+        <div class="button-container">
+            <button id="save-btn" class="btn btn-lg btn-block btn-success">Add</button>
+            <div class="separator-div-sm"></div>
+            <button id="cancel-btn" class="btn btn-lg btn-block btn-danger">Cancel</button>
+        </div>
+        <div class="separator-div-md"></div>
+    </div>
+</div>

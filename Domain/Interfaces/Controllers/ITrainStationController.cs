@@ -1,6 +1,5 @@
 ﻿using Domain.Models.Dto;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 
 namespace Domain.Interfaces.Controllers
 {

@@ -25,7 +25,17 @@
       "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
       "DisplayName": "Miscellaneous Files",
       "ColorIndex": -1
+    },
+    "22c6d314-605c-4b86-9c56-8c19045ac582": {
+      "ProjectGuid": "22c6d314-605c-4b86-9c56-8c19045ac582",
+      "DisplayName": "Tests",
+      "ColorIndex": 4
+    },
+    "fd9ba0b8-5d2a-4cf0-ad57-b16e1d5a8fe7": {
+      "ProjectGuid": "fd9ba0b8-5d2a-4cf0-ad57-b16e1d5a8fe7",
+      "DisplayName": "Infrastructure",
+      "ColorIndex": 5
     }
   },
-  "NextColorIndex": 4
+  "NextColorIndex": 6
 }

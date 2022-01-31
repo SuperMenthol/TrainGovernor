@@ -25,3 +25,4 @@ D:\Repo-website\TrainGovernor\Infrastructure\obj\Debug\net6.0\Infrastructure.dll
 D:\Repo-website\TrainGovernor\Infrastructure\obj\Debug\net6.0\ref\Infrastructure.dll
 D:\Repo-website\TrainGovernor\Infrastructure\obj\Debug\net6.0\Infrastructure.pdb
 D:\Repo-website\TrainGovernor\Infrastructure\obj\Debug\net6.0\Infrastructure.genruntimeconfig.cache
+D:\Repo-website\TrainGovernor\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.AssemblyReference.cache

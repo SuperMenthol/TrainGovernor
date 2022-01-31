@@ -40,7 +40,8 @@ namespace Application.Controllers
             try
             {
                 var a = await _context.Cities
-                .Where(x => x.Id == id).FirstOrDefaultAsync();
+                .Where(x => x.Id == id)
+                .FirstOrDefaultAsync();
 
                 return new CityOverviewDto(a);
             }

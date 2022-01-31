@@ -55,5 +55,6 @@ function savebtn_click() {
         },
         body: JSON.stringify(obj)
     })
+        .then(() => saveBtn.disabled = true)
         .then(() => window.top.location.reload());
 }

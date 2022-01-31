@@ -7,6 +7,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Application.Controllers
 {
+    [Route("[controller]")]
     public class TrainStationController : Controller, ITrainStationController
     {
         private ITrainGovernorContext _context;

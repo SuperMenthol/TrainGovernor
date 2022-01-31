@@ -43,8 +43,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Repo-website/TrainGovernor/TrainGovernor/Pages/Stations/List.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhdGlvbnNcTGlzdC5jc2h0bWw=
+[D:/Repo-website/TrainGovernor/TrainGovernor/Pages/Stations/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhdGlvbnNcQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Repo-website/TrainGovernor/TrainGovernor/Pages/Stations/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhdGlvbnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Repo-website/TrainGovernor/TrainGovernor/Pages/Stations/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhdGlvbnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Repo-website/TrainGovernor/TrainGovernor/Pages/_ViewImports.cshtml]

@@ -1,0 +1,48 @@
+﻿@page
+@model TrainGovernor.Pages.Stations.IndexModel
+@section Scripts{
+    <script type="text/javascript">
+        var cities = @Html.Raw(Json.Serialize(Model.Cities));
+        var stations = @Html.Raw(Json.Serialize(Model.Stations));
+    </script>
+    <script type="text/javascript" src="~/js/Stations/Station.js" ></script>
+}
+@section Styles{
+    <link href="~/css/Station.css" rel="stylesheet" type="text/css" />
+}
+
+<div id="out" class="out">
+    <div id="main-container" class="main-container">
+        <h1 class="h1-header">Stations</h1>
+        <div id="search-container" class="search-container">
+            <input id="namesearch-input" class="form-control" type="text" placeholder="Enter station name..." />
+            <div class="separator-div-sm"></div>
+            <select id="citysearch-input" class="form-select" >
+                <option value=-1>Select city</option>
+                <option value=0>Show all</option>
+                @foreach (var city in Model.Cities)
+                {
+                    <option value=@city.Id>@city.Name</option>
+                }
+            </select>
+            <div class="separator-div-md"></div>
+            <button id="btn-search" class="btn btn-primary">Search</button>
+            <button id="btn-reset" class="btn btn-secondary">Reset</button>
+            <button id="btn-all" class="btn btn-info">Show all</button>
+            <button id="btn-add" class="btn btn-success" onclick="location.href='./Stations/Add'">Add new station</button>
+        </div>
+        <div id="table-container" class="table-container">
+            <table id="stations-table" class="table table-hover table-striped table-border-top">
+                <tr>
+                    <th>View/Edit</th>
+                    <th>Name</th>
+                    <th>Zip code</th>
+                    <th>City name</th>
+                    <th>Address</th>
+                    <th>Active</th>
+                    <th>Lines</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

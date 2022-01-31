@@ -1,18 +1,15 @@
-﻿using Domain.Models.Dto;
-using Domain.Models.ValueObjects.Primitives;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Domain.Extensions
+﻿namespace Domain.Extensions
 {
     public static class AddressExtensions
     {
-        //public static Address RetrieveAddress(this TrainStationDto stationDto)
-        //{
-        //    return new Address(stationDto.ZipCode, stationDto.CityId, );
-        //}
+        public static string[] Decompose(this string streetAddress)
+        {
+            var arr = streetAddress.Split(',').ToArray();
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = arr[i].Trim();
+            }
+            return arr;
+        }
     }
 }
