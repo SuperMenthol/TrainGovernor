@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "3mH9X5LJy2r424ZaMO4TVV24tZX1jdDD+T4hgmzuv1PY0talLv/9PFzY9GgBb8ymXnldLdXZo5Hle+BPMLARQQ==",
+  "dgSpecHash": "PDGTtUR1L2ytFLvKi/T36XmzzynCeCkS77wpcGaRK9fyxzQgQmyTEPb70/j44NOy/7uTwfwEysj6XiTQMbyD2A==",
   "success": true,
   "projectFilePath": "D:\\Repo-website\\TrainGovernor\\Tests\\Tests.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\micha\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
+    "C:\\Users\\micha\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\micha\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\micha\\.nuget\\packages\\coverlet.collector\\3.1.0\\coverlet.collector.3.1.0.nupkg.sha512",
     "C:\\Users\\micha\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",

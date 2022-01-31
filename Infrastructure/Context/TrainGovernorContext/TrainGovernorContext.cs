@@ -21,7 +21,6 @@ namespace Infrastructure.Context.TrainGovernorContext
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //optionsBuilder.UseSqlServer("Server=ASP_TrainGovernor; Database=DESKTOP-NPC8O49\\SOL; Trusted_Connection=True; MultipleActiveResultSets=true");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

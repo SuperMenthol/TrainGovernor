@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "F6EdIe2aHCui21N1Fk3DFA4UDvqjmy0U/HTkR/NPNTq4R+aW/fmZdkrU17laeKdtsK1QbHhp8ZjBut+u0d84rg==",
+  "dgSpecHash": "G1EKYOfIoMos/jcQHtZqgqU81lLrRKWkNVgkOu6TOhPkBMrx4y2+Vs6F0i3YFG5hiVLmzO1m2GtEmWCTZ453DA==",
   "success": true,
   "projectFilePath": "D:\\Repo-website\\TrainGovernor\\Application\\Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\micha\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
+    "C:\\Users\\micha\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\micha\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\micha\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
     "C:\\Users\\micha\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

@@ -1,4 +1,5 @@
-﻿using Domain.Interfaces.Controllers;
+﻿using AutoMapper;
+using Domain.Interfaces.Controllers;
 using Domain.Models.Dto;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -12,11 +13,13 @@ namespace Application.Controllers
     {
         protected ITrainGovernorContext _context;
         private readonly ILogger<CityController> _logger;
+        private IMapper _mapper;
 
-        public CityController(ITrainGovernorContext context, ILogger<CityController> logger)
+        public CityController(ITrainGovernorContext context, ILogger<CityController> logger, IMapper mapper)
         {
             _context = context;
             _logger = logger;
+            _mapper = mapper;
         }
 
         [HttpGet]
@@ -24,9 +27,16 @@ namespace Application.Controllers
         {
             try
             {
-                return await _context.Cities
-                .Select(x => new CityOverviewDto(x))
-                .ToListAsync();
+                var cities = _context.Cities.Include(x => x.Stations);
+
+                var res = new List<CityOverviewDto>();
+                foreach (var city in cities)
+                {
+                    var mappedCity = _mapper.Map<CityOverviewDto>(city);
+                    res.Add(_mapper.Map<CityOverviewDto>(city));
+                }
+
+                return res;
             }
             catch (Exception ex)
             {

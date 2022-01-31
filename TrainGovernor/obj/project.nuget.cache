@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "vfb3IzRqCgRGLmsDaCn4wK6XvD6ORR9De+gthvah0sGGoorKTngUhWQm76d4soO9ioYuoKbqJmJ9TT+8TlEKIQ==",
+  "dgSpecHash": "T7XON1aLpAhWpLAiwws8w2xyeBi1iEs+iBZA8eqSfJ9RYGb3rB4wxWxfAf18/hMOty+IKe1HvEYcLCua2S1X2A==",
   "success": true,
   "projectFilePath": "D:\\Repo-website\\TrainGovernor\\TrainGovernor\\TrainGovernor.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\micha\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
+    "C:\\Users\\micha\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\micha\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\micha\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\micha\\.nuget\\packages\\microsoft.aspnet.mvc\\5.2.7\\microsoft.aspnet.mvc.5.2.7.nupkg.sha512",

@@ -15,14 +15,16 @@ namespace Domain.Models.Dto
         public string? ZipCode { get; set; }
         public bool IsActive { get; set; }
 
-        public List<TrainStation> Stations { get; set; }
+        public List<TrainStationInfoDto> Stations { get; set; }
 
         public CityOverviewDto(City entity)
         {
             Id = entity.Id;
             Name = entity.Name;
             ZipCode = entity.ZipCode;
-            Stations = entity.Stations ?? new List<TrainStation>();
+            //Stations = entity.Stations ?? new List<TrainStation>();
+            //Stations = new List<TrainStationInfoDto>();
+
             IsActive = entity.IsActive;
         }
 
@@ -35,7 +37,7 @@ namespace Domain.Models.Dto
                 Id = Id,
                 Name = Name,
                 ZipCode = ZipCode,
-                Stations = Stations,
+                //Stations = Stations,
                 IsActive = IsActive
             };
         }
