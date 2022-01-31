@@ -43,8 +43,14 @@
     padding: 10px;
 }
 
+.station-card {
+    border: 1px solid black;
+    height: 50px;
+    background: #fff3d1;
+    padding: 25px;
+}
+
 .stations-container {
-    width: 80%;
     height: 20%;
     padding: 10px;
 }

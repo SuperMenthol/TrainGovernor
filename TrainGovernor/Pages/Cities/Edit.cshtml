@@ -2,6 +2,7 @@
 @model TrainGovernor.Pages.Cities.EditModel
 @section scripts{
     <script type="text/javascript">var city = @Html.Raw(Json.Serialize(Model.City));</script>
+    <script type="text/javascript">var city = @Html.Raw(Json.Serialize(Model.City));</script>
     <script type="text/javascript" src="~/js/Cities/Edit.js" ></script>
 }
 @section Styles{
@@ -42,7 +43,13 @@
         <div id="stations-container" class="stations-container">
             <h1 class="h1-style">Stations</h1>
             <div id="stations" class="stations-div">
-
+                @foreach (var station in Model.Stations)
+                {
+                    <div class="station-card">
+                        <p>@station.Name</p>
+                        <p>@station.Address.FullAddress</p>
+                    </div>
+                }
             </div>
         </div>
         <div class="separator-div-sm"></div>
@@ -51,8 +58,8 @@
             <label for="deactivate-check">City is active</label>
         </div>
         <div id="footer">
-            <button id="savebtn" disabled=true>Save</button>
-            <button id="cancelbtn" onclick="cancelbtn_click()">Cancel</button>
+            <button id="savebtn" class="btn btn-success" disabled=true>Save</button>
+            <button id="cancelbtn" class="btn btn-danger" onclick="location.href='/Cities/Index'">Go back</button>
         </div>
     </div>
 </div>

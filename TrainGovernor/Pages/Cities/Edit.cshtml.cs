@@ -10,6 +10,7 @@ namespace TrainGovernor.Pages.Cities
         ICityController _cityController;
         ITrainStationController _stationController;
         public CityOverviewDto City { get; private set; }
+        public List<TrainStationDto> Stations { get; set; }
 
         public EditModel(ICityController cityController, ITrainStationController stationController)
         {
@@ -20,6 +21,7 @@ namespace TrainGovernor.Pages.Cities
         public async Task OnGet([FromRoute] int cityid)
         {
             City = await _cityController.GetById(cityid);
+            Stations = await _stationController.GetStationsForCity(cityid);
         }
     }
 }
