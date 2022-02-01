@@ -7,6 +7,7 @@
     <script type="text/javascript">
         var cities = @Html.Raw(Json.Serialize(Model.Cities));
         var station = @Html.Raw(Json.Serialize(Model.Station));
+        var neighbours = @Html.Raw(Json.Serialize(Model.NeighbouringTrainStations));
     </script>
     <script type="module" src="~/js/Stations/Edit.js" ></script>
 }
@@ -63,17 +64,27 @@
                         <div class="station-card table-responsive">
                                 <table class="table table-responsive">
                                     <tr>
+                                        <td>@station.NeighbourStation.Id</td>
                                         <td>@station.NeighbourStation.Name</td>
                                         <td>@station.NeighbourStation.Address.FullAddress</td>
-                                        <td>@station.DistanceInKm</td>
+                                        <td><input id="distance-input" type="number" class="form-control" min=1 value=@station.DistanceInKm></td>
                                         <td>
                                             <input id="connection-check" type="checkbox" class="form-check-input" checked="@station.IsActive" />
-                                            <label for="connection-check">Connection active</label>
+                                            <label id="conn-chk-label" for="connection-check">Connection active</label>
                                         </td>
                                     </tr>
                                 </table>
                         </div>
                     }
+                </div>
+                <div id="add-neighbour-div">
+                    <select id="neighbour-select" class="form-select">
+                        <option value=0>Add new connection</option>
+                        @foreach (var stat in Model.StationsToAddAsNeighbours)
+                        {
+                            <option value=@stat.Id>@stat.Name - @stat.Address.FullAddress</option>
+                        }
+                    </select>
                 </div>
             </div>
             <div class="separator-div-lg"></div>
@@ -82,7 +93,7 @@
         </div>
         <div class="separator-div-lg"></div>
         <div class="button-container">
-            <button id="save-btn" class="btn btn-lg btn-block btn-success">Add</button>
+            <button id="save-btn" class="btn btn-lg btn-block btn-success">Save</button>
             <div class="separator-div-sm"></div>
             <button id="cancel-btn" class="btn btn-lg btn-block btn-danger" onclick="location.href='/Cities/Index'">Go back</button>
         </div>

@@ -12,7 +12,7 @@ let ZIP_CODE_LENGTH = 6;
 
 let CITY_NAME_LENGTH_MESSAGE = `City name must have at least ${MIN_CITY_NAME_LENGTH} characters`;
 let CITY_REGEX_MESSAGE = 'City name can only contain letters, digits, space( ) and dash (-) symbol';
-let ZIP_CODE_REGEX_MESSAGE = 'Zip code can contain only digits';
+let ZIP_CODE_REGEX_MESSAGE = 'Zip code can only be entered in dd-ddd format, where d is a single digit from 0 to 9';
 let ZIP_CODE_LENGTH_MESSAGE = `Zip code has to contain ${ZIP_CODE_LENGTH} characters if the field contains any text`;
 
 let MIN_STREET_NAME_LENGTH = 2;

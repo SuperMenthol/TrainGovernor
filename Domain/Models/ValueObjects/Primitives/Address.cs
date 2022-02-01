@@ -44,7 +44,7 @@ namespace Domain.Models.ValueObjects.Primitives
         {
             get
             {
-                return StreetAddress + ", " + ZipCode + " " + CityId;
+                return StreetAddress + ", " + ZipCode; //TO DO: find a way to map city name to this address
             }
         }
 

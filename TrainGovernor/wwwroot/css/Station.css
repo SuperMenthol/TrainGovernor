@@ -71,6 +71,22 @@
     width: 100%;
 }
 
+.edited-station-card {
+    background: #b5d496;
+    padding: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+}
+
+.unsaved-station-card {
+    background: #dbbd9c;
+    padding: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+}
+
 .out {
     display: flex;
     flex-flow: column nowrap;

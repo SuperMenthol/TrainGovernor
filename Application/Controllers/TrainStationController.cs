@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Domain.Interfaces.Controllers;
 using Domain.Models.Dto;
+using Domain.Models.ValueObjects;
 using Infrastructure.Interfaces.Context;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -112,6 +113,26 @@ namespace Application.Controllers
             }
         }
 
+        [HttpPost]
+        [Route("AddNeighbouringStation")]
+        public ActionResult<bool> AddNeighbouringStations([FromBody] List<NeighbouringStation> dto)
+        {
+            try
+            {
+                foreach (var trainStation in dto)
+                {
+                    _context.NeighbouringStations.Add(trainStation.ToEntity());
+                }
+                _context.SaveChanges();
+                return true;
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e.ToString());
+                return false;
+            }
+        }
+
         [HttpPut]
         [Route("Update")]
         public ActionResult<bool> UpdateStation([FromBody] TrainStationDto trainStationDto)
@@ -123,6 +144,32 @@ namespace Application.Controllers
                 return true;
             }
             catch (Exception ex)
+            {
+                _logger.LogError(ex.ToString());
+                return false;
+            }
+        }
+
+        [HttpPut]
+        [Route("UpdateNeighbouringStations")]
+        public ActionResult<bool> UpdateNeighbouringStations([FromBody] List<NeighbouringStation> neighbouringStations)
+        {
+            try
+            {
+                foreach (var trainStation in neighbouringStations)
+                {
+                    var recordId = _context.NeighbouringStations.Where(x => x.StationId == trainStation.StationId && x.NeighbourId == trainStation.NeighbourId).AsNoTracking().First().Id;
+
+                    var entity = trainStation.ToEntity();
+                    entity.Id = recordId;
+
+                    _context.NeighbouringStations.Update(entity);
+                    _context.SaveChanges();
+                }
+
+                return true;
+            }
+            catch(Exception ex)
             {
                 _logger.LogError(ex.ToString());
                 return false;

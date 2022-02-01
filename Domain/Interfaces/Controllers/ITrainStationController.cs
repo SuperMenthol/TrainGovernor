@@ -1,4 +1,5 @@
 ﻿using Domain.Models.Dto;
+using Domain.Models.ValueObjects;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Domain.Interfaces.Controllers
@@ -25,8 +26,16 @@ namespace Domain.Interfaces.Controllers
         [Route("Add")]
         ActionResult<bool> AddStation([FromBody] TrainStationDto trainStationDto);
 
+        [HttpPost]
+        [Route("AddNeighbouringStation")]
+        ActionResult<bool> AddNeighbouringStations([FromBody] List<NeighbouringStation> dto);
+
         [HttpPut]
         [Route("Update")]
         ActionResult<bool> UpdateStation([FromBody] TrainStationDto trainStationDto);
+
+        [HttpPut]
+        [Route("UpdateNeighbouringStations")]
+        ActionResult<bool> UpdateNeighbouringStations([FromBody] List<NeighbouringStation> neighbouringStations);
     }
 }
