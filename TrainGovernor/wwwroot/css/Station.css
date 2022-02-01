@@ -53,9 +53,22 @@
 }
 
 .stations-container {
-    width: 80%;
     height: 20%;
     padding: 10px;
+}
+
+.stations-div {
+    background: #bbcff0;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.station-card {
+    background: #bbcff0;
+    padding: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
 }
 
 .out {

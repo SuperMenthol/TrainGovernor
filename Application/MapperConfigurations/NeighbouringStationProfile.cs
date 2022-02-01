@@ -4,12 +4,10 @@ using Infrastructure.Entity.TrainGovernor;
 
 namespace Application.MapperConfigurations
 {
-    public class CityProfile : Profile
+    public class NeighbouringStationProfile : Profile
     {
-        public CityProfile()
+        public NeighbouringStationProfile()
         {
-            CreateMap<City, CityOverviewDto>();
-            CreateMap<TrainStation, TrainStationInfoDto>();
             CreateMap<NeighbouringTrainStation, NeighbouringTrainStationDto>();
         }
     }

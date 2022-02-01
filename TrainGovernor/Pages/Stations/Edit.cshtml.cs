@@ -11,6 +11,7 @@ namespace TrainGovernor.Pages.Stations
         ITrainStationController _stationController { get; set; }
 
         public IList<CityOverviewDto> Cities { get; set; }
+        public IList<NeighbouringTrainStationDto> NeighbouringTrainStations { get; set; }
         public TrainStationDto Station { get; set; }
 
         public EditModel(ICityController cityController, ITrainStationController stationController)
@@ -23,6 +24,7 @@ namespace TrainGovernor.Pages.Stations
         {
             Cities = await _cityController.GetCities();
             Station = await _stationController.GetStation(id);
+            NeighbouringTrainStations = await _stationController.GetNeighbouringTrainStations(id);
         }
     }
 }

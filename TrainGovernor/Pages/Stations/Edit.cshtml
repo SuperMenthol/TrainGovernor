@@ -54,6 +54,28 @@
             <div class="separator-div-sm"></div>
             <label for="street2-input">New street number:</label>
             <input id="street2-input" type="text" class="form-control" />
+            <div class="separator-div-md"></div>
+            <div id="stations-container" class="stations-container">
+                <h1 class="h1-style">Station connections</h1>
+                <div id="stations" class="stations-div">
+                    @foreach (var station in Model.NeighbouringTrainStations)
+                    {
+                        <div class="station-card table-responsive">
+                                <table class="table table-responsive">
+                                    <tr>
+                                        <td>@station.NeighbourStation.Name</td>
+                                        <td>@station.NeighbourStation.Address.FullAddress</td>
+                                        <td>@station.DistanceInKm</td>
+                                        <td>
+                                            <input id="connection-check" type="checkbox" class="form-check-input" checked="@station.IsActive" />
+                                            <label for="connection-check">Connection active</label>
+                                        </td>
+                                    </tr>
+                                </table>
+                        </div>
+                    }
+                </div>
+            </div>
             <div class="separator-div-lg"></div>
             <input id="active-check" class="form-check-input" type="checkbox" checked="@Model.Station.IsActive" />
             <label for="active-check">Station is active</label>

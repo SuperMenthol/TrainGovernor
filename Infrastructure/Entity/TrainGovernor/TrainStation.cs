@@ -10,5 +10,7 @@
         public bool IsActive { get; set; }
 
         public City City { get; set; }
+        public List<NeighbouringTrainStation> NeighbouringTrainStations { get; set; }
+        public List<NeighbouringTrainStation> NeighbourTrainStations { get; set; }
     }
 }

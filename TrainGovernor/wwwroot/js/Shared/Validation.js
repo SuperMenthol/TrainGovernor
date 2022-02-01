@@ -5,7 +5,7 @@
 
 let REGEX_ZIPCODE_LENGTH = new RegExp("/[0-9]{2}-[0-9]{3}/");
 let REGEX_LETTERS_NUMBERS_SPACE_DASH = new RegExp("/[a-zA-Z0-9 ąĄćĆęĘłŁśŚńŃżŻźŹóÓ]*/");
-let REGEX_STREET_NUMBER = new RegExp("[0-9]+[\/]?[a-zA-Z0-9]+");
+let REGEX_STREET_NUMBER = new RegExp("[0-9]+([\/]?[a-zA-Z0-9])?");
 
 let MIN_CITY_NAME_LENGTH = 2;
 let ZIP_CODE_LENGTH = 6;
