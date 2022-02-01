@@ -32,7 +32,6 @@ namespace Application.Controllers
                 var res = new List<CityOverviewDto>();
                 foreach (var city in cities)
                 {
-                    var mappedCity = _mapper.Map<CityOverviewDto>(city);
                     res.Add(_mapper.Map<CityOverviewDto>(city));
                 }
 

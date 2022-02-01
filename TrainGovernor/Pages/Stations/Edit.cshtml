@@ -8,7 +8,7 @@
         var cities = @Html.Raw(Json.Serialize(Model.Cities));
         var station = @Html.Raw(Json.Serialize(Model.Station));
     </script>
-    <script type="text/javascript" src="~/js/Stations/Edit.js" ></script>
+    <script type="module" src="~/js/Stations/Edit.js" ></script>
 }
 
 <div class="out">
@@ -62,7 +62,7 @@
         <div class="button-container">
             <button id="save-btn" class="btn btn-lg btn-block btn-success">Add</button>
             <div class="separator-div-sm"></div>
-            <button id="cancel-btn" class="btn btn-lg btn-block btn-danger">Cancel</button>
+            <button id="cancel-btn" class="btn btn-lg btn-block btn-danger" onclick="location.href='/Cities/Index'">Go back</button>
         </div>
         <div class="separator-div-md"></div>
     </div>

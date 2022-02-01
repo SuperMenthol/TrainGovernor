@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "bJ0DV4PNqwj4m6OKE0i5AaZwSvEqNt/KsBQrmIP0CYU=",
+  "Hash": "jW6OCvZRUoYUM+uOAtvGN5A7Ub/FaHWN0+xaDofW4CE=",
   "Source": "TrainGovernor",
   "BasePath": "_content/TrainGovernor",
   "Mode": "Default",
@@ -187,12 +187,12 @@
       "OriginalItemSpec": "wwwroot\\js\\Cities\\Edit.js"
     },
     {
-      "Identity": "D:\\Repo-website\\TrainGovernor\\TrainGovernor\\wwwroot\\js\\Cities\\Validation.js",
+      "Identity": "D:\\Repo-website\\TrainGovernor\\TrainGovernor\\wwwroot\\js\\Shared\\Validation.js",
       "SourceId": "TrainGovernor",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Repo-website\\TrainGovernor\\TrainGovernor\\wwwroot\\",
       "BasePath": "_content/TrainGovernor",
-      "RelativePath": "js/Cities/Validation.js",
+      "RelativePath": "js/Shared/Validation.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -201,7 +201,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\Cities\\Validation.js"
+      "OriginalItemSpec": "wwwroot\\js\\Shared\\Validation.js"
     },
     {
       "Identity": "D:\\Repo-website\\TrainGovernor\\TrainGovernor\\wwwroot\\js\\site.js",

@@ -1,9 +1,10 @@
-﻿let oldName;
+﻿import { cityValidation } from "../Shared/Validation.js";
+
+let oldName;
 let newName;
 let oldCode;
 let newCode;
 let activeCheck;
-let cancelBtn;
 let saveBtn;
 
 let obj;
@@ -14,7 +15,6 @@ document.onload = function () {
     oldCode = document.getElementById('oldcode-input');
     newCode = document.getElementById('newcode-input');
     activeCheck = document.getElementById('deactivate-check');
-    cancelBtn = document.getElementById('cancelbtn');
     saveBtn = document.getElementById('savebtn');
 
     newName.addEventListener('change', editValueChange);
@@ -26,11 +26,6 @@ document.onload = function () {
     obj = city;
     activeCheck.checked = obj.isActive;
 }();
-
-function cancelbtn_click() {
-    newName.value = '';
-    newCode.value = '';
-}
 
 function editValueChange() {
     if ((newName.value != oldName.value && newName.value.length > 0)
@@ -44,17 +39,32 @@ function editValueChange() {
 }
 
 function savebtn_click() {
-    obj.name = newName.value.length > 0 ? newName.value : oldName.value;
-    obj.postCode = newCode.value.length > 0 ? newCode.value : oldCode.value;
-    obj.isActive = activeCheck.checked;
+    let validationResult = cityValidation(newName, newCode);
 
-    fetch(`/City/UpdateCity`, {
-        method: 'PUT',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(obj)
-    })
-        .then(() => saveBtn.disabled = true)
-        .then(() => window.top.location.reload());
+    if (validationResult.validated) {
+        obj.name = newName.value.length > 0 ? newName.value : oldName.value;
+        obj.postCode = newCode.value.length > 0 ? newCode.value : oldCode.value;
+        obj.isActive = activeCheck.checked;
+
+        fetch(`/City/UpdateCity`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(obj)
+        })
+            .then(() => saveBtn.disabled = true)
+            .then(() => swal.fire({
+                icon: 'success',
+                title: 'Success!',
+                text: 'City has been updated'
+            }));
+    }
+    else {
+        swal.fire({
+            icon: 'error',
+            title: 'Fields not validated',
+            text: validationResult.message
+        });
+    }
 }

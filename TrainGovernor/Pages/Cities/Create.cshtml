@@ -1,7 +1,7 @@
 ﻿@page
 @model TrainGovernor.Pages.Cities.CreateModel
 @section scripts{
-    <script src="~/js/Cities/Create.js" ></script>
+    <script type="module" src="~/js/Cities/Create.js" ></script>
 }
 @section Styles{
     <link href="~/css/City.css" rel="stylesheet" type="text/css" />
@@ -21,5 +21,5 @@
         <input type="text" id="postcode-input" class="form-control input-box" />
     </div>
     <div class="separator-div-lg"></div>
-    <button id="save-button" onclick="save()" class="btn btn-primary">Add</button>
+    <button id="save-button" class="btn btn-primary">Add</button>
 </div>

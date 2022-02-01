@@ -1,9 +1,10 @@
-﻿let nameInput;
+﻿import { stationValidation } from "../Shared/Validation.js";
+
+let nameInput;
 let citySelect;
 let zipCodeInput;
 let street1Input;
 let street2Input;
-let cancelBtn;
 let saveBtn;
 
 window.onload = function () {
@@ -12,11 +13,11 @@ window.onload = function () {
     zipCodeInput = document.getElementById('zipcode-input');
     street1Input = document.getElementById('street1-input');
     street2Input = document.getElementById('street2-input');
-    cancelBtn = document.getElementById('cancel-btn');
     saveBtn = document.getElementById('save-btn');
 
-    cancelBtn.addEventListener('click', refresh);
     saveBtn.addEventListener('click', save);
+    citySelect.addEventListener('change', citySelect_change);
+    citySelect_change();
 }
 
 function refresh() {
@@ -29,29 +30,45 @@ function refresh() {
     window.top.location.reload();
 }
 
-function validate() {
+async function save() {
+    let validationResult = stationValidation(nameInput, zipCodeInput, street1Input, street2Input);
 
+    if (validationResult.validated) {
+        station.name = nameInput.value;
+        station.cityId = citySelect.value;
+        station.zipCode = zipCodeInput.value;
+        station.isActive = true;
+        station.address = {
+            ZipCode: zipCodeInput.value,
+            CityId: citySelect.value,
+            StreetName: street1Input.value,
+            StreetNumber: street2Input.value
+        };
+
+        fetch(`/TrainStation/Add`, {
+            method: 'POST',
+            mode: 'cors',
+            body: JSON.stringify(station),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(() => swal.fire({
+                icon: 'success',
+                title: 'Success!',
+                text: 'Station has been created'
+            }))
+            .then(() => refresh());
+    }
+    else {
+        swal.fire({
+            icon: 'error',
+            title: 'Fields not validated',
+            text: validationResult.message
+        });
+    }
 }
 
-async function save() {
-    station.name = nameInput.value;
-    station.cityId = citySelect.value;
-    station.zipCode = zipCodeInput.value;
-    station.isActive = true;
-    station.address = {
-        ZipCode: zipCodeInput.value,
-        CityId: citySelect.value,
-        StreetName: street1Input.value,
-        StreetNumber: street2Input.value
-    };
-
-    fetch(`/TrainStation/Add`, {
-        method: 'POST',
-        mode: 'cors',
-        body: JSON.stringify(station),
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    })
-        .then(() => refresh());
+function citySelect_change() {
+    saveBtn.disabled = citySelect.value == 0;
 }
