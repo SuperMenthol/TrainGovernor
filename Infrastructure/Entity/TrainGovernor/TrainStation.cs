@@ -12,5 +12,6 @@
         public City City { get; set; }
         public List<NeighbouringTrainStation> NeighbouringTrainStations { get; set; }
         public List<NeighbouringTrainStation> NeighbourTrainStations { get; set; }
+        public List<LineStation> LinesOfStation { get; set; }
     }
 }

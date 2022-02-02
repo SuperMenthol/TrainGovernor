@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jW6OCvZRUoYUM+uOAtvGN5A7Ub/FaHWN0+xaDofW4CE=",
+  "Hash": "AIAjXqIdDa5nGn2y4MCiqApmoxwQMMeGxHHU3OGMkAc=",
   "Source": "TrainGovernor",
   "BasePath": "_content/TrainGovernor",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\City.css"
+    },
+    {
+      "Identity": "D:\\Repo-website\\TrainGovernor\\TrainGovernor\\wwwroot\\css\\Line.css",
+      "SourceId": "TrainGovernor",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Repo-website\\TrainGovernor\\TrainGovernor\\wwwroot\\",
+      "BasePath": "_content/TrainGovernor",
+      "RelativePath": "css/Line.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Line.css"
     },
     {
       "Identity": "D:\\Repo-website\\TrainGovernor\\TrainGovernor\\wwwroot\\css\\navbar.css",
@@ -185,6 +202,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\Cities\\Edit.js"
+    },
+    {
+      "Identity": "D:\\Repo-website\\TrainGovernor\\TrainGovernor\\wwwroot\\js\\Lines\\Line.js",
+      "SourceId": "TrainGovernor",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Repo-website\\TrainGovernor\\TrainGovernor\\wwwroot\\",
+      "BasePath": "_content/TrainGovernor",
+      "RelativePath": "js/Lines/Line.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Lines\\Line.js"
     },
     {
       "Identity": "D:\\Repo-website\\TrainGovernor\\TrainGovernor\\wwwroot\\js\\Shared\\Validation.js",

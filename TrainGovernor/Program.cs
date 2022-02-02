@@ -33,6 +33,7 @@ namespace TrainGovernor
             builder.Services.AddScoped<ITrainGovernorContext, TrainGovernorContext>();
             builder.Services.AddScoped<ITrainStationController, TrainStationController>();
             builder.Services.AddScoped<ICityController, CityController>();
+            builder.Services.AddScoped<ILineController, LineController>();
 
             builder.Logging.ClearProviders();
             builder.Logging.SetMinimumLevel(LogLevel.Information);

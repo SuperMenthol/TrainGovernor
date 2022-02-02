@@ -8,7 +8,7 @@ namespace Domain.Models.Dto
         public int StationId { get; set; }
         public string StationName { get; set; }
         public int NeighbourId { get; set; }
-        public decimal DistanceInKm { get; set; }
+        public float DistanceInKm { get; set; }
         public bool IsActive { get; set; }
         public TrainStationDto NeighbourStation { get; set; }
 

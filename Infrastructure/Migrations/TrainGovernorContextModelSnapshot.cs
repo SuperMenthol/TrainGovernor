@@ -44,6 +44,66 @@ namespace Infrastructure.Migrations
                     b.ToTable("Cities");
                 });
 
+            modelBuilder.Entity("Infrastructure.Entity.TrainGovernor.Line", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Lines");
+                });
+
+            modelBuilder.Entity("Infrastructure.Entity.TrainGovernor.LineStation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<float>("AvgSpeed")
+                        .HasColumnType("real");
+
+                    b.Property<int>("BreakInMinutes")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("LineId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("NeighbourRelationId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StationId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StationOrder")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LineId");
+
+                    b.HasIndex("NeighbourRelationId");
+
+                    b.HasIndex("StationId");
+
+                    b.ToTable("LineStations");
+                });
+
             modelBuilder.Entity("Infrastructure.Entity.TrainGovernor.NeighbouringTrainStation", b =>
                 {
                     b.Property<int>("Id")
@@ -52,8 +112,8 @@ namespace Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<decimal>("DistanceInKm")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<float>("DistanceInKm")
+                        .HasColumnType("real");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
@@ -106,6 +166,33 @@ namespace Infrastructure.Migrations
                     b.ToTable("Stations");
                 });
 
+            modelBuilder.Entity("Infrastructure.Entity.TrainGovernor.LineStation", b =>
+                {
+                    b.HasOne("Infrastructure.Entity.TrainGovernor.Line", "Line")
+                        .WithMany("LineStations")
+                        .HasForeignKey("LineId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Infrastructure.Entity.TrainGovernor.NeighbouringTrainStation", "NeighbouringTrainStation")
+                        .WithMany("StationsInLines")
+                        .HasForeignKey("NeighbourRelationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Infrastructure.Entity.TrainGovernor.TrainStation", "TrainStation")
+                        .WithMany("LinesOfStation")
+                        .HasForeignKey("StationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Line");
+
+                    b.Navigation("NeighbouringTrainStation");
+
+                    b.Navigation("TrainStation");
+                });
+
             modelBuilder.Entity("Infrastructure.Entity.TrainGovernor.NeighbouringTrainStation", b =>
                 {
                     b.HasOne("Infrastructure.Entity.TrainGovernor.TrainStation", "NeighbourStation")
@@ -141,8 +228,20 @@ namespace Infrastructure.Migrations
                     b.Navigation("Stations");
                 });
 
+            modelBuilder.Entity("Infrastructure.Entity.TrainGovernor.Line", b =>
+                {
+                    b.Navigation("LineStations");
+                });
+
+            modelBuilder.Entity("Infrastructure.Entity.TrainGovernor.NeighbouringTrainStation", b =>
+                {
+                    b.Navigation("StationsInLines");
+                });
+
             modelBuilder.Entity("Infrastructure.Entity.TrainGovernor.TrainStation", b =>
                 {
+                    b.Navigation("LinesOfStation");
+
                     b.Navigation("NeighbourTrainStations");
 
                     b.Navigation("NeighbouringTrainStations");

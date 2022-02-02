@@ -1,5 +1,7 @@
 ﻿import { stationValidation } from "../Shared/Validation.js";
 
+//todo: export neighbouring train station functions to different file, refactor save function
+
 let oldNameInput;
 let oldZipCodeInput;
 let oldStreet1Input;
@@ -97,8 +99,6 @@ async function save() {
             StreetName: usedObjects.streetNameField.value,
             StreetNumber: usedObjects.streetNumberField.value
         };
-
-        console.log(station);
 
         fetch(`/TrainStation/Update`, {
             method: 'PUT',

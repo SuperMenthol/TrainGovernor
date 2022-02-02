@@ -11,6 +11,8 @@ namespace Application.MapperConfigurations
             CreateMap<City, CityOverviewDto>();
             CreateMap<TrainStation, TrainStationInfoDto>();
             CreateMap<NeighbouringTrainStation, NeighbouringTrainStationDto>();
+            CreateMap<Line, LineDto>();
+            CreateMap<LineStation, LineStationDto>();
         }
     }
 }

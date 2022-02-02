@@ -1,0 +1,11 @@
+﻿@page "{lineId:int}"
+@model TrainGovernor.Pages.Lines.EditModel
+@section Scripts{
+    <script type="text/javascript">
+        var stations = @Html.Raw(Json.Serialize(Model.Stations));
+        var line = @Html.Raw(Json.Serialize(Model.Line));
+    </script>
+}
+@section Styles{
+    <link href="~/css/Line.css" rel="stylesheet" type="text/css" />
+}

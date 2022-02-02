@@ -19,6 +19,8 @@ namespace Infrastructure.Context.TrainGovernorContext
         public DbSet<City> Cities { get; set; }
         public DbSet<TrainStation> Stations { get; set; }
         public DbSet<NeighbouringTrainStation> NeighbouringStations { get; set; }
+        public DbSet<Line> Lines { get; set; }
+        public DbSet<LineStation> LineStations { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -44,6 +46,18 @@ namespace Infrastructure.Context.TrainGovernorContext
                 .Property(x => x.Id)
                 .ValueGeneratedOnAdd();
 
+            modelBuilder.Entity<Line>()
+                .HasKey(x => x.Id);
+            modelBuilder.Entity<Line>()
+                .Property(x => x.Id)
+                .ValueGeneratedOnAdd();
+
+            modelBuilder.Entity<LineStation>()
+                .HasKey(x => x.Id);
+            modelBuilder.Entity<LineStation>()
+                .Property(x => x.Id)
+                .ValueGeneratedOnAdd();
+
             modelBuilder.Entity<TrainStation>()
                 .HasOne(x => x.City)
                 .WithMany(x => x.Stations);
@@ -59,6 +73,21 @@ namespace Infrastructure.Context.TrainGovernorContext
                 .WithMany(y => y.NeighbouringTrainStations)
                 .HasForeignKey(x => x.NeighbourId)
                 .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<LineStation>()
+                .HasOne(x => x.Line)
+                .WithMany(y => y.LineStations)
+                .HasForeignKey(x => x.LineId);
+
+            modelBuilder.Entity<LineStation>()
+                .HasOne(x => x.TrainStation)
+                .WithMany(y => y.LinesOfStation)
+                .HasForeignKey(x => x.StationId);
+
+            modelBuilder.Entity<LineStation>()
+                .HasOne(x => x.NeighbouringTrainStation)
+                .WithMany(y => y.StationsInLines)
+                .HasForeignKey(x => x.NeighbourRelationId);
         }
 
         public override int SaveChanges() => base.SaveChanges();

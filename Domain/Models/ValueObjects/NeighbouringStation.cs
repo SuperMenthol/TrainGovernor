@@ -7,7 +7,7 @@ namespace Domain.Models.ValueObjects
         public int Id { get; set; }
         public int StationId { get; set; }
         public int NeighbourId { get; set; }
-        public decimal DistanceInKm { get; set; }
+        public float DistanceInKm { get; set; }
         public bool IsActive { get; set; }
 
         public NeighbouringStation()

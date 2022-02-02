@@ -96,3 +96,4 @@ D:\Repo-website\TrainGovernor\TrainGovernor\bin\Debug\net6.0\NLog.Web.AspNetCore
 D:\Repo-website\TrainGovernor\TrainGovernor\bin\Debug\net6.0\nlog.config
 D:\Repo-website\TrainGovernor\TrainGovernor\bin\Debug\net6.0\AutoMapper.dll
 D:\Repo-website\TrainGovernor\TrainGovernor\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Repo-website\TrainGovernor\TrainGovernor\obj\Debug\net6.0\TrainGovernor.MvcApplicationPartsAssemblyInfo.cs
