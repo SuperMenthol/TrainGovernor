@@ -87,17 +87,7 @@ function appendRow(data) {
     btnCell.innerHTML = `<button class="btn btn-info" onclick="location.href='./Lines/Edit/${data.id}'">View</button>`;
     nameCell.innerText = lineObj.name;
     stationsCountCell.innerText = lineObj.allStations;
-    travelTimeCell.innerText = lineObj.totalTravelTime;
+    travelTimeCell.innerText = lineObj.totalTravelTimeString;
     startStationCell.innerText = lineObj.startingStation.name;
     endStationCell.innerText = lineObj.endingStation.name;
 }
-
-
-//@foreach(var line in Model.Lines)
-//{
-//    <tr>
-//        <td class="d-md-table-cell"><button class="btn btn-info" onclick="location.href='./Lines/Edit/@line.Id'">View</button></td>
-//        <td>@line.Name</td>
-//        <td>@line.LineStations.Count</td>
-//    </tr>
-//}

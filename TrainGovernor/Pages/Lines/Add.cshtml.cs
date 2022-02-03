@@ -4,24 +4,22 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace TrainGovernor.Pages.Lines
 {
-    public class EditModel : PageModel
+    public class AddModel : PageModel
     {
-        public LineDto Line { get; set; }
         public IList<TrainStationDto> Stations { get; set; }
         public IList<NeighbouringTrainStationDto> Neighbours { get; set; }
 
         private ILineController _lineController;
         private ITrainStationController _stationController;
 
-        public EditModel(ILineController lineController, ITrainStationController trainStationController)
+        public AddModel(ILineController lineController, ITrainStationController trainStationController)
         {
             _lineController = lineController;
             _stationController = trainStationController;
         }
 
-        public async Task OnGet(int lineId)
+        public async Task OnGet()
         {
-            Line = _lineController.GetLine(lineId);
             Stations = await _stationController.GetAll();
             Neighbours = await _stationController.GetAllNeighbouringStations();
         }

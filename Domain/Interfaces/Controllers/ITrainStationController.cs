@@ -22,6 +22,10 @@ namespace Domain.Interfaces.Controllers
         [Route("GetNeighbours/{stationId}")]
         Task<List<NeighbouringTrainStationDto>> GetNeighbouringTrainStations(int stationId);
 
+        [HttpGet]
+        [Route("AllNeighbouringStations")]
+        Task<List<NeighbouringTrainStationDto>> GetAllNeighbouringStations();
+
         [HttpPost]
         [Route("Add")]
         ActionResult<bool> AddStation([FromBody] TrainStationDto trainStationDto);

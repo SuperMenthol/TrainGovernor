@@ -1,6 +1,7 @@
 ﻿export {
     cityValidation,
-    stationValidation
+    stationValidation,
+    lineValidation
 }
 
 let REGEX_ZIPCODE_LENGTH = new RegExp("/[0-9]{2}-[0-9]{3}/");
@@ -22,6 +23,24 @@ let STREET_NAME_REGEX_MESSAGE = 'Street name can only contains letters, digits, 
 
 let STREET_NUMBER_REGEX_MESSAGE = 'Street number can only contain letters, digits and dash(/) symbol';
 
+let LINE_NAME_MESSAGE = 'Line name must have at least 1 character';
+
+let NO_RELATIONS_MESSAGE = 'Line must have relations';
+
+function lineValidation(nameField, usedRelations) {
+    let result = {
+        validated: false,
+        message: ''
+    };
+
+    let nameResult = validateBase(nameField.value, lineNameHooks);
+    let relResult = validateBase(usedRelations, lineRelationHooks);
+
+    result.validated = relResult.validated && nameResult.validated;
+    result.message = concatenateResultMessage([nameResult.message, relResult.message]);
+
+    return result;
+}
 
 function cityValidation(cityNameField, zipCodeField) {
     let result = {
@@ -29,8 +48,8 @@ function cityValidation(cityNameField, zipCodeField) {
         message: ''
     }
 
-    let nameResult = validateBase(cityNameField, cityNameHooks);
-    let codeResult = validateBase(zipCodeField, zipCodeHooks);
+    let nameResult = validateBase(cityNameField.value, cityNameHooks);
+    let codeResult = validateBase(zipCodeField.value, zipCodeHooks);
 
     result.validated = codeResult.validated && nameResult.validated;
     result.message = concatenateResultMessage([nameResult.message, codeResult.message]);
@@ -44,10 +63,10 @@ function stationValidation(stationNameField, zipCodeField, streetNameField, stre
         message: ''
     }
 
-    let nameResult = validateBase(stationNameField, cityNameHooks);
-    let codeResult = validateBase(zipCodeField, nonEmptyZipCodeHooks);
-    let streetResult = validateBase(streetNameField, streetNameHooks);
-    let streetNumberResult = validateBase(streetNumberField, streetNumberHooks);
+    let nameResult = validateBase(stationNameField.value, cityNameHooks);
+    let codeResult = validateBase(zipCodeField.value, nonEmptyZipCodeHooks);
+    let streetResult = validateBase(streetNameField.value, streetNameHooks);
+    let streetNumberResult = validateBase(streetNumberField.value, streetNumberHooks);
 
     result.validated = codeResult.validated && nameResult.validated && streetResult.validated && streetNumberResult.validated;
     result.message = concatenateResultMessage([nameResult.message, codeResult.message, streetResult.message, streetNumberResult.message]);
@@ -63,7 +82,7 @@ function validateBase(objToValidate, hook) {
 
     let messages = [];
 
-    let input = objToValidate.value;
+    let input = objToValidate;
 
     for (let act of hook) {
         messages.push(act(input));
@@ -153,6 +172,24 @@ let streetNumberHooks = [
     function (input) {
         if (!input.match(REGEX_STREET_NUMBER)) {
             return STREET_NUMBER_REGEX_MESSAGE;
+        }
+        return '';
+    }
+]
+
+let lineNameHooks = [
+    function (input) {
+        if (input.length == 0) {
+            return LINE_NAME_MESSAGE;
+        }
+        return '';
+    }
+]
+
+let lineRelationHooks = [
+    function (input) {
+        if (input.length == 0) {
+            return NO_RELATIONS_MESSAGE;
         }
         return '';
     }

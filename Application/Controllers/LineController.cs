@@ -78,5 +78,51 @@ namespace Application.Controllers
                 return null;
             }
         }
+
+        [HttpPost]
+        [Route("Add")]
+        public async Task AddLine([FromBody] LineDto line)
+        {
+            try
+            {
+                var lineEntity = line.ToEntity();
+                _context.Lines.Add(lineEntity);
+                _context.SaveChanges();
+
+                foreach (var item in line.LineStations)
+                {
+                    item.LineId = lineEntity.Id;
+                    _context.LineStations.Add(item.ToEntity());
+                }
+                _context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.ToString());
+            }
+        }
+
+        [HttpPut]
+        [Route("Update")]
+        public async Task UpdateLine([FromBody] LineDto line)
+        {
+            try
+            {
+                var lineEntity = line.ToEntity();
+                _context.Lines.Update(lineEntity);
+                foreach (var item in line.LineStations)
+                {
+                    item.LineId = lineEntity.Id;
+                    var stationEntity = item.ToEntity();
+                    stationEntity.LineId = lineEntity.Id;
+                    _context.LineStations.Update(item.ToEntity());
+                }
+                _context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.ToString());
+            }
+        }
     }
 }

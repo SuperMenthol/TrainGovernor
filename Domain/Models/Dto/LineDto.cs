@@ -1,4 +1,6 @@
-﻿namespace Domain.Models.Dto
+﻿using Infrastructure.Entity.TrainGovernor;
+
+namespace Domain.Models.Dto
 {
     public class LineDto
     {
@@ -22,6 +24,14 @@
                 return totalTime;
             }
         }
+        public string TotalTravelTimeString
+        {
+            get
+            {
+                return TimeSpan.FromMinutes(TotalTravelTime).ToString("hh':'mm':'ss");
+            }
+        }
+
         public int AllStations
         {
             get
@@ -39,28 +49,45 @@
         {
             get
             {
-                return LineStations
+                return LineStations != null ? LineStations
                     .Where(x => x.StationOrder == 1)
                     .FirstOrDefault()?
-                    .TrainStation;
+                    .TrainStation :
+                    null;
             }
         }
 
-        public TrainStationDto EndingStation
+        public TrainStationDto? EndingStation
         {
             get
             {
-                return LineStations
+                return LineStations.Count > 0 ?
+                    LineStations
                     .OrderByDescending(x => x.StationOrder)
-                    .First()
-                    .NeighbouringTrainStation
-                    .NeighbourStation;
+                    .FirstOrDefault()?
+                    .NeighbouringTrainStation?
+                    .NeighbourStation :
+                    null;
             }
         }
 
         public LineDto()
         {
 
+        }
+
+        public Line ToEntity()
+        {
+            var lines = new List<LineStation>();
+            LineStations.ForEach(x => lines.Add(x.ToEntity()));
+
+            return new Line()
+            {
+                Id = Id,
+                Name = Name,
+                IsActive = IsActive,
+                //LineStations = lines
+            };
         }
     }
 }

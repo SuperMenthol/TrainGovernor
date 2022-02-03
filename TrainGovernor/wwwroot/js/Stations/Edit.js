@@ -209,6 +209,21 @@ function changeCardColor(card, toEdited) {
     }
 }
 
+function getStationCard(e) {
+    let currentElement = e;
+
+    while (currentElement.parentElement != null) {
+        let parent = currentElement.parentElement;
+        if (parent.classList.contains('station-card')
+            || parent.classList.contains('edited-station-card')) {
+            return parent;
+        }
+        currentElement = parent;
+    }
+
+    return null;
+}
+
 function getCardData(card) {
     let cardData = card.querySelectorAll('td');
     let isNew = cardData[4].querySelector('#connection-check') == null;
@@ -238,21 +253,6 @@ function reverseNeighbouringStationValueObject(valueObject) {
         DistanceInKm: valueObject.DistanceInKm,
         IsActive: valueObject.IsActive
     };
-}
-
-function getStationCard(e) {
-    let currentElement = e;
-
-    while (currentElement.parentElement != null) {
-        let parent = currentElement.parentElement;
-        if (parent.classList.contains('station-card')
-            || parent.classList.contains('edited-station-card')) {
-            return parent;
-        }
-        currentElement = parent;
-    }
-
-    return null;
 }
 
 function getNewNeighbourConnections() {

@@ -12,5 +12,13 @@ namespace Domain.Interfaces.Controllers
         [HttpGet]
         [Route("GetLine/{id}")]
         LineDto GetLine(int id);
+
+        [HttpPost]
+        [Route("Add")]
+        Task AddLine([FromBody] LineDto line);
+
+        [HttpPut]
+        [Route("Update")]
+        Task UpdateLine([FromBody] LineDto line);
     }
 }

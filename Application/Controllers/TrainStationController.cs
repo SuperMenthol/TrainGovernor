@@ -96,6 +96,31 @@ namespace Application.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("AllNeighbouringStations")]
+        public async Task<List<NeighbouringTrainStationDto>> GetAllNeighbouringStations()
+        {
+            try
+            {
+                var stations = await _context.NeighbouringStations
+                    .Include(x => x.Station)
+                    .Include(x => x.NeighbourStation)
+                    .ToListAsync();
+                var res = new List<NeighbouringTrainStationDto>();
+                foreach (var station in stations)
+                {
+                    res.Add(_mapper.Map<NeighbouringTrainStationDto>(station));
+                }
+
+                return res;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.ToString());
+                return null;
+            }
+        }
+
         [HttpPost]
         [Route("Add")]
         public ActionResult<bool> AddStation([FromBody] TrainStationDto trainStationDto)
@@ -121,9 +146,11 @@ namespace Application.Controllers
             {
                 foreach (var trainStation in dto)
                 {
-                    _context.NeighbouringStations.Add(trainStation.ToEntity());
+                    var ent = trainStation.ToEntity();
+                    _context.NeighbouringStations.Add(ent);
+                    _context.SaveChanges();
                 }
-                _context.SaveChanges();
+                //_context.SaveChanges();
                 return true;
             }
             catch (Exception e)
