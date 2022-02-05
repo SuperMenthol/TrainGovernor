@@ -39,11 +39,15 @@ function editValueChange() {
 }
 
 function savebtn_click() {
-    let validationResult = cityValidation(newName, newCode);
+    let objectsToInput = {
+        nameField: newName.value.length > 0 ? newName : oldName,
+        zipCodeField: newCode.value.length > 0 ? newCode : oldCode
+    }
+    let validationResult = cityValidation(objectsToInput.nameField, objectsToInput.zipCodeField);
 
     if (validationResult.validated) {
-        obj.name = newName.value.length > 0 ? newName.value : oldName.value;
-        obj.postCode = newCode.value.length > 0 ? newCode.value : oldCode.value;
+        obj.name = objectsToInput.nameField.value;
+        obj.postCode = objectsToInput.zipCodeField.value;
         obj.isActive = activeCheck.checked;
 
         fetch(`/City/UpdateCity`, {
@@ -58,7 +62,8 @@ function savebtn_click() {
                 icon: 'success',
                 title: 'Success!',
                 text: 'City has been updated'
-            }));
+            }))
+            .then(() => refresh(objectsToInput));
     }
     else {
         swal.fire({
@@ -67,4 +72,13 @@ function savebtn_click() {
             text: validationResult.message
         });
     }
+}
+
+function refresh(fields) {
+    oldName.value = fields.nameField.value;
+    oldCode.value = fields.zipCodeField.value;
+    newName.value = '';
+    newCode.value = '';
+
+    window.top.location.reload();
 }

@@ -15,7 +15,7 @@ window.onload = function () {
     resetBtn = document.getElementById('btn-reset');
     tbl = document.getElementById('stations-table');
 
-    showallBtn.addEventListener('click', showAllStations);
+    showallBtn.addEventListener('click', showAllLines);
     searchBtn.addEventListener('click', search);
     resetBtn.addEventListener('click', reset);
 }
@@ -26,7 +26,7 @@ function search() {
     let filteredStations = stations;
 
     if (citySelect.value == 0 && nameInput.value.length == 0) {
-        showAllStations();
+        showAllLines();
     }
     else if (citySelect.value == -1 && nameInput.value.length == 0) {
         return;
@@ -56,7 +56,7 @@ function appendRow(data) {
     let linesCountCell = row.insertCell(6);
 
     btnCell.classList.add('d-md-table-cell');
-    btnCell.innerHTML = `<button class="btn btn-info" onclick="location.href='./Stations/Edit/${data.id}'">View</button>`;
+    btnCell.innerHTML = `<button class="btn btn-info" onclick="location.href='/Stations/Edit/${data.id}'">View</button>`;
     nameCell.innerText = data.name;
     zipcodeCell.innerText = data.zipCode;
     cityNameCell.innerText = cityObj.name;
@@ -65,7 +65,7 @@ function appendRow(data) {
     linesCountCell.innerText = '0';
 }
 
-function showAllStations() {
+function showAllLines() {
     for (let data of stations) {
         appendRow(data);
     }

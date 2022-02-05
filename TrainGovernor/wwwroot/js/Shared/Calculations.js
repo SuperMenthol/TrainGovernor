@@ -9,3 +9,10 @@
 export function calculateDepartureTime(distance, avgSpeed, brkTime) {
     return parseFloat(calculateArrivalTime(distance, avgSpeed)) + parseFloat(brkTime);
 }
+
+export function timeStringFromMinutes(input) {
+    let hours = Math.floor(input / 60);
+    let minutes = (input - hours * 60).toPrecision(2);
+
+    return `${hours}:${minutes}:00`;
+}

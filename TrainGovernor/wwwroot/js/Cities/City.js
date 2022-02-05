@@ -40,7 +40,7 @@ function appendRow(data) {
     let cell3 = row.insertCell(2);
 
     cell1.classList.add('d-md-table-cell');
-    cell1.innerHTML = `<button class="btn btn-info" onclick="location.href='./ Cities / Edit /${data.Id}'">View</button>`;
+    cell1.innerHTML = `<button class="btn btn-info" onclick="location.href='/Cities/Edit/${data.Id}'">View</button>`;
     cell2.innerText = data.name;
-    cell3.innerText = data.stationsCount;
+    cell3.innerText = data.stations.length;
 }

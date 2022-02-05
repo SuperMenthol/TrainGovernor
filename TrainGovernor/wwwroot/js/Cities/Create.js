@@ -9,18 +9,33 @@ window.onload = function () {
     codeInput = document.getElementById('postcode-input');
     saveBtn = document.getElementById('save-button');
 
+    nameInput.addEventListener('change', nameInput_change);
+
     saveBtn.addEventListener('click', save);
+}
+
+function nameInput_change() {
+    if (nameInput.value.length > 2) {
+        saveBtn.disabled = false;
+    }
+    else {
+        saveBtn.disabled = true;
+    }
 }
 
 function save() {
     let validationResult = cityValidation(nameInput, codeInput);
 
-    if (validationResult.validated) {
-        obj.name = newName.value.length > 0 ? newName.value : oldName.value;
-        obj.postCode = newCode.value.length > 0 ? newCode.value : oldCode.value;
-        obj.isActive = activeCheck.checked;
+    console.log(validationResult);
 
-        fetch(`/City/Add/${name}/${zipCode}`, { method: 'POST' })
+    if (validationResult.validated) {
+        let obj = {
+            name: nameInput.value,
+            zipCode: codeInput.value.length > 0 ? codeInput.value : '',
+            isActive: true
+        };
+
+        fetch(`/City/Add/${obj.name}/${obj.zipCode}`, { method: 'POST' })
             .then(swal.fire({
                 icon: 'success',
                 title: `${obj.name} saved as a new city!`

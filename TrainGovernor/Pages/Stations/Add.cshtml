@@ -2,6 +2,7 @@
 @model TrainGovernor.Pages.Stations.AddModel
 @section Scripts{
     <script type="text/javascript">var station = @Html.Raw(Json.Serialize(Model.TrainStationDto));</script>
+    <script type="text/javascript">var cities = @Html.Raw(Json.Serialize(Model.Cities));</script>
     <script type="module" src="~/js/Stations/Create.js" ></script>
 }
 @section Styles{
@@ -40,9 +41,9 @@
         </div>
         <div class="separator-div-lg"></div>
         <div class="button-container">
-            <button id="save-btn" class="btn btn-lg btn-block btn-success">Add</button>
+            <button id="save-btn" class="btn btn-lg btn-block btn-success" disabled>Add</button>
             <div class="separator-div-sm"></div>
-            <button id="cancel-btn" class="btn btn-lg btn-block btn-danger" onclick="location.href='/Cities/Index'">Go back</button>
+            <button id="cancel-btn" class="btn btn-lg btn-block btn-danger" onclick="location.href='/Stations/Index'">Go back</button>
         </div>
         <div class="separator-div-md"></div>
     </div>

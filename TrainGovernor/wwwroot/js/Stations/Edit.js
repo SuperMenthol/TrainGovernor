@@ -1,7 +1,5 @@
 ﻿import { stationValidation } from "../Shared/Validation.js";
 
-//todo: export neighbouring train station functions to different file, refactor save function
-
 let oldNameInput;
 let oldZipCodeInput;
 let oldStreet1Input;
@@ -35,6 +33,12 @@ window.onload = function () {
     activeCheck = document.getElementById('active-check');
     saveBtn = document.getElementById('save-btn');
 
+    nameInput.addEventListener('change', checkSavePossibility);
+    zipCodeInput.addEventListener('change', checkSavePossibility);
+    street1Input.addEventListener('change', checkSavePossibility);
+    street2Input.addEventListener('change', checkSavePossibility);
+    activeCheck.addEventListener('change', checkSavePossibility);
+
     citySelect.value = station.cityId;
 
     let distanceInputs = document.querySelectorAll('#distance-input');
@@ -54,6 +58,7 @@ function refresh() {
     zipCodeInput.value = '';
     street1Input.value = '';
     street2Input.value = '';
+    saveBtn.disabled = true;
 
     window.top.location.reload();
 }
@@ -134,13 +139,22 @@ function getUsedObjects() {
 }
 
 function citySelect_change() {
-    saveBtn.disabled = citySelect.value == 0;
+    if (citySelect.value > 0) {
+        let city = cities.find(x => x.id == citySelect.value)
+
+        if (city.zipCode != null) {
+            zipCodeInput.value = city.zipCode;
+        }
+    }
+
+    checkSavePossibility();
 }
 
 function connectionSelect_change() {
     if (connectionSelect.value > 0) {
         appendUnsavedConnection();
     }
+    checkSavePossibility();
 }
 
 function appendUnsavedConnection() {
@@ -183,6 +197,7 @@ function connectionActive_change() {
     let cardData = getCardData(card);
 
     changeCardColor(card, this.checked != neighbours.find(x => x.Id == cardData.id).isActive);
+    checkSavePossibility();
 }
 
 function connectionDistance_change() {
@@ -190,6 +205,7 @@ function connectionDistance_change() {
     let cardData = getCardData(card);
 
     let condition = this.value != neighbours.find(x => x.Id == cardData.id).distanceInKm;
+    checkSavePossibility();
 
     changeCardColor(card, condition);
 }
@@ -210,12 +226,13 @@ function changeCardColor(card, toEdited) {
 }
 
 function getStationCard(e) {
-    let currentElement = e;
+    let currentElement = e.target ?? e;
 
     while (currentElement.parentElement != null) {
         let parent = currentElement.parentElement;
         if (parent.classList.contains('station-card')
-            || parent.classList.contains('edited-station-card')) {
+            || parent.classList.contains('edited-station-card')
+            || parent.classList.contains('unsaved-station-card')) {
             return parent;
         }
         currentElement = parent;
@@ -237,7 +254,6 @@ function getCardData(card) {
 }
 
 function createNeighbouringStationValueObject(cardData) {
-    console.log(station);
     return {
         StationId: station.id,
         NeighbourId: cardData.Id,
@@ -277,4 +293,19 @@ function getConnectionsToUpdate() {
     editedConnections.forEach(x => allEditedConnections.push(x));
 
     return allEditedConnections;
+}
+
+function checkSavePossibility() {
+    if ((citySelect.value > 0 && citySelect.value != station.cityId)
+        || (zipCodeInput.value.length > 0 && zipCodeInput.value != station.zipCode)
+        || street1Input.value.length > 0
+        || nameInput.value.length > 0
+        || street2Input.value.length > 0
+        || (document.querySelectorAll('.edited-station-card').length > 0 || document.querySelectorAll('.unsaved-station-card').length > 0)
+        || activeCheck.checked != station.isActive) {
+        saveBtn.disabled = false;
+    }
+    else {
+        saveBtn.disabled = true;
+    }
 }

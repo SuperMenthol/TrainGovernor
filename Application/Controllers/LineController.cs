@@ -26,7 +26,6 @@ namespace Application.Controllers
         [Route("GetAllLines")]
         public async Task<List<LineDto>> GetAllLines()
         {
-            // do I need neighbouring total travel time here? It can inflate loading times with many objects
             try
             {
                 var lines = await _context.Lines
@@ -92,6 +91,7 @@ namespace Application.Controllers
                 foreach (var item in line.LineStations)
                 {
                     item.LineId = lineEntity.Id;
+                    var itemEnt = item.ToEntity();
                     _context.LineStations.Add(item.ToEntity());
                 }
                 _context.SaveChanges();

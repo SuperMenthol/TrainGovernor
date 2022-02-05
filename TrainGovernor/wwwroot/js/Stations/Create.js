@@ -16,8 +16,11 @@ window.onload = function () {
     saveBtn = document.getElementById('save-btn');
 
     saveBtn.addEventListener('click', save);
+    nameInput.addEventListener('change', checkSavePossibility);
     citySelect.addEventListener('change', citySelect_change);
-    citySelect_change();
+    zipCodeInput.addEventListener('change', checkSavePossibility);
+    street1Input.addEventListener('change', checkSavePossibility);
+    street2Input.addEventListener('change', checkSavePossibility);
 }
 
 function refresh() {
@@ -70,5 +73,24 @@ async function save() {
 }
 
 function citySelect_change() {
-    saveBtn.disabled = citySelect.value == 0;
+    if (citySelect.value > 0) {
+        let city = cities.find(x => x.id == citySelect.value)
+
+        if (city.zipCode != null) {
+        zipCodeInput.value = city.zipCode;
+        }
+    }
+}
+
+function checkSavePossibility() {
+    if (citySelect.value > 0
+        && zipCodeInput.value.length > 0
+        && street1Input.value.length > 0
+        && nameInput.value.length > 0
+        && street2Input.value.length > 0) {
+        saveBtn.disabled = false;
+    }
+    else {
+        saveBtn.disabled = true;
+    }
 }

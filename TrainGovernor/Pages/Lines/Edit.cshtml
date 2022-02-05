@@ -26,7 +26,7 @@
         <div class="separator-div-md"></div>
         <div id="stat-separator" class="separator-div-md"></div>
         <div id="stations-container" class="stations-container">
-                <h1 class="h1-style">Station connections</h1>
+@*                <h1 class="h1-style">Station connections</h1>
                 <div id="stations" class="stations-div">
                     @foreach (var station in Model.Line.LineStations)
                     {
@@ -36,6 +36,7 @@
                                         <td class="table-col-lg">@station.TrainStation.Name</td>
                                         <td class="table-col-lg">@station.NeighbouringTrainStation.NeighbourStation.Name</td>
                                         <td class="table-col-sm">@station.TimeToArriveString</td>
+                                        <td class="table-col-sm"><input id="spd-input" type="number" class="form-control" min=1 value=@station.AvgSpeed></td>
                                         <td class="table-col-sm"><input id="break-input" type="number" class="form-control" min=1 value=@station.BreakInMinutes></td>
                                         <td class="table-col-sm">@station.TimeToDepartString</td>
                                         <td class="table-col-sm">
@@ -46,16 +47,16 @@
                                 </table>
                         </div>
                     }
-                </div>
-                <div class="separator-div-sm"></div>
-                <div id="select-container">
-                </div>
-                <div class="separator-div-md"></div>
-                <div class="button-container">
-                    <button id="save-btn" class="btn btn-success">Create</button>
-                    <div class="separator-div-sm"></div>
-                    <button id="cancel-btn" class="btn btn-danger" onclick="location.href='/Lines/Index'">Go back</button>
-                </div>
+                </div>*@
+        </div>
+        <div class="separator-div-sm"></div>
+        <div class="button-container">
+            <div id="select-container">
+            </div>
+            <div class="separator-div-md"></div>
+            <button id="save-btn" class="btn btn-success" >Save</button>
+            <div class="separator-div-sm"></div>
+            <button id="cancel-btn" class="btn btn-danger" onclick="location.href='/Lines/Index'">Go back</button>
         </div>
     </div>
 </div>

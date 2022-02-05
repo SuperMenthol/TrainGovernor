@@ -24,8 +24,9 @@
                     }
                 </select>
             </div>
+            <div class="separator-div-sm"></div>
             <button class="btn btn-success" onclick="getAllCities()">Show all cities</button>
-            <button class="btn btn-primary" onclick="location.href='./Cities/Create'">Add new</button>
+            <button class="btn btn-primary" onclick="location.href='/Cities/Create'">Add new</button>
         </div>
         <div class="table-container">
             <table id="cityTable" class="table table-hover table-striped table-border-top">
@@ -37,7 +38,7 @@
                 @foreach (var city in Model.Cities)
                 {
                     <tr>
-                        <td class="d-md-table-cell"><button class="btn btn-info" onclick="location.href='./Cities/Edit/@city.Id'">View</button></td>
+                        <td class="d-md-table-cell"><button class="btn btn-info" onclick="location.href='/Cities/Edit/@city.Id'">View</button></td>
                         <td>@city.Name</td>
                         <td>@city.Stations.Count</td>
                     </tr>

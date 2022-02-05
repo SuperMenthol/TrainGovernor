@@ -4,8 +4,8 @@
     lineValidation
 }
 
-let REGEX_ZIPCODE_LENGTH = new RegExp("/[0-9]{2}-[0-9]{3}/");
-let REGEX_LETTERS_NUMBERS_SPACE_DASH = new RegExp("/[a-zA-Z0-9 ąĄćĆęĘłŁśŚńŃżŻźŹóÓ]*/");
+let REGEX_ZIPCODE = new RegExp("[0-9]{2}-[0-9]{3}");
+let REGEX_LETTERS_NUMBERS_SPACE_DASH = new RegExp("[a-zA-Z0-9 ąĄćĆęĘłŁśŚńŃżŻźŹóÓ]+");
 let REGEX_STREET_NUMBER = new RegExp("[0-9]+([\/]?[a-zA-Z0-9])?");
 
 let MIN_CITY_NAME_LENGTH = 2;
@@ -116,7 +116,8 @@ let cityNameHooks = [
         return '';
     },
     function (input) {
-        if (input.match(REGEX_LETTERS_NUMBERS_SPACE_DASH)) {
+        let res = input.match(REGEX_LETTERS_NUMBERS_SPACE_DASH);
+        if (!input.match(REGEX_LETTERS_NUMBERS_SPACE_DASH) || res[0].length != input.length) {
             return CITY_REGEX_MESSAGE;
         }
         return '';
@@ -131,7 +132,7 @@ let zipCodeHooks = [
         return '';
     },
     function (input) {
-        if (input.match(REGEX_ZIPCODE_LENGTH)) {
+        if (input.length > 0 && !input.match(REGEX_ZIPCODE)) {
             return ZIP_CODE_REGEX_MESSAGE;
         }
         return '';
@@ -146,7 +147,7 @@ let nonEmptyZipCodeHooks = [
         return '';
     },
     function (input) {
-        if (input.match(REGEX_ZIPCODE_LENGTH)) {
+        if (!input.match(REGEX_ZIPCODE)) {
             return ZIP_CODE_REGEX_MESSAGE;
         }
         return '';
@@ -161,7 +162,8 @@ let streetNameHooks = [
         return '';
     },
     function (input) {
-        if (input.match(REGEX_LETTERS_NUMBERS_SPACE_DASH)) {
+        let res = input.match(REGEX_LETTERS_NUMBERS_SPACE_DASH);
+        if (!input.match(REGEX_LETTERS_NUMBERS_SPACE_DASH) || res[0].length != input.length) {
             return STREET_NAME_REGEX_MESSAGE;
         }
         return '';
