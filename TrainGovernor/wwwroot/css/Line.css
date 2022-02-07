@@ -52,12 +52,12 @@
     padding: 10px;
 }
 
-.stations-container {
+.relations-container {
     height: 20%;
     padding: 10px;
 }
 
-.stations-div {
+.relations-div {
     background: #bbcff0;
     display: flex;
     flex-flow: column nowrap;

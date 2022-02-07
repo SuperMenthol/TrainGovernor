@@ -14,5 +14,10 @@ export function timeStringFromMinutes(input) {
     let hours = Math.floor(input / 60);
     let minutes = (input - hours * 60).toPrecision(2);
 
-    return `${hours}:${minutes}:00`;
+    return `${hours}:${minutes}`;
+}
+
+export function minutesFromTimeString(input) {
+    let arr = input.toString().split(':');
+    return parseInt(arr[0]) * 60 + parseInt(arr[1]);
 }

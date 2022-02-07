@@ -73,8 +73,6 @@ function reset() {
 function appendRow(data) {
     let lineObj = lines.find(x => x.id === data.id);
 
-    console.log(lineObj);
-
     let row = tbl.insertRow(tbl.rows.length);
     let btnCell = row.insertCell(0);
     let nameCell = row.insertCell(1);
@@ -88,6 +86,6 @@ function appendRow(data) {
     nameCell.innerText = lineObj.name;
     stationsCountCell.innerText = lineObj.allStations;
     travelTimeCell.innerText = lineObj.totalTravelTimeString;
-    startStationCell.innerText = lineObj.startingStation.name;
-    endStationCell.innerText = lineObj.endingStation.name;
+    startStationCell.innerText = lineObj.startingStation != null ? lineObj.startingStation.name : '';
+    endStationCell.innerText = lineObj.endingStation != null ? lineObj.endingStation.name : '';
 }
