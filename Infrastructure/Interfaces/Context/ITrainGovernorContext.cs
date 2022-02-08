@@ -10,6 +10,7 @@ namespace Infrastructure.Interfaces.Context
         public DbSet<NeighbouringTrainStation> NeighbouringStations { get; set; }
         public DbSet<Line> Lines { get; set; }
         public DbSet<LineStation> LineStations { get; set; }
+        public DbSet<LineStartTime> LineStartTimes { get; set; }
         public int SaveChanges();
     }
 }

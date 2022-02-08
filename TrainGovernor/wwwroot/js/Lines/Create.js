@@ -1,5 +1,5 @@
 ﻿import { lineValidation } from "../Shared/Validation.js";
-import { build, buildRelationCard, adjustStatFields, filterStationSelect } from "../Shared/HTMLElements/Line.js";
+import { build, buildRelationCard, adjustStatFields, filterStationSelect } from "../Shared/HTMLElements/LineRelations.js";
 import { stationDto } from "../Shared/Models/LineStationDto.js";
 import { calculateArrivalTime, calculateDepartureTime } from "../Shared/Calculations.js";
 

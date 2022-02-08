@@ -13,6 +13,7 @@ namespace Application.MapperConfigurations
             CreateMap<NeighbouringTrainStation, NeighbouringTrainStationDto>();
             CreateMap<Line, LineDto>();
             CreateMap<LineStation, LineStationDto>();
+            CreateMap<LineStartTime, LineStartTimeDto>();
         }
     }
 }

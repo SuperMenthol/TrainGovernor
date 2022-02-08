@@ -21,6 +21,7 @@ namespace Infrastructure.Context.TrainGovernorContext
         public DbSet<NeighbouringTrainStation> NeighbouringStations { get; set; }
         public DbSet<Line> Lines { get; set; }
         public DbSet<LineStation> LineStations { get; set; }
+        public DbSet<LineStartTime> LineStartTimes { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -58,6 +59,12 @@ namespace Infrastructure.Context.TrainGovernorContext
                 .Property(x => x.Id)
                 .ValueGeneratedOnAdd();
 
+            modelBuilder.Entity<LineStartTime>()
+                .HasKey(x => x.Id);
+            modelBuilder.Entity<LineStartTime>()
+                .Property(x => x.Id)
+                .ValueGeneratedOnAdd();
+
             modelBuilder.Entity<TrainStation>()
                 .HasOne(x => x.City)
                 .WithMany(x => x.Stations);
@@ -88,6 +95,10 @@ namespace Infrastructure.Context.TrainGovernorContext
                 .HasOne(x => x.NeighbouringTrainStation)
                 .WithMany(y => y.StationsInLines)
                 .HasForeignKey(x => x.NeighbourRelationId);
+
+            modelBuilder.Entity<LineStartTime>()
+                .HasOne(x => x.Line)
+                .WithMany(y => y.StartTimes);
         }
 
         public override int SaveChanges() => base.SaveChanges();

@@ -5,9 +5,10 @@
         var stations = @Html.Raw(Json.Serialize(Model.Stations));
         var line = @Html.Raw(Json.Serialize(Model.Line));
         var neighbours = @Html.Raw(Json.Serialize(Model.Neighbours));
+        var startTimes = @Html.Raw(Json.Serialize(Model.StartTimes));
     </script>
     <script type="module" src="~/js/Lines/Edit.js" ></script>
-    <script type="module" src="~/js/Shared/HTMLElements/Line.js" ></script>
+    <script type="module" src="~/js/Shared/HTMLElements/LineRelations.js" ></script>
 }
 @section Styles{
     <link href="~/css/Line.css" rel="stylesheet" type="text/css" />
@@ -25,10 +26,13 @@
         </div>
         <div class="separator-div-md"></div>
         <div id="stat-separator" class="separator-div-md"></div>
-        <div id="relations-container" class="relations-container"> @*//to do: change name of class, style and html element to relations-container*@
+        <div id="relations-container" class="relations-container">
         </div>
         <div class="separator-div-sm"></div>
-        <div id="select-container">
+        <div class="select-container" id="select-container">
+        </div>
+        <div class="separator-div-sm"></div>
+        <div class="starttime-container" id="starttime-container">
         </div>
         <div class="separator-div-md"></div>
         <div class="button-container">

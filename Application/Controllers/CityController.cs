@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
 using Domain.Interfaces.Controllers;
 using Domain.Models.Dto;
+using Infrastructure.Interfaces.Context;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using Infrastructure.Interfaces.Context;
 
 namespace Application.Controllers
 {

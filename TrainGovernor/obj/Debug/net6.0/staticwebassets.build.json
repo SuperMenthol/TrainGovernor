@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "gdOPqscel/evmLKHTc21vBn5Zp57esCKzzSszlo/KWk=",
+  "Hash": "cg4cbTD2yZe+ktHBRV/U4AR6kHVe7W9sQ9wKvmTEgtA=",
   "Source": "TrainGovernor",
   "BasePath": "_content/TrainGovernor",
   "Mode": "Default",
@@ -272,12 +272,12 @@
       "OriginalItemSpec": "wwwroot\\js\\Shared\\Calculations.js"
     },
     {
-      "Identity": "D:\\Repo-website\\TrainGovernor\\TrainGovernor\\wwwroot\\js\\Shared\\HTMLElements\\Line.js",
+      "Identity": "D:\\Repo-website\\TrainGovernor\\TrainGovernor\\wwwroot\\js\\Shared\\HTMLElements\\LineRelations.js",
       "SourceId": "TrainGovernor",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Repo-website\\TrainGovernor\\TrainGovernor\\wwwroot\\",
       "BasePath": "_content/TrainGovernor",
-      "RelativePath": "js/Shared/HTMLElements/Line.js",
+      "RelativePath": "js/Shared/HTMLElements/LineRelations.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -286,7 +286,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\Shared\\HTMLElements\\Line.js"
+      "OriginalItemSpec": "wwwroot\\js\\Shared\\HTMLElements\\LineRelations.js"
+    },
+    {
+      "Identity": "D:\\Repo-website\\TrainGovernor\\TrainGovernor\\wwwroot\\js\\Shared\\HTMLElements\\LineStartingTime.js",
+      "SourceId": "TrainGovernor",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Repo-website\\TrainGovernor\\TrainGovernor\\wwwroot\\",
+      "BasePath": "_content/TrainGovernor",
+      "RelativePath": "js/Shared/HTMLElements/LineStartingTime.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Shared\\HTMLElements\\LineStartingTime.js"
     },
     {
       "Identity": "D:\\Repo-website\\TrainGovernor\\TrainGovernor\\wwwroot\\js\\Shared\\Models\\LineStationDto.js",

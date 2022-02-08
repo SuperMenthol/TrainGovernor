@@ -1,5 +1,6 @@
 ﻿import { lineValidation } from "../Shared/Validation.js";
-import { build, buildRelationCard, adjustStatFields, filterStationSelect } from "../Shared/HTMLElements/Line.js";
+import { build, buildRelationCard, adjustStatFields, filterStationSelect } from "../Shared/HTMLElements/LineRelations.js";
+import { buildStartingTimeSegment } from "../Shared/HTMLElements/LineStartingTime.js";
 import { stationDto } from "../Shared/Models/LineStationDto.js";
 import { calculateArrivalTime, calculateDepartureTime } from "../Shared/Calculations.js";
 
@@ -15,6 +16,8 @@ let usedRelations = { relationsArray: [] };
 window.onload = function () {
     getUsedRelations(line.lineStations);
     build(usedRelations);
+
+    buildStartingTimeSegment();
 
     oldNameInput = document.getElementById('oldname-input');
     nameInput = document.getElementById('name-input');
