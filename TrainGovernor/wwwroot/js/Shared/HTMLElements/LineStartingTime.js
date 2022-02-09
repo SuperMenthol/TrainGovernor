@@ -1,4 +1,6 @@
-﻿let container;
+﻿import { lineStartTimeObject } from "../Models/LineStartTimeObject.js";
+
+let container;
 let hourInput;
 let minuteInput;
 let inactiveLbl;
@@ -6,50 +8,22 @@ let inactiveLbl;
 let saveBtn;
 let activateBtn;
 
-let timeSelect;
-
-let startTimesObject = {
-    collection: [{
-        id: 1,
-        hour: 4,
-        minute: 40,
-        isActive: true
-    },
-        {
-            id: 2,
-            hour: 5,
-            minute: 13,
-            isActive: false
-        },
-        {
-            id: 3,
-            hour: 6,
-            minute: 57,
-            isActive: true
-        },
-        {
-            id: 4,
-            hour: 9,
-            minute: 6,
-            isActive: false
-        },
-        {
-            id: 5,
-            hour: 11,
-            minute: 10,
-            isActive: true
-        },
-        {
-            id: 6,
-            hour: 13,
-            minute: 7,
-            isActive: true
-        }
-    ]
+const ACTIVATE_BTN_TEXT = {
+    IS_ACTIVE: 'Deactivate',
+    IS_INACTIVE: 'Activate',
+    IS_NULL: 'Remove'
 };
 
-export function buildStartingTimeSegment(timesObject) {
-    //startTimesObject = timesObject;
+const NEWLY_ADDED_TIME_ID = -1;
+
+let timeSelect;
+
+let line;
+let startTimesObject;
+
+export function buildStartingTimeSegment(lineId, timesObject) {
+    line = lineId;
+    startTimesObject = timesObject;
     container = document.getElementById('starttime-container');
 
     let containerDiv = buildContainingDiv();
@@ -130,7 +104,7 @@ function buildButtonsContainer(containingDiv) {
     activateBtn = document.createElement('button');
     activateBtn.classList.add('btn', 'btn-warning', 'start-time-element-button');
     activateBtn.disabled = true;
-    activateBtn.textContent = 'Activate';
+    activateBtn.textContent = ACTIVATE_BTN_TEXT.IS_INACTIVE;
     activateBtn.addEventListener('click', activateBtn_click);
 
     buttonsPart.appendChild(saveBtn);
@@ -161,24 +135,62 @@ function timeInput_correctShort(e) {
 }
 
 function saveBtn_click() {
+    if (timeSelect.value == 0) {
+        let newObject = lineStartTimeObject(line, parseInt(hourInput.value), parseInt(minuteInput.value));
+        startTimesObject.collection.push(newObject);
+        timeSelect.options.add(startTimeSelectOption(newObject));
+    }
+    else {
+        let objectToUpdate = startTimesObject.collection.filter(x => x.id == timeSelect.value)[0];
+        objectToUpdate.hour = parseInt(hourInput.value);
+        objectToUpdate.minute = parseInt(minuteInput.value);
 
+        timeSelect.selectedOptions[0].textContent = generateOptionTextContent(objectToUpdate.hour, objectToUpdate.minute);
+    }
 }
 
 function activateBtn_click() {
+    if (timeSelect.value == NEWLY_ADDED_TIME_ID) {
+        removeUnsavedStartTime();
+        return;
+    }
 
+    let selectedObject = startTimesObject.collection.filter(x => x.id == timeSelect.value)[0];
+
+    selectedObject.isActive = !selectedObject.isActive;
+    inactiveLbl.hidden = selectedObject.isActive;
+
+    activateBtn.textContent = selectedObject.isActive ? "Deactivate" : "Activate";
+    manageTimeSelectOptionStyle(timeSelect.selectedOptions[0], selectedObject.isActive);
+}
+
+function removeUnsavedStartTime() {
+    let objectToDelete = startTimesObject.collection.filter(x => x.id == NEWLY_ADDED_TIME_ID && x.hour == parseInt(hourInput.value && x.minute == parseInt(minuteInput.value)));
+    startTimesObject.collection = startTimesObject.collection.filter(x => x.id != NEWLY_ADDED_TIME_ID && x.hour != objectToDelete.hour && x.minute != objectToDelete.minute);
+
+    let selectedOption = timeSelect.selectedOptions[0];
+    timeSelect.selectedIndex = 0;
+    timeSelect.options.remove(selectedOption);
+    affectActivateBtn(0);
 }
 
 function timeSelect_change(e) {
     let selectedId = e.explicitOriginalTarget.value;
+    console.log(selectedId);
+
     let selectedObject = startTimesObject.collection.filter(x => x.id == selectedId)[0];
-    if (selectedId > 0) {
-        hourInput.value = selectedObject.hour;
-        minuteInput.value = selectedObject.minute;
+    if (selectedId != 0) {
+        hourInput.value = generateHourText(selectedObject.hour);
+        minuteInput.value = generateMinuteText(selectedObject.minute);
+
+        if (selectedId == -1) {
+            changeActivateBtnText(null);
+        }
     }
     else {
         hourInput.value = 0;
         minuteInput.value = 0;
-        affectActivateBtn(selectedId);
+        affectActivateBtn(selectedId, true);
         return;
     }
 
@@ -194,11 +206,18 @@ function affectActivateBtn(id, isActive) {
     activateBtn.disabled = false;
     inactiveLbl.hidden = isActive;
 
+    changeActivateBtnText(isActive);
+}
+
+function changeActivateBtnText(isActive) {
     if (isActive) {
-        activateBtn.textContent = 'Deactivate';
+        activateBtn.textContent = ACTIVATE_BTN_TEXT.IS_ACTIVE;
     }
-    else {
-        activateBtn.textContent = 'Activate';
+    else if (isActive === false) {
+        activateBtn.textContent = ACTIVATE_BTN_TEXT.IS_INACTIVE;
+    }
+    else if (isActive == null || isActive == undefined) {
+        activateBtn.textContent = ACTIVATE_BTN_TEXT.IS_NULL;
     }
 }
 
@@ -212,9 +231,19 @@ function loadSelectOptions() {
 function startTimeSelectOption(item) {
     let opt = document.createElement('option');
     opt.value = item.id;
-    opt.text = `${item.hour}:${item.minute}`;
+    opt.text = generateOptionTextContent(item.hour, item.minute);
+    manageTimeSelectOptionStyle(opt, item.isActive);
 
     return opt;
+}
+
+function manageTimeSelectOptionStyle(option, isActive) {
+    if (isActive) {
+        option.classList.remove('start-time-select-option-inactive');
+    }
+    else {
+        option.classList.add('start-time-select-option-inactive');
+    }
 }
 
 function selectFirstOption() {
@@ -223,4 +252,24 @@ function selectFirstOption() {
     selectFirstOption.text = 'Insert new';
 
     return selectFirstOption;
+}
+
+function generateOptionTextContent(hour, minute) {
+    return `${generateHourText(hour)}:${generateMinuteText(minute)}`;
+}
+
+function generateHourText(hour) {
+    if (hour.toString().length == 1) {
+        hour = '0' + hour;
+    }
+
+    return hour;
+}
+
+function generateMinuteText(minute) {
+    if (minute.toString().length == 1) {
+        minute = '0' + minute;
+    }
+
+    return minute;
 }

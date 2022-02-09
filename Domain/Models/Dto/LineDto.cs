@@ -8,6 +8,7 @@ namespace Domain.Models.Dto
         public string Name { get; set; }
         public bool IsActive { get; set; }
         public List<LineStationDto> LineStations { get; set; }
+        public List<LineStartTimeDto> StartTimes { get; set; }
         public float TotalTravelTime
         {
             get
@@ -86,7 +87,6 @@ namespace Domain.Models.Dto
                 Id = Id,
                 Name = Name,
                 IsActive = IsActive,
-                //LineStations = lines
             };
         }
     }

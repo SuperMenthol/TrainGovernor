@@ -146,6 +146,10 @@
     flex-flow: column wrap;
 }
 
+.start-time-select-option-inactive {
+    background: #6f7685;
+}
+
 .table-fixed {
     display: flex;
     flex-flow: row nowrap;

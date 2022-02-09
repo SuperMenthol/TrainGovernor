@@ -1,4 +1,4 @@
-﻿namespace Domain.Models.ValueObjects
+﻿namespace Domain.Models.ValueObjects.Primitives
 {
     public class StationTime
     {

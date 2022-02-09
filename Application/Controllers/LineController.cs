@@ -115,7 +115,14 @@ namespace Application.Controllers
                     item.LineId = lineEntity.Id;
                     var stationEntity = item.ToEntity();
                     stationEntity.LineId = lineEntity.Id;
-                    _context.LineStations.Update(item.ToEntity());
+                    _context.LineStations.Update(stationEntity);
+                }
+                foreach (var item in line.StartTimes)
+                {
+                    item.LineId = lineEntity.Id;
+                    var lineTimeEntity = item.ToEntity();
+                    lineTimeEntity.LineId = lineEntity.Id;
+                    _context.LineStartTimes.Update(lineTimeEntity);
                 }
                 _context.SaveChanges();
             }

@@ -2,16 +2,11 @@
 using Domain.Interfaces.Controllers;
 using Domain.Models.Dto;
 using Domain.Models.ValueObjects;
+using Domain.Models.ValueObjects.Primitives;
 using Infrastructure.Interfaces.Context;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Application.Controllers
 {
@@ -35,7 +30,7 @@ namespace Application.Controllers
         [Route("GetForLine/{lineId}/{activeOnly}")]
         public async Task<List<LineStartTimeDto>> GetLineStartTimesForLine(int lineId, bool activeOnly)
         {
-            var startTimes = await _context.LineStartTimes.Where(x => x.LineId == lineId).ToListAsync();
+            var startTimes = await _context.LineStartTimes.AsNoTracking().Where(x => x.LineId == lineId).ToListAsync();
             if (activeOnly)
             {
                 startTimes = startTimes.Where(x => x.IsActive).ToList();
@@ -44,7 +39,7 @@ namespace Application.Controllers
             var res = new List<LineStartTimeDto>();
             foreach (var time in startTimes)
             {
-                res.Add(_mapper.Map<LineStartTimeDto>(startTimes));
+                res.Add(_mapper.Map<LineStartTimeDto>(time));
             }
 
             return res;
@@ -52,7 +47,7 @@ namespace Application.Controllers
 
         [HttpGet]
         [Route("GetTimetableData/{lineId}")]
-        public List<StationTime> GetTimetableData(int startTimeId)
+        public LineWithStartTimes GetTimetableData(int startTimeId)
         {
             var startObj = _context.LineStartTimes.Where(x => x.Id == startTimeId)
                 .Include(y => y.Line)
@@ -91,7 +86,11 @@ namespace Application.Controllers
                 });
             }
 
-            return res;
+            return new LineWithStartTimes()
+            {
+                LineId = startObj.LineId,
+                Collection = res
+            };
         }
     }
 }

@@ -3,6 +3,7 @@ import { build, buildRelationCard, adjustStatFields, filterStationSelect } from 
 import { buildStartingTimeSegment } from "../Shared/HTMLElements/LineStartingTime.js";
 import { stationDto } from "../Shared/Models/LineStationDto.js";
 import { calculateArrivalTime, calculateDepartureTime } from "../Shared/Calculations.js";
+import { objectToSave } from "../Shared/Models/LineStartTimeObject.js";
 
 let stationSelect;
 
@@ -12,12 +13,17 @@ let nameInput;
 let saveBtn;
 
 let usedRelations = { relationsArray: [] };
+let startTimesObject = {
+    collection: []
+};
 
 window.onload = function () {
+    startTimesObject.collection = startTimes;
+    console.log(startTimes);
     getUsedRelations(line.lineStations);
     build(usedRelations);
 
-    buildStartingTimeSegment();
+    buildStartingTimeSegment(line.id, startTimesObject);
 
     oldNameInput = document.getElementById('oldname-input');
     nameInput = document.getElementById('name-input');
@@ -90,6 +96,7 @@ function save() {
 
     if (validationResult.validated) {
         let lineStations = [];
+        let lineStartTimes = [];
 
         for (let i = 0; i < usedRelations.relationsArray.length; i++) {
             let lineStation = usedRelations.relationsArray[i];
@@ -97,12 +104,23 @@ function save() {
             lineStations.push(stationDto(lineStation, lineStation.stationOrder, lineStation.isNew));
         }
 
+        for (let i = 0; i < startTimesObject.collection.length; i++) {
+            let startTime = startTimesObject.collection[i];
+            let obj = objectToSave(startTime);
+            obj.line = line;
+
+            lineStartTimes.push(objectToSave(startTime));
+        }
+
         let obj = {
             id: line.id,
             name: nameInput.value,
             isActive: true,
-            lineStations: lineStations
+            lineStations: lineStations,
+            startTimes: lineStartTimes
         };
+
+        console.log(obj);
 
         fetch(`/Line/Update`, {
             method: 'PUT',

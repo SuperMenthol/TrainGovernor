@@ -13,6 +13,6 @@ namespace Domain.Interfaces.Controllers
 
         [HttpGet]
         [Route("GetTimetableData/{lineId}")]
-        List<StationTime> GetTimetableData(int lineId);
+        LineWithStartTimes GetTimetableData(int lineId);
     }
 }

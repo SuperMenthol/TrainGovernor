@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cg4cbTD2yZe+ktHBRV/U4AR6kHVe7W9sQ9wKvmTEgtA=",
+  "Hash": "oPG4k0wnsXKO+Trj1+BsQxvnDPPHUMq2VZZkJ7K06CQ=",
   "Source": "TrainGovernor",
   "BasePath": "_content/TrainGovernor",
   "Mode": "Default",
@@ -304,6 +304,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\Shared\\HTMLElements\\LineStartingTime.js"
+    },
+    {
+      "Identity": "D:\\Repo-website\\TrainGovernor\\TrainGovernor\\wwwroot\\js\\Shared\\Models\\LineStartTimeObject.js",
+      "SourceId": "TrainGovernor",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Repo-website\\TrainGovernor\\TrainGovernor\\wwwroot\\",
+      "BasePath": "_content/TrainGovernor",
+      "RelativePath": "js/Shared/Models/LineStartTimeObject.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Shared\\Models\\LineStartTimeObject.js"
     },
     {
       "Identity": "D:\\Repo-website\\TrainGovernor\\TrainGovernor\\wwwroot\\js\\Shared\\Models\\LineStationDto.js",
