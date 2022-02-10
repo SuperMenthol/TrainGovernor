@@ -1,0 +1,30 @@
+﻿@page
+@model TrainGovernor.Pages.Reports.IndexModel
+@section Scripts{
+    <script>
+        var lines = @Html.Raw(Json.Serialize(Model.Lines));
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+}
+@section Styles{
+    <link href="~/css/Line.css" rel="stylesheet" type="text/css" />
+}
+
+@*use https://ekoopmans.github.io/html2pdf.js/*@
+<div class="out">
+    <div class="main-container">
+        <h1 class="h1-header">Reports</h1>
+        <div class="report-container">
+            <p>Generate timetable for line:</p>
+            <select class="form-select" id="time-table-select">
+                <option value=0>Choose a relation</option>
+                @foreach (var line in Model.Lines)
+                {
+                    <option value=@line.Id>@line.Name - @line.StartingStation-@line.EndingStation</option>
+                }
+            </select>
+            <button class="btn btn-success" id="timetablePreviewBtn">View</button>
+            <button class="btn btn-primary" id="timetableDownloadwBtn">Download</button>
+        </div>
+    </div>
+</div>
