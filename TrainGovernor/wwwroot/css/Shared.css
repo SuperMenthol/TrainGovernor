@@ -1,2 +1,42 @@
-﻿body {
+﻿.h1-header {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.h1-style {
+    font-size: 24px;
+    font-style: oblique;
+}
+
+.h2-style {
+    font-size: 14px;
+}
+
+.input-box {
+    padding: 10px;
+}
+
+.out {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.search-container {
+    padding: 10px;
+}
+
+.separator-div-lg {
+    height: 50px;
+}
+
+.separator-div-md {
+    height: 30px;
+}
+
+.separator-div-sm {
+    height: 15px;
+}
+
+.search-container {
+    padding: 10px;
 }
