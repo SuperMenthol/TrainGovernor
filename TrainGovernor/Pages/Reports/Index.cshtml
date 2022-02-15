@@ -4,10 +4,11 @@
     <script>
         var lines = @Html.Raw(Json.Serialize(Model.Lines));
     </script>
+    <script type="text/javascript" src="~/js/Reports/Timetable.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 }
 @section Styles{
-    <link href="~/css/Line.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/Reports.css" rel="stylesheet" type="text/css" />
 }
 
 @*use https://ekoopmans.github.io/html2pdf.js/*@
@@ -16,15 +17,16 @@
         <h1 class="h1-header">Reports</h1>
         <div class="report-container">
             <p>Generate timetable for line:</p>
-            <select class="form-select" id="time-table-select">
+            <select class="form-select" id="time-table-select" onchange="lineSelect_change()">
                 <option value=0>Choose a relation</option>
                 @foreach (var line in Model.Lines)
                 {
-                    <option value=@line.Id>@line.Name - @line.StartingStation-@line.EndingStation</option>
+                    <option value=@line.Id>@line.Name - @line.StartingStation?.Name - @line.EndingStation?.Name</option>
                 }
             </select>
-            <button class="btn btn-success" id="timetablePreviewBtn">View</button>
-            <button class="btn btn-primary" id="timetableDownloadwBtn">Download</button>
+            <div class="separator-div-md"></div>
+            <button class="btn btn-primary" id="timetableDownloadwBtn" onclick="downloadBtn_click()">Download</button>
+            <label for="time-table-select" id="time-table-label" hidden>You have to select a line to generate the timetable.</label>
         </div>
     </div>
 </div>

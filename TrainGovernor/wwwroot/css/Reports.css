@@ -24,6 +24,21 @@
     flex-flow: column nowrap;
 }
 
+.report-timetable-div {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 10px;
+}
+
+.report-timetable-table {
+    border: 2px solid black;
+}
+
+.report-timetable-table-cell {
+    text-align: center;
+    border: 1px solid black;
+}
+
 .separator-div-lg {
     height: 50px;
 }

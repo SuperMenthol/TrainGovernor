@@ -1,7 +1,6 @@
 ﻿using Domain.Models.Dto;
 using Domain.Models.ValueObjects;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 
 namespace Domain.Interfaces.Controllers
 {
@@ -12,7 +11,7 @@ namespace Domain.Interfaces.Controllers
         Task<List<LineStartTimeDto>> GetLineStartTimesForLine(int lineId, bool activeOnly);
 
         [HttpGet]
-        [Route("GetTimetableData/{lineId}")]
-        LineWithStartTimes GetTimetableData(int lineId);
+        [Route("GetTimetableData")]
+        LineWithStartTimes GetTimetableData([FromRoute] int lineId);
     }
 }

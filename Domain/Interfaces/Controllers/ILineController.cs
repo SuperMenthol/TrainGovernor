@@ -13,6 +13,10 @@ namespace Domain.Interfaces.Controllers
         [Route("GetLine/{id}")]
         LineDto GetLine(int id);
 
+        [HttpGet]
+        [Route("GetWithStartTimes")]
+        List<LineDto> GetLinesHavingStartTimes();
+
         [HttpPost]
         [Route("Add")]
         Task AddLine([FromBody] LineDto line);

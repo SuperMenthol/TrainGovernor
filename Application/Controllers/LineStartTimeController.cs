@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Application.Controllers
 {
+    [Route("[controller]")]
     public class LineStartTimeController : Controller, ILineStartTimeController
     {
         ITrainGovernorContext _context;
@@ -47,50 +48,77 @@ namespace Application.Controllers
 
         [HttpGet]
         [Route("GetTimetableData/{lineId}")]
-        public LineWithStartTimes GetTimetableData(int startTimeId)
+        public LineWithStartTimes GetTimetableData([FromRoute] int lineId)
         {
-            var startObj = _context.LineStartTimes.Where(x => x.Id == startTimeId)
-                .Include(y => y.Line)
-                .ThenInclude(z => z.LineStations)
-                .ThenInclude(a => a.NeighbouringTrainStation)
-                .First();
-
-            var dto = _mapper.Map<LineStartTimeDto>(startObj);
-            var relations = dto.Line.LineStations;
-
-            var stationsUsed = _context.Stations
-                .Join(relations
-                , y => y.Id
-                , x => x.NeighbouringTrainStation.StationId
-                , (x, y) => x)
-                .Join(relations
-                , y => y.Id
-                , x => x.NeighbouringTrainStation.NeighbourId
-                , (x, y) => x);
-
-            var res = new List<StationTime>();
-            res.Add(new StationTime(dto.Hour, dto.Minute)
+            try
             {
-                StationId = relations[0].StationId,
-                StationName = stationsUsed.Where(x => x.Id == relations[0].StationId).First().Name,
-            });
-            for (int i = 1; i < dto.Line.LineStations.Count; i++)
-            {
-                var hourOfArrival = res.Last().ArrivalTime.AddMinutes(relations[i].GetTimeToArrive);
-                var hourOfDeparture = res.Last().DepartureTime.AddMinutes(relations[i].GetTimeToDepart);
+                var startObj = _context.LineStartTimes.Where(x => x.LineId == lineId)
+                    .Include(y => y.Line)
+                    .ThenInclude(z => z.LineStations)
+                    .ThenInclude(a => a.NeighbouringTrainStation)
+                    .OrderBy(x => x.Hour)
+                    .ThenBy(x => x.Minute)
+                    .ToList();
 
-                res.Add(new StationTime(hourOfArrival.Hour, hourOfArrival.Minute, relations[i].BreakInMinutes)
+                var lineStartDtos = new List<LineStartTimeDto>();
+                foreach (var item in startObj)
                 {
-                    StationId = relations[i-1].NeighbouringTrainStation.NeighbourId,
-                    StationName = stationsUsed.Where(x => x.Id == relations[i-1].NeighbouringTrainStation.NeighbourId).First().Name
-                });
-            }
+                    lineStartDtos.Add(_mapper.Map<LineStartTimeDto>(item));
+                }
 
-            return new LineWithStartTimes()
+                var relations = lineStartDtos[0].Line.LineStations.OrderBy(x => x.StationOrder).ToList();
+
+                var stationIds = relations.Select(x => x.NeighbouringTrainStation.StationId).ToList();
+                stationIds.AddRange(relations.Select(x => x.NeighbouringTrainStation.NeighbourId).ToList());
+
+                var stationsUsed = _context.Stations
+                    .AsEnumerable()
+                    .Join(stationIds
+                        , y => y.Id
+                        , x => x
+                        , (x, y) => x)
+                    .Distinct()
+                    .ToList();
+
+                var ungroupedCollection = new List<StationTime>();
+
+                foreach (var dto in lineStartDtos)
+                {
+                    var res = new List<StationTime>();
+                    res.Add(new StationTime(hour: dto.Hour, minute: dto.Minute)
+                    {
+                        StationId = relations[0].StationId,
+                        StationName = stationsUsed.Where(x => x.Id == relations[0].StationId).First().Name,
+                    });
+                    for (int i = 0; i < dto.Line.LineStations.Count; i++)
+                    {
+                        int timeOfArrival = res.Last().ArrivalTimeInMinutes + (int)Math.Floor(relations[i].GetTimeToArrive);
+                        var timeOfDeparture = timeOfArrival + relations[i].BreakInMinutes;
+
+                        res.Add(new StationTime(timeOfArrival, relations[i].BreakInMinutes)
+                        {
+                            StationId = relations[i].NeighbouringTrainStation.NeighbourId,
+                            StationName = stationsUsed.Where(x => x.Id == relations[i].NeighbouringTrainStation.NeighbourId).First().Name
+                        });
+                    }
+
+                    ungroupedCollection.AddRange(res);
+                }
+
+                var groupedCollection = ungroupedCollection.GroupBy(x => x.StationName).ToList();
+
+                return new LineWithStartTimes()
+                {
+                    LineId = startObj[0].Line.Id,
+                    LineName = startObj[0].Line.Name,
+                    Collection = groupedCollection
+                };
+            }
+            catch (Exception ex)
             {
-                LineId = startObj.LineId,
-                Collection = res
-            };
+                _logger.LogError(ex.ToString());
+                return new LineWithStartTimes();
+            }
         }
     }
 }

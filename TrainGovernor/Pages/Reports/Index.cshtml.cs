@@ -21,7 +21,7 @@ namespace TrainGovernor.Pages.Reports
 
         public void OnGet()
         {
-            Lines = _lineController.GetAllLines().Result;
+            Lines = _lineController.GetLinesHavingStartTimes();
         }
     }
 }

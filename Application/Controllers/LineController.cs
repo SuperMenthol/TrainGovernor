@@ -52,6 +52,35 @@ namespace Application.Controllers
         }
 
         [HttpGet]
+        [Route("GetWithStartTimes")]
+        public List<LineDto> GetLinesHavingStartTimes()
+        {
+            try
+            {
+                var lines = _context.Lines
+                    .Where(x => x.StartTimes.Count > 0)
+                    .Include(x => x.LineStations)
+                    .ThenInclude(y => y.TrainStation)
+                    .Include(x => x.LineStations)
+                    .ThenInclude(y => y.NeighbouringTrainStation)
+                    .ThenInclude(y => y.NeighbourStation)
+                    .ToList();
+
+                var res = new List<LineDto>();
+                foreach (var line in lines)
+                {
+                    res.Add(_mapper.Map<LineDto>(line));
+                }
+                return res;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.ToString());
+                return null;
+            }
+        }
+
+        [HttpGet]
         [Route("GetLine/{id}")]
         public LineDto GetLine(int id)
         {
