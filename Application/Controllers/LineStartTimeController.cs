@@ -14,7 +14,6 @@ namespace Application.Controllers
     public class LineStartTimeController : Controller, ILineStartTimeController
     {
         ITrainGovernorContext _context;
-        ILineController _lineController;
         ILogger<LineStartTimeController> _logger;
         IMapper _mapper;
 
@@ -22,7 +21,6 @@ namespace Application.Controllers
             ILogger<LineStartTimeController> logger, IMapper mapper)
         {
             _context = context;
-            _lineController = lineController;
             _logger = logger;
             _mapper = mapper;
         }
@@ -31,19 +29,16 @@ namespace Application.Controllers
         [Route("GetForLine/{lineId}/{activeOnly}")]
         public async Task<List<LineStartTimeDto>> GetLineStartTimesForLine(int lineId, bool activeOnly)
         {
-            var startTimes = await _context.LineStartTimes.AsNoTracking().Where(x => x.LineId == lineId).ToListAsync();
+            var startTimes = await _context.LineStartTimes.AsNoTracking().Where(x => x.LineId == lineId)
+                .Select(x => _mapper.Map<LineStartTimeDto>(x))
+                .ToListAsync();
+
             if (activeOnly)
             {
                 startTimes = startTimes.Where(x => x.IsActive).ToList();
             }
 
-            var res = new List<LineStartTimeDto>();
-            foreach (var time in startTimes)
-            {
-                res.Add(_mapper.Map<LineStartTimeDto>(time));
-            }
-
-            return res;
+            return startTimes;
         }
 
         [HttpGet]
@@ -56,17 +51,12 @@ namespace Application.Controllers
                     .Include(y => y.Line)
                     .ThenInclude(z => z.LineStations)
                     .ThenInclude(a => a.NeighbouringTrainStation)
+                    .Select(x => _mapper.Map<LineStartTimeDto>(x))
                     .OrderBy(x => x.Hour)
                     .ThenBy(x => x.Minute)
                     .ToList();
 
-                var lineStartDtos = new List<LineStartTimeDto>();
-                foreach (var item in startObj)
-                {
-                    lineStartDtos.Add(_mapper.Map<LineStartTimeDto>(item));
-                }
-
-                var relations = lineStartDtos[0].Line.LineStations.OrderBy(x => x.StationOrder).ToList();
+                var relations = startObj[0].Line.LineStations.OrderBy(x => x.StationOrder).ToList();
 
                 var stationIds = relations.Select(x => x.NeighbouringTrainStation.StationId).ToList();
                 stationIds.AddRange(relations.Select(x => x.NeighbouringTrainStation.NeighbourId).ToList());
@@ -82,7 +72,7 @@ namespace Application.Controllers
 
                 var ungroupedCollection = new List<StationTime>();
 
-                foreach (var dto in lineStartDtos)
+                foreach (var dto in startObj)
                 {
                     var res = new List<StationTime>();
                     res.Add(new StationTime(hour: dto.Hour, minute: dto.Minute)

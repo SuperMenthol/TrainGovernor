@@ -80,14 +80,11 @@ namespace Application.Controllers
                 var stations = await _context.NeighbouringStations
                     .Include(x => x.Station)
                     .Include(x => x.NeighbourStation)
-                    .Where(x => x.StationId == stationId).ToListAsync();
-                var res = new List<NeighbouringTrainStationDto>();
-                foreach (var station in stations)
-                {
-                    res.Add(_mapper.Map<NeighbouringTrainStationDto>(station));
-                }
+                    .Where(x => x.StationId == stationId)
+                    .Select(x => _mapper.Map<NeighbouringTrainStationDto>(x))
+                    .ToListAsync();
 
-                return res;
+                return stations;
             }
             catch (Exception ex)
             {
@@ -105,14 +102,10 @@ namespace Application.Controllers
                 var stations = await _context.NeighbouringStations
                     .Include(x => x.Station)
                     .Include(x => x.NeighbourStation)
+                    .Select(x => _mapper.Map<NeighbouringTrainStationDto>(x))
                     .ToListAsync();
-                var res = new List<NeighbouringTrainStationDto>();
-                foreach (var station in stations)
-                {
-                    res.Add(_mapper.Map<NeighbouringTrainStationDto>(station));
-                }
 
-                return res;
+                return stations;
             }
             catch (Exception ex)
             {
@@ -148,9 +141,9 @@ namespace Application.Controllers
                 {
                     var ent = trainStation.ToEntity();
                     _context.NeighbouringStations.Add(ent);
-                    _context.SaveChanges();
                 }
-                //_context.SaveChanges();
+
+                _context.SaveChanges();
                 return true;
             }
             catch (Exception e)

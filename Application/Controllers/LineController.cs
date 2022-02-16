@@ -34,15 +34,10 @@ namespace Application.Controllers
                     .Include(x => x.LineStations)
                     .ThenInclude(y => y.NeighbouringTrainStation)
                     .ThenInclude(y => y.NeighbourStation)
+                    .Select(x => _mapper.Map<LineDto>(x))
                     .ToListAsync();
 
-                var res = new List<LineDto>();
-                foreach (var line in lines)
-                {
-                    res.Add(_mapper.Map<LineDto>(line));
-                }
-
-                return res;
+                return lines;
             }
             catch (Exception ex)
             {
@@ -64,6 +59,7 @@ namespace Application.Controllers
                     .Include(x => x.LineStations)
                     .ThenInclude(y => y.NeighbouringTrainStation)
                     .ThenInclude(y => y.NeighbourStation)
+                    .Select(x => _mapper.Map<LineDto>(x))
                     .ToList();
 
                 var res = new List<LineDto>();

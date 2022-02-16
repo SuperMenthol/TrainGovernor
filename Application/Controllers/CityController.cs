@@ -27,15 +27,11 @@ namespace Application.Controllers
         {
             try
             {
-                var cities = _context.Cities.Include(x => x.Stations);
+                var cities = _context.Cities.Include(x => x.Stations)
+                    .Select(x => _mapper.Map<CityOverviewDto>(x))
+                    .ToList();
 
-                var res = new List<CityOverviewDto>();
-                foreach (var city in cities)
-                {
-                    res.Add(_mapper.Map<CityOverviewDto>(city));
-                }
-
-                return res;
+                return cities;
             }
             catch (Exception ex)
             {
@@ -69,7 +65,7 @@ namespace Application.Controllers
             {
                 _context.Cities.Update(city.ToEntity());
                 _context.SaveChanges();
-                return View();
+                return true;
             }
             catch (Exception ex)
             {
