@@ -5,9 +5,9 @@ import { calculateArrivalTime, calculateDepartureTime } from "../Shared/Calculat
 
 let stationSelect;
 let nameInput;
+let stationContainer;
 
 let saveBtn;
-
 let usedRelations = { relationsArray: [] };
 
 window.onload = function () {

@@ -116,18 +116,36 @@ namespace Application.Controllers
 
         [HttpPost]
         [Route("Add")]
-        public ActionResult<bool> AddStation([FromBody] TrainStationDto trainStationDto)
+        public ActionResult AddStation([FromBody] TrainStationDto trainStationDto)
         {
             try
             {
+                if (CheckIfStationExists(trainStationDto))
+                {
+                    return new JsonResult(new
+                    {
+                        Success = false,
+                        Message = "This station already exists"
+                    });
+                }
+
                 _context.Stations.Add(trainStationDto.ToEntity());
                 _context.SaveChanges();
-                return true;
+
+                return new JsonResult(new
+                {
+                    Success = true,
+                    Message = "Station has been created"
+                });
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex.ToString());
-                return false;
+                return new JsonResult(new
+                {
+                    Success = false,
+                    Message = "Saving station was not possible"
+                });
             }
         }
 
@@ -194,6 +212,13 @@ namespace Application.Controllers
                 _logger.LogError(ex.ToString());
                 return false;
             }
+        }
+
+        private bool CheckIfStationExists(TrainStationDto dto)
+        {
+            return _context.Stations.Any(x => x.Name == dto.Name)
+                || (_context.Stations.Any(x => x.Address == dto.Address.StreetAddress
+                && x.CityId == dto.CityId));
         }
     }
 }

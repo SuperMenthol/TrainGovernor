@@ -56,12 +56,20 @@ async function save() {
                 'Content-Type': 'application/json'
             }
         })
-            .then(() => swal.fire({
-                icon: 'success',
-                title: 'Success!',
-                text: 'Station has been created'
-            }))
-            .then(() => refresh());
+            .then(data => data.json())
+            .then(function (response) {
+                console.log(response);
+                let icn = response.success ? 'success' : 'error';
+                let ttl = response.success ? 'Success!' : 'Error!';
+                let act = response.success ? refresh : null;
+
+                swal.fire({
+                    icon: icn,
+                    title: ttl,
+                    text: response.message
+                })
+                    .then(() => act);
+            })
     }
     else {
         swal.fire({

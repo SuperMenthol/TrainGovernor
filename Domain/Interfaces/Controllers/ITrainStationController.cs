@@ -28,7 +28,7 @@ namespace Domain.Interfaces.Controllers
 
         [HttpPost]
         [Route("Add")]
-        ActionResult<bool> AddStation([FromBody] TrainStationDto trainStationDto);
+        ActionResult AddStation([FromBody] TrainStationDto trainStationDto);
 
         [HttpPost]
         [Route("AddNeighbouringStation")]

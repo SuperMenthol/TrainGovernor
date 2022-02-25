@@ -245,7 +245,7 @@ export function fillTimeField(e, relationObj, isArrival) {
         elementToChange.textContent = '-';
     }
     else {
-        elementToChange.textContent = timeToInput;
+        elementToChange.textContent = timeToInput.toFixed(2);
     }
 }
 
@@ -286,7 +286,7 @@ export function adjustStatFields() {
 
     let totalTravelTime = 0;
     relationsObject.relationsArray.forEach(function (x) {
-        totalTravelTime += parseFloat(calculateDepartureTime(x.distance, x.avgSpeed, x.breakTime));
+        totalTravelTime += parseFloat(calculateDepartureTime(x.distance, x.avgSpeed, x.breakTime)).toFixed(2);
     });
 
     totalTravelTimeField.value = totalTravelTime;

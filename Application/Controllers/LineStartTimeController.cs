@@ -52,9 +52,9 @@ namespace Application.Controllers
                     .ThenInclude(z => z.LineStations)
                     .ThenInclude(a => a.NeighbouringTrainStation)
                     .Select(x => _mapper.Map<LineStartTimeDto>(x))
-                    .OrderBy(x => x.Hour)
-                    .ThenBy(x => x.Minute)
                     .ToList();
+
+                startObj = startObj.OrderBy(x => x.Hour).ThenBy(x => x.Minute).ToList();
 
                 var relations = startObj[0].Line.LineStations.OrderBy(x => x.StationOrder).ToList();
 

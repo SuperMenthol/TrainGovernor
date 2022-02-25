@@ -26,8 +26,6 @@ function nameInput_change() {
 function save() {
     let validationResult = cityValidation(nameInput, codeInput);
 
-    console.log(validationResult);
-
     if (validationResult.validated) {
         let obj = {
             name: nameInput.value,
@@ -39,7 +37,11 @@ function save() {
             .then(swal.fire({
                 icon: 'success',
                 title: `${obj.name} saved as a new city!`
-            }));
+            }))
+            .then(() => {
+                nameInput.value = '';
+                codeInput.value = '';
+            });
     }
     else {
         swal.fire({
