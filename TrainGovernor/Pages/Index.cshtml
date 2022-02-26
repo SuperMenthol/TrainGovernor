@@ -1,12 +1,20 @@
 ﻿@page
-@using Application.Controllers;
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    <p>Get <a asp-page-handler="TrainStation">building Web apps with ASP.NET Core</a>.</p>
+<div>
+    <p class="display-4 text-center">Welcome to TrainGovernor.</p>
+    <p>This is a web application which allows users to manage a fictional passenger train company. Features include:</p>
+    <p>&bull; Creating and editing cities</p>
+    <p>&bull; Creating and editing stations</p>
+    <p>&bull; Adding relations between stations</p>
+    <p>&bull; Creating and managing lines</p>
+    <p>&bull; Generating timetables</p>
+    <br />
+    <p>Page was created using:</p>
+    <p>&bull; C#, .NET Core</p>
+    <p>&bull; Vanilla JavaScript</p>
+    <p>&bull; Entity Framework Core based on MS SQL</p>
 </div>
