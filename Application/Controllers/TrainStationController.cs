@@ -16,6 +16,22 @@ namespace Application.Controllers
         private ILogger<TrainStationController> _logger;
         private IMapper _mapper;
 
+        private static object RESULT_STATION_SUCCESS = new
+        {
+            Success = true,
+            Message = "Station has been saved"
+        };
+        private static object RESULT_STATION_EXISTS = new
+        {
+            Success = false,
+            Message = "This station already exists"
+        };
+        private static object RESULT_STATION_FAILURE = new
+        {
+            Success = false,
+            Message = "Saving station was not possible"
+        };
+
         public TrainStationController(ITrainGovernorContext context, ILogger<TrainStationController> logger, IMapper mapper)
         {
             _context = context;
@@ -122,30 +138,18 @@ namespace Application.Controllers
             {
                 if (CheckIfStationExists(trainStationDto))
                 {
-                    return new JsonResult(new
-                    {
-                        Success = false,
-                        Message = "This station already exists"
-                    });
+                    return new JsonResult(RESULT_STATION_EXISTS);
                 }
 
                 _context.Stations.Add(trainStationDto.ToEntity());
                 _context.SaveChanges();
 
-                return new JsonResult(new
-                {
-                    Success = true,
-                    Message = "Station has been created"
-                });
+                return new JsonResult(RESULT_STATION_SUCCESS);
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex.ToString());
-                return new JsonResult(new
-                {
-                    Success = false,
-                    Message = "Saving station was not possible"
-                });
+                return new JsonResult(RESULT_STATION_FAILURE);
             }
         }
 
@@ -173,18 +177,23 @@ namespace Application.Controllers
 
         [HttpPut]
         [Route("Update")]
-        public ActionResult<bool> UpdateStation([FromBody] TrainStationDto trainStationDto)
+        public ActionResult UpdateStation([FromBody] TrainStationDto trainStationDto)
         {
             try
             {
+                if (CheckIfStationExists(trainStationDto))
+                {
+                    return new JsonResult(RESULT_STATION_EXISTS);
+                }
+
                 _context.Stations.Update(trainStationDto.ToEntity());
                 _context.SaveChanges();
-                return true;
+                return new JsonResult(RESULT_STATION_SUCCESS);
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex.ToString());
-                return false;
+                return new JsonResult(RESULT_STATION_FAILURE);
             }
         }
 

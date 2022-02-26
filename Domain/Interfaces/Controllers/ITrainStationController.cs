@@ -30,13 +30,13 @@ namespace Domain.Interfaces.Controllers
         [Route("Add")]
         ActionResult AddStation([FromBody] TrainStationDto trainStationDto);
 
+        [HttpPut]
+        [Route("Update")]
+        ActionResult UpdateStation([FromBody] TrainStationDto trainStationDto);
+
         [HttpPost]
         [Route("AddNeighbouringStation")]
         ActionResult<bool> AddNeighbouringStations([FromBody] List<NeighbouringStation> dto);
-
-        [HttpPut]
-        [Route("Update")]
-        ActionResult<bool> UpdateStation([FromBody] TrainStationDto trainStationDto);
 
         [HttpPut]
         [Route("UpdateNeighbouringStations")]

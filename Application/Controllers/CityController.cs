@@ -15,6 +15,24 @@ namespace Application.Controllers
         private readonly ILogger<CityController> _logger;
         private IMapper _mapper;
 
+        private static object RESULT_CITY_SUCCESS = new
+        {
+            Success = true,
+            Message = "City has been saved"
+        };
+
+        private static object RESULT_CITY_EXISTS = new
+        {
+            Success = false,
+            Message = "This city already exists"
+        };
+
+        private static object RESULT_CITY_FAILURE = new
+        {
+            Success = false,
+            Message = "City was not saved due to an error"
+        };
+
         public CityController(ITrainGovernorContext context, ILogger<CityController> logger, IMapper mapper)
         {
             _context = context;
@@ -59,24 +77,29 @@ namespace Application.Controllers
 
         [HttpPut]
         [Route("UpdateCity")]
-        public ActionResult<bool> UpdateCity([FromBody] CityOverviewDto city)
+        public ActionResult UpdateCity([FromBody] CityOverviewDto city)
         {
             try
             {
+                if (CheckIfCityExists(city))
+                {
+                    return new JsonResult(RESULT_CITY_EXISTS);
+                }
+
                 _context.Cities.Update(city.ToEntity());
                 _context.SaveChanges();
-                return true;
+                return new JsonResult(RESULT_CITY_SUCCESS);
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex.ToString());
-                return false;
+                return new JsonResult(RESULT_CITY_FAILURE);
             }
         }
 
         [HttpPost]
         [Route("Add/{name}/{postCode?}")]
-        public ActionResult<bool> AddCity(string name, string? postCode = null)
+        public ActionResult AddCity(string name, string? postCode)
         {
             try
             {
@@ -87,15 +110,25 @@ namespace Application.Controllers
                     IsActive = true
                 };
 
+                if (CheckIfCityExists(nCity))
+                {
+                    return new JsonResult(RESULT_CITY_EXISTS);
+                }
+
                 _context.Cities.Add(nCity.ToEntity());
                 _context.SaveChanges();
-                return true;
+                return new JsonResult(RESULT_CITY_SUCCESS);
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex.ToString());
-                return false;
+                return new JsonResult(RESULT_CITY_FAILURE);
             }
+        }
+
+        private bool CheckIfCityExists(CityOverviewDto dto)
+        {
+            return _context.Cities.Any(x => x.Name == dto.Name && x.ZipCode == dto.ZipCode);
         }
     }
 }

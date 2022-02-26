@@ -8,7 +8,7 @@ namespace Domain.Models.Dto
         [Required(ErrorMessage = "Id cannot be null")]
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "City cannot have not name")]
+        [Required(ErrorMessage = "City cannot have no name")]
         [StringLength(30, MinimumLength = 2, ErrorMessage = "City name must exceed one character")]
         public string Name { get; set; }
 
@@ -22,8 +22,6 @@ namespace Domain.Models.Dto
             Id = entity.Id;
             Name = entity.Name;
             ZipCode = entity.ZipCode;
-            //Stations = entity.Stations ?? new List<TrainStation>();
-            //Stations = new List<TrainStationInfoDto>();
 
             IsActive = entity.IsActive;
         }

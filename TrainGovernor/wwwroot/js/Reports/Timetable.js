@@ -25,8 +25,6 @@ async function getBeginningStartTimes() {
         .then(response => response.json())
         .then(function (data) { return data; });
 
-    console.log(lineInfo);
-
     return lineInfo;
 }
 

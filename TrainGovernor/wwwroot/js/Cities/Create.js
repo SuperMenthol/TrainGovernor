@@ -1,4 +1,5 @@
 ﻿import { cityValidation } from "../Shared/Validation.js";
+import { generateSwal } from "../Shared/swalGenerator.js";
 
 let nameInput;
 let codeInput;
@@ -34,14 +35,8 @@ function save() {
         };
 
         fetch(`/City/Add/${obj.name}/${obj.zipCode}`, { method: 'POST' })
-            .then(swal.fire({
-                icon: 'success',
-                title: `${obj.name} saved as a new city!`
-            }))
-            .then(() => {
-                nameInput.value = '';
-                codeInput.value = '';
-            });
+            .then((data) => data.json())
+            .then((response) => generateSwal(response, refresh()));
     }
     else {
         swal.fire({
@@ -50,4 +45,9 @@ function save() {
         text: validationResult.message
         });
     }
+}
+
+function refresh() {
+    nameInput.value = '';
+    codeInput.value = '';
 }

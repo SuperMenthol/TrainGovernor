@@ -20,9 +20,10 @@
 
 .station-card {
     border: 1px solid black;
-    height: 50px;
+    flex-flow: column nowrap;
+    height: 100px;
     background: #fff3d1;
-    padding: 25px;
+    padding: 5px;
 }
 
 .stations-container {

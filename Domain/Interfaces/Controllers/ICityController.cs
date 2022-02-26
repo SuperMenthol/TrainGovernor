@@ -10,10 +10,10 @@ namespace Domain.Interfaces.Controllers
 
         [HttpPut]
         [Route("UpdateCity")]
-        ActionResult<bool> UpdateCity([FromBody] CityOverviewDto city);
+        ActionResult UpdateCity([FromBody] CityOverviewDto city);
 
         [HttpPost]
         [Route("Add/{name}/{postCode?}")]
-        ActionResult<bool> AddCity(string name, string? postCode = null);
+        ActionResult AddCity(string name, string? postCode = null);
     }
 }

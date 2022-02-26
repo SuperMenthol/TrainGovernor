@@ -1,4 +1,5 @@
-﻿import { stationValidation } from "../Shared/Validation.js";
+﻿import { generateSwal } from "../Shared/swalGenerator.js";
+import { stationValidation } from "../Shared/Validation.js";
 
 let oldNameInput;
 let oldZipCodeInput;
@@ -113,12 +114,8 @@ async function save() {
                 'Content-Type': 'application/json'
             }
         })
-            .then(() => swal.fire({
-                icon: 'success',
-                title: 'Success!',
-                text: 'Station has been updated'
-            }))
-            .then(() => refresh());
+            .then((data) => data.json())
+            .then((response) => generateSwal(response, refresh));
     }
     else {
         swal.fire({

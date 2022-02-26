@@ -1,4 +1,5 @@
 ﻿import { stationValidation } from "../Shared/Validation.js";
+import { generateSwal } from "../Shared/swalGenerator.js";
 
 let nameInput;
 let citySelect;
@@ -57,19 +58,7 @@ async function save() {
             }
         })
             .then(data => data.json())
-            .then(function (response) {
-                console.log(response);
-                let icn = response.success ? 'success' : 'error';
-                let ttl = response.success ? 'Success!' : 'Error!';
-                let act = response.success ? refresh : null;
-
-                swal.fire({
-                    icon: icn,
-                    title: ttl,
-                    text: response.message
-                })
-                    .then(() => act);
-            })
+            .then(response => generateSwal(response, refresh));
     }
     else {
         swal.fire({
