@@ -45,7 +45,8 @@ namespace Application.Controllers
         {
             try
             {
-                var cities = _context.Cities.Include(x => x.Stations)
+                var cities = _context.Cities
+                    .Include(x => x.Stations)
                     .Select(x => _mapper.Map<CityOverviewDto>(x))
                     .ToList();
 

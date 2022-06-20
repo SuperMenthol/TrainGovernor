@@ -181,11 +181,6 @@ namespace Application.Controllers
         {
             try
             {
-                if (CheckIfStationExists(trainStationDto))
-                {
-                    return new JsonResult(RESULT_STATION_EXISTS);
-                }
-
                 _context.Stations.Update(trainStationDto.ToEntity());
                 _context.SaveChanges();
                 return new JsonResult(RESULT_STATION_SUCCESS);
