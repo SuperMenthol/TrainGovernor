@@ -1,5 +1,5 @@
-using Domain.Interfaces.Controllers;
-using Domain.Models.Dto;
+using Infrastructure.Interfaces.Controllers;
+using Infrastructure.Models.Dto;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace TrainGovernor.Pages.Cities

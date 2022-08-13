@@ -1,9 +1,9 @@
 ﻿using Application.Controllers;
 using AutoMapper;
-using Domain.Interfaces.Controllers;
-using Infrastructure.Context.TrainGovernorContext;
-using Infrastructure.Entity.TrainGovernor;
-using Infrastructure.Interfaces.Context;
+using Infrastructure.Interfaces.Controllers;
+using Domain.Context.TrainGovernorContext;
+using Domain.Entity.TrainGovernor;
+using Domain.Interfaces.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Moq;

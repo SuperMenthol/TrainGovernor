@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using Domain.Interfaces.Controllers;
-using Domain.Models.Dto;
-using Domain.Models.ValueObjects;
-using Infrastructure.Interfaces.Context;
+using Infrastructure.Interfaces.Controllers;
+using Infrastructure.Models.Dto;
+using Infrastructure.Models.ValueObjects;
+using Domain.Interfaces.Context;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;

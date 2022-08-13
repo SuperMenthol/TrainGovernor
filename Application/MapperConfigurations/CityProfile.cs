@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using Domain.Models.Dto;
-using Infrastructure.Entity.TrainGovernor;
+using Infrastructure.Models.Dto;
+using Domain.Entity.TrainGovernor;
 
 namespace Application.MapperConfigurations
 {

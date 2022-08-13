@@ -1,4 +1,4 @@
-using Domain.Interfaces.Controllers;
+using Infrastructure.Interfaces.Controllers;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace TrainGovernor.Pages.Cities

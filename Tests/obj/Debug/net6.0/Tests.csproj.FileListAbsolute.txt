@@ -14,6 +14,8 @@ D:\Repo-website\TrainGovernor\Tests\bin\Debug\net6.0\Tests.runtimeconfig.json
 D:\Repo-website\TrainGovernor\Tests\bin\Debug\net6.0\Tests.dll
 D:\Repo-website\TrainGovernor\Tests\bin\Debug\net6.0\ref\Tests.dll
 D:\Repo-website\TrainGovernor\Tests\bin\Debug\net6.0\Tests.pdb
+D:\Repo-website\TrainGovernor\Tests\bin\Debug\net6.0\AutoMapper.dll
+D:\Repo-website\TrainGovernor\Tests\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 D:\Repo-website\TrainGovernor\Tests\bin\Debug\net6.0\Castle.Core.dll
 D:\Repo-website\TrainGovernor\Tests\bin\Debug\net6.0\EntityFramework.SqlServer.dll
 D:\Repo-website\TrainGovernor\Tests\bin\Debug\net6.0\EntityFramework.dll
@@ -28,8 +30,10 @@ D:\Repo-website\TrainGovernor\Tests\bin\Debug\net6.0\Microsoft.Data.SqlClient.dl
 D:\Repo-website\TrainGovernor\Tests\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
 D:\Repo-website\TrainGovernor\Tests\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 D:\Repo-website\TrainGovernor\Tests\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Repo-website\TrainGovernor\Tests\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.InMemory.dll
 D:\Repo-website\TrainGovernor\Tests\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 D:\Repo-website\TrainGovernor\Tests\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Repo-website\TrainGovernor\Tests\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
 D:\Repo-website\TrainGovernor\Tests\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
 D:\Repo-website\TrainGovernor\Tests\bin\Debug\net6.0\Microsoft.Identity.Client.dll
 D:\Repo-website\TrainGovernor\Tests\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
@@ -159,7 +163,3 @@ D:\Repo-website\TrainGovernor\Tests\obj\Debug\net6.0\Tests.dll
 D:\Repo-website\TrainGovernor\Tests\obj\Debug\net6.0\ref\Tests.dll
 D:\Repo-website\TrainGovernor\Tests\obj\Debug\net6.0\Tests.pdb
 D:\Repo-website\TrainGovernor\Tests\obj\Debug\net6.0\Tests.genruntimeconfig.cache
-D:\Repo-website\TrainGovernor\Tests\bin\Debug\net6.0\AutoMapper.dll
-D:\Repo-website\TrainGovernor\Tests\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
-D:\Repo-website\TrainGovernor\Tests\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.InMemory.dll
-D:\Repo-website\TrainGovernor\Tests\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll

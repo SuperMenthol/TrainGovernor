@@ -119,9 +119,6 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Repo-website\\TrainGovernor\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "D:\\Repo-website\\TrainGovernor\\Infrastructure\\Infrastructure.csproj"
-              },
               "D:\\Repo-website\\TrainGovernor\\Persistence\\Infrastructure.csproj": {
                 "projectPath": "D:\\Repo-website\\TrainGovernor\\Persistence\\Infrastructure.csproj"
               }
@@ -189,7 +186,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\Repo-website\\TrainGovernor\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\Repo-website\\TrainGovernor\\Domain\\Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -205,6 +206,10 @@
             "EntityFramework": {
               "target": "Package",
               "version": "[6.4.4, )"
+            },
+            "Microsoft.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",

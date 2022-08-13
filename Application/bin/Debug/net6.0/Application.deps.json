@@ -1794,7 +1794,9 @@
       },
       "Infrastructure/1.0.0": {
         "dependencies": {
+          "Domain": "1.0.0",
           "EntityFramework": "6.4.4",
+          "Microsoft.AspNetCore.Mvc": "2.2.0",
           "Microsoft.EntityFrameworkCore": "6.0.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.1",
           "Microsoft.Extensions.Configuration": "6.0.0"

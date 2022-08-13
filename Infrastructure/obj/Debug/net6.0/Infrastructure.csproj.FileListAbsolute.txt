@@ -17,12 +17,15 @@ D:\Repo-website\TrainGovernor\Infrastructure\bin\Debug\net6.0\Infrastructure.run
 D:\Repo-website\TrainGovernor\Infrastructure\bin\Debug\net6.0\Infrastructure.dll
 D:\Repo-website\TrainGovernor\Infrastructure\bin\Debug\net6.0\ref\Infrastructure.dll
 D:\Repo-website\TrainGovernor\Infrastructure\bin\Debug\net6.0\Infrastructure.pdb
+D:\Repo-website\TrainGovernor\Infrastructure\bin\Debug\net6.0\Domain.dll
+D:\Repo-website\TrainGovernor\Infrastructure\bin\Debug\net6.0\Domain.pdb
+D:\Repo-website\TrainGovernor\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.AssemblyReference.cache
 D:\Repo-website\TrainGovernor\Infrastructure\obj\Debug\net6.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
 D:\Repo-website\TrainGovernor\Infrastructure\obj\Debug\net6.0\Infrastructure.AssemblyInfoInputs.cache
 D:\Repo-website\TrainGovernor\Infrastructure\obj\Debug\net6.0\Infrastructure.AssemblyInfo.cs
 D:\Repo-website\TrainGovernor\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.CoreCompileInputs.cache
+D:\Repo-website\TrainGovernor\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.CopyComplete
 D:\Repo-website\TrainGovernor\Infrastructure\obj\Debug\net6.0\Infrastructure.dll
 D:\Repo-website\TrainGovernor\Infrastructure\obj\Debug\net6.0\ref\Infrastructure.dll
 D:\Repo-website\TrainGovernor\Infrastructure\obj\Debug\net6.0\Infrastructure.pdb
 D:\Repo-website\TrainGovernor\Infrastructure\obj\Debug\net6.0\Infrastructure.genruntimeconfig.cache
-D:\Repo-website\TrainGovernor\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.AssemblyReference.cache

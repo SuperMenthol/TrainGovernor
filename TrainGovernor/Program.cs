@@ -1,11 +1,12 @@
 using Application.Controllers;
-using Domain.Interfaces.Controllers;
-using Infrastructure.Context.TrainGovernorContext;
-using Infrastructure.Interfaces.Context;
+using Infrastructure.Interfaces.Controllers;
+using Domain.Context.TrainGovernorContext;
+using Domain.Interfaces.Context;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using NLog.Web;
 using System.Reflection;
+using Domain.Context.UserAuthContext;
 
 namespace TrainGovernor
 {
@@ -24,6 +25,8 @@ namespace TrainGovernor
             builder.Services.AddRazorPages();
             builder.Services.AddDbContext<ITrainGovernorContext, TrainGovernorContext>(options => 
                 options.UseSqlServer(configuration.GetConnectionString("TrainGovernorConnection")));
+            builder.Services.AddDbContext<IUserAuthContext, UserAuthContext>(options => 
+                options.UseSqlServer(configuration.GetConnectionString("UserAuthConnection")));
 
             builder.Services
                 .AddMvc()
@@ -58,6 +61,7 @@ namespace TrainGovernor
             app.MapControllers();
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapRazorPages();

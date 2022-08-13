@@ -1,203 +1,354 @@
 ﻿++Solution 'TrainGovernor' ‎(4 of 4 projects)
 i:{00000000-0000-0000-0000-000000000000}:TrainGovernor.sln
-++Persistence
-i:{00000000-0000-0000-0000-000000000000}:Persistence
-i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\persistence\bin\debug\net6.0\persistence.dll
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\persistence\bin\debug\net6.0\persistence.dll
+++Application
+i:{00000000-0000-0000-0000-000000000000}:Application
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\application\bin\debug\net6.0\application.dll
 ++Dependencies
-i:{96acb38a-2b0b-4dd2-8fe2-ea3322d35fa5}:>526
-i:{d90189a7-b319-4237-9b8c-6035c9967d50}:>528
-i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:>527
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:>779
-++Context
-i:{96acb38a-2b0b-4dd2-8fe2-ea3322d35fa5}:d:\repo-website\traingovernor\persistence\context\
-i:{96acb38a-2b0b-4dd2-8fe2-ea3322d35fa5}:d:\repo-website\traingovernor\persistence\interfaces\context\
-++Entity
-i:{96acb38a-2b0b-4dd2-8fe2-ea3322d35fa5}:d:\repo-website\traingovernor\persistence\entity\
-++TrainGovernor
-i:{96acb38a-2b0b-4dd2-8fe2-ea3322d35fa5}:d:\repo-website\traingovernor\persistence\entity\traingovernor\
-i:{00000000-0000-0000-0000-000000000000}:TrainGovernor
-++City.cs
-i:{96acb38a-2b0b-4dd2-8fe2-ea3322d35fa5}:d:\repo-website\traingovernor\persistence\entity\traingovernor\city.cs
-++TrainStation.cs
-i:{96acb38a-2b0b-4dd2-8fe2-ea3322d35fa5}:d:\repo-website\traingovernor\persistence\entity\traingovernor\trainstation.cs
-++Interfaces
-i:{96acb38a-2b0b-4dd2-8fe2-ea3322d35fa5}:d:\repo-website\traingovernor\persistence\interfaces\
-i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\interfaces\
-++ITrainGovernorContext.cs
-i:{96acb38a-2b0b-4dd2-8fe2-ea3322d35fa5}:d:\repo-website\traingovernor\persistence\interfaces\context\itraingovernorcontext.cs
-++Migrations
-i:{96acb38a-2b0b-4dd2-8fe2-ea3322d35fa5}:d:\repo-website\traingovernor\persistence\migrations\
-++20220119183833_Init.cs
-i:{96acb38a-2b0b-4dd2-8fe2-ea3322d35fa5}:d:\repo-website\traingovernor\persistence\migrations\20220119183833_init.cs
-++TrainGovernorContextModelSnapshot.cs
-i:{96acb38a-2b0b-4dd2-8fe2-ea3322d35fa5}:d:\repo-website\traingovernor\persistence\migrations\traingovernorcontextmodelsnapshot.cs
+i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:>798
+i:{fd9ba0b8-5d2a-4cf0-ad57-b16e1d5a8fe7}:>799
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:>800
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:>1269
+++Controllers
+i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:d:\repo-website\traingovernor\application\controllers\
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\interfaces\controllers\
+++CityController.cs
+i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:d:\repo-website\traingovernor\application\controllers\citycontroller.cs
+++LineController.cs
+i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:d:\repo-website\traingovernor\application\controllers\linecontroller.cs
+++LineStartTimeController.cs
+i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:d:\repo-website\traingovernor\application\controllers\linestarttimecontroller.cs
+++LoginController.cs
+i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:d:\repo-website\traingovernor\application\controllers\logincontroller.cs
+++TrainStationController.cs
+i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:d:\repo-website\traingovernor\application\controllers\trainstationcontroller.cs
+++MapperConfigurations
+i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:d:\repo-website\traingovernor\application\mapperconfigurations\
+++CityProfile.cs
+i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:d:\repo-website\traingovernor\application\mapperconfigurations\cityprofile.cs
+++nlog.config
+i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:d:\repo-website\traingovernor\application\nlog.config
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\nlog.config
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\nlog.config
 ++Analyzers
-i:{96acb38a-2b0b-4dd2-8fe2-ea3322d35fa5}:analyzers
-i:{d90189a7-b319-4237-9b8c-6035c9967d50}:analyzers
 i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:analyzers
+i:{fd9ba0b8-5d2a-4cf0-ad57-b16e1d5a8fe7}:analyzers
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:analyzers
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:analyzers
 ++Frameworks
-i:{96acb38a-2b0b-4dd2-8fe2-ea3322d35fa5}:frameworks
-i:{d90189a7-b319-4237-9b8c-6035c9967d50}:frameworks
 i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:frameworks
+i:{fd9ba0b8-5d2a-4cf0-ad57-b16e1d5a8fe7}:frameworks
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:frameworks
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:frameworks
 ++Packages
-i:{96acb38a-2b0b-4dd2-8fe2-ea3322d35fa5}:packages
-i:{d90189a7-b319-4237-9b8c-6035c9967d50}:packages
 i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:packages
+i:{fd9ba0b8-5d2a-4cf0-ad57-b16e1d5a8fe7}:packages
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:packages
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:packages
-++TrainGovernorContext
-i:{96acb38a-2b0b-4dd2-8fe2-ea3322d35fa5}:d:\repo-website\traingovernor\persistence\context\traingovernorcontext\
-++20220119183833_Init.Designer.cs
-i:{96acb38a-2b0b-4dd2-8fe2-ea3322d35fa5}:d:\repo-website\traingovernor\persistence\migrations\20220119183833_init.designer.cs
+++Projects
+i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:projects
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:projects
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:projects
+++Microsoft.AspNetCore.App.Analyzers
+i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
+++Microsoft.AspNetCore.App.CodeFixes
+i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+++Microsoft.AspNetCore.Mvc.Analyzers
+i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:c:\users\micha\.nuget\packages\microsoft.aspnetcore.mvc.analyzers\2.2.0\analyzers\dotnet\cs\microsoft.aspnetcore.mvc.analyzers.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.mvc.analyzers.dll
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:c:\users\micha\.nuget\packages\microsoft.aspnetcore.mvc.analyzers\2.2.0\analyzers\dotnet\cs\microsoft.aspnetcore.mvc.analyzers.dll
+++Microsoft.CodeAnalysis.Analyzers
+i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:c:\users\micha\.nuget\packages\microsoft.codeanalysis.analyzers\1.1.0\analyzers\dotnet\cs\microsoft.codeanalysis.analyzers.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\users\micha\.nuget\packages\microsoft.codeanalysis.analyzers\1.1.0\analyzers\dotnet\cs\microsoft.codeanalysis.analyzers.dll
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:c:\users\micha\.nuget\packages\microsoft.codeanalysis.analyzers\1.1.0\analyzers\dotnet\cs\microsoft.codeanalysis.analyzers.dll
+++Microsoft.CodeAnalysis.CSharp.Analyzers
+i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:c:\users\micha\.nuget\packages\microsoft.codeanalysis.analyzers\1.1.0\analyzers\dotnet\cs\microsoft.codeanalysis.csharp.analyzers.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\users\micha\.nuget\packages\microsoft.codeanalysis.analyzers\1.1.0\analyzers\dotnet\cs\microsoft.codeanalysis.csharp.analyzers.dll
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:c:\users\micha\.nuget\packages\microsoft.codeanalysis.analyzers\1.1.0\analyzers\dotnet\cs\microsoft.codeanalysis.csharp.analyzers.dll
 ++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
-i:{96acb38a-2b0b-4dd2-8fe2-ea3322d35fa5}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
-i:{d90189a7-b319-4237-9b8c-6035c9967d50}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
 i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{fd9ba0b8-5d2a-4cf0-ad57-b16e1d5a8fe7}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
 ++Microsoft.CodeAnalysis.NetAnalyzers
-i:{96acb38a-2b0b-4dd2-8fe2-ea3322d35fa5}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
-i:{d90189a7-b319-4237-9b8c-6035c9967d50}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
 i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{fd9ba0b8-5d2a-4cf0-ad57-b16e1d5a8fe7}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
 ++Microsoft.EntityFrameworkCore.Analyzers
-i:{96acb38a-2b0b-4dd2-8fe2-ea3322d35fa5}:c:\users\micha\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.1\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
-i:{d90189a7-b319-4237-9b8c-6035c9967d50}:c:\users\micha\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.1\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
-i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:c:\users\micha\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.1\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\users\micha\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.1\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{fd9ba0b8-5d2a-4cf0-ad57-b16e1d5a8fe7}:c:\users\micha\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.1\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
 ++Microsoft.Extensions.Logging.Generators
-i:{96acb38a-2b0b-4dd2-8fe2-ea3322d35fa5}:c:\users\micha\.nuget\packages\microsoft.extensions.logging.abstractions\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
-i:{d90189a7-b319-4237-9b8c-6035c9967d50}:c:\users\micha\.nuget\packages\microsoft.extensions.logging.abstractions\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
-i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:c:\users\micha\.nuget\packages\microsoft.extensions.logging.abstractions\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{fd9ba0b8-5d2a-4cf0-ad57-b16e1d5a8fe7}:c:\users\micha\.nuget\packages\microsoft.extensions.logging.abstractions\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
 ++System.Text.Json.SourceGeneration
-i:{96acb38a-2b0b-4dd2-8fe2-ea3322d35fa5}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.1\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
-i:{d90189a7-b319-4237-9b8c-6035c9967d50}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.1\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
 i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.1\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{fd9ba0b8-5d2a-4cf0-ad57-b16e1d5a8fe7}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.1\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.1\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.1\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
 ++Microsoft.NETCore.App
-i:{96acb38a-2b0b-4dd2-8fe2-ea3322d35fa5}:d:\repo-website\traingovernor\persistence\microsoft.netcore.app
-i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\microsoft.netcore.app
 i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:d:\repo-website\traingovernor\application\microsoft.netcore.app
+i:{fd9ba0b8-5d2a-4cf0-ad57-b16e1d5a8fe7}:d:\repo-website\traingovernor\infrastructure\microsoft.netcore.app
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\microsoft.netcore.app
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\microsoft.netcore.app
-++EntityFramework (6.4.4)
-i:{96acb38a-2b0b-4dd2-8fe2-ea3322d35fa5}:>796
-++Microsoft.EntityFrameworkCore (6.0.1)
-i:{96acb38a-2b0b-4dd2-8fe2-ea3322d35fa5}:>791
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:>846
-++Microsoft.EntityFrameworkCore.Design (6.0.1)
-i:{96acb38a-2b0b-4dd2-8fe2-ea3322d35fa5}:>793
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:>848
-++Microsoft.EntityFrameworkCore.SqlServer (6.0.1)
-i:{96acb38a-2b0b-4dd2-8fe2-ea3322d35fa5}:>792
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:>847
-++Microsoft.EntityFrameworkCore.Tools (6.0.1)
-i:{96acb38a-2b0b-4dd2-8fe2-ea3322d35fa5}:>795
-++Microsoft.Extensions.Configuration (6.0.0)
-i:{96acb38a-2b0b-4dd2-8fe2-ea3322d35fa5}:>794
-++TrainGovernorContext.cs
-i:{96acb38a-2b0b-4dd2-8fe2-ea3322d35fa5}:d:\repo-website\traingovernor\persistence\context\traingovernorcontext\traingovernorcontext.cs
+++AutoMapper (11.0.0)
+i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:>1304
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:>1350
+++AutoMapper.Extensions.Microsoft.DependencyInjection (11.0.0)
+i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:>1301
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:>1346
+++Microsoft.AspNetCore.Mvc (2.2.0)
+i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:>1303
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:>1321
+++NLog (4.7.13)
+i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:>1305
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:>1351
+++NLog.Web.AspNetCore (4.14.0)
+i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:>1302
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:>1348
 ++Domain
-i:{00000000-0000-0000-0000-000000000000}:Domain
-i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:d:\repo-website\traingovernor\domain\bin\debug\net6.0\domain.dll
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\domain\bin\debug\net6.0\domain.dll
-++Controllers
-i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\interfaces\controllers\
-i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:d:\repo-website\traingovernor\application\controllers\
-++ICityController.cs
-i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\interfaces\controllers\icitycontroller.cs
-++ITrainStationController.cs
-i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\interfaces\controllers\itrainstationcontroller.cs
+++Infrastructure
+i:{00000000-0000-0000-0000-000000000000}:Infrastructure
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\domain\infrastructure.csproj
+i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:d:\repo-website\traingovernor\domain\infrastructure.csproj
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\infrastructure\infrastructure.csproj
+++Context
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\context\
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\interfaces\context\
+++TrainGovernorContext
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\context\traingovernorcontext\
+++TrainGovernorContext.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\context\traingovernorcontext\traingovernorcontext.cs
+++Entity
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\entity\
+++Interfaces
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\interfaces\
+++Migrations
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\migrations\
+++Sql
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\sql\
+++TrainGovernor
+i:{00000000-0000-0000-0000-000000000000}:TrainGovernor
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\entity\traingovernor\
+++20220119183833_Init.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\migrations\20220119183833_init.cs
+++20220129115956_PostCodeToCitiesTable.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\migrations\20220129115956_postcodetocitiestable.cs
+++20220129143138_IsActiveToCitiesTable.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\migrations\20220129143138_isactivetocitiestable.cs
+++20220130083621_ZipCode.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\migrations\20220130083621_zipcode.cs
+++20220130102839_ZipCodeStations.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\migrations\20220130102839_zipcodestations.cs
+++20220131083058_IsActive.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\migrations\20220131083058_isactive.cs
+++20220131102450_ZipCodeToSTRING.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\migrations\20220131102450_zipcodetostring.cs
+++20220201120154_Neighbourr.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\migrations\20220201120154_neighbourr.cs
+++20220202080627_Line-LineStation.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\migrations\20220202080627_line-linestation.cs
+++20220202090614_LineStation-NeighbourRelation.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\migrations\20220202090614_linestation-neighbourrelation.cs
+++20220202093053_LineStation-new.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\migrations\20220202093053_linestation-new.cs
+++20220202093637_LineSt.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\migrations\20220202093637_linest.cs
+++20220202094334_NeighbourRelation-nullable.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\migrations\20220202094334_neighbourrelation-nullable.cs
+++20220202094853_Rev.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\migrations\20220202094853_rev.cs
+++20220208191619_LineStartTime.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\migrations\20220208191619_linestarttime.cs
+++TrainGovernorContextModelSnapshot.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\migrations\traingovernorcontextmodelsnapshot.cs
+++CleanDatabase.sql
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\sql\cleandatabase.sql
+++EntityFramework (6.4.4)
+i:{fd9ba0b8-5d2a-4cf0-ad57-b16e1d5a8fe7}:>1299
+++Microsoft.EntityFrameworkCore (6.0.1)
+i:{fd9ba0b8-5d2a-4cf0-ad57-b16e1d5a8fe7}:>1290
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:>1344
+++Microsoft.EntityFrameworkCore.Design (6.0.1)
+i:{fd9ba0b8-5d2a-4cf0-ad57-b16e1d5a8fe7}:>1292
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:>1347
+++Microsoft.EntityFrameworkCore.SqlServer (6.0.1)
+i:{fd9ba0b8-5d2a-4cf0-ad57-b16e1d5a8fe7}:>1291
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:>1345
+++Microsoft.EntityFrameworkCore.Tools (6.0.1)
+i:{fd9ba0b8-5d2a-4cf0-ad57-b16e1d5a8fe7}:>1295
+++Microsoft.Extensions.Configuration (6.0.0)
+i:{fd9ba0b8-5d2a-4cf0-ad57-b16e1d5a8fe7}:>1294
+++City.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\entity\traingovernor\city.cs
+++Line.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\entity\traingovernor\line.cs
+++LineStartTime.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\entity\traingovernor\linestarttime.cs
+++LineStation.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\entity\traingovernor\linestation.cs
+++NeighbouringTrainStation.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\entity\traingovernor\neighbouringtrainstation.cs
+++TrainStation.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\entity\traingovernor\trainstation.cs
+++ITrainGovernorContext.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\interfaces\context\itraingovernorcontext.cs
+++20220119183833_Init.Designer.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\migrations\20220119183833_init.designer.cs
+++20220129115956_PostCodeToCitiesTable.Designer.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\migrations\20220129115956_postcodetocitiestable.designer.cs
+++20220129143138_IsActiveToCitiesTable.Designer.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\migrations\20220129143138_isactivetocitiestable.designer.cs
+++20220130083621_ZipCode.Designer.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\migrations\20220130083621_zipcode.designer.cs
+++20220130102839_ZipCodeStations.Designer.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\migrations\20220130102839_zipcodestations.designer.cs
+++20220131083058_IsActive.Designer.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\migrations\20220131083058_isactive.designer.cs
+++20220131102450_ZipCodeToSTRING.Designer.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\migrations\20220131102450_zipcodetostring.designer.cs
+++20220201120154_Neighbourr.Designer.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\migrations\20220201120154_neighbourr.designer.cs
+++20220202080627_Line-LineStation.Designer.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\migrations\20220202080627_line-linestation.designer.cs
+++20220202090614_LineStation-NeighbourRelation.Designer.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\migrations\20220202090614_linestation-neighbourrelation.designer.cs
+++20220202093053_LineStation-new.Designer.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\migrations\20220202093053_linestation-new.designer.cs
+++20220202093637_LineSt.Designer.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\migrations\20220202093637_linest.designer.cs
+++20220202094334_NeighbourRelation-nullable.Designer.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\migrations\20220202094334_neighbourrelation-nullable.designer.cs
+++20220202094853_Rev.Designer.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\migrations\20220202094853_rev.designer.cs
+++20220208191619_LineStartTime.Designer.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\migrations\20220208191619_linestarttime.designer.cs
+++Extensions
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\extensions\
 ++Models
 i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\models\
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\js\shared\models\
+++AddressExtensions.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\extensions\addressextensions.cs
 ++Dto
 i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\models\dto\
-++CityOverviewDto.cs
-i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\models\dto\cityoverviewdto.cs
 ++Result
 i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\models\result\
 ++ValueObjects
 i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\models\valueobjects\
+++Infrastructure (..\Infrastructure\Infrastructure.csproj)
+++Infrastructure (..\Persistence\Infrastructure.csproj)
+++ICityController.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\interfaces\controllers\icitycontroller.cs
+++ILineController.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\interfaces\controllers\ilinecontroller.cs
+++ILineStartTimeController.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\interfaces\controllers\ilinestarttimecontroller.cs
+++ITrainStationController.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\interfaces\controllers\itrainstationcontroller.cs
+++CityOverviewDto.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\models\dto\cityoverviewdto.cs
+++LineDto.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\models\dto\linedto.cs
+++LineStartTimeDto.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\models\dto\linestarttimedto.cs
+++LineStationDto.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\models\dto\linestationdto.cs
+++NeighbouringTrainStationDto.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\models\dto\neighbouringtrainstationdto.cs
+++TrainStationDto.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\models\dto\trainstationdto.cs
+++TrainStationInfoDto.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\models\dto\trainstationinfodto.cs
 ++Primitives
 i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\models\valueobjects\primitives\
-++Address.cs
-i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\models\valueobjects\primitives\address.cs
+++LineWithStartTimes.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\models\valueobjects\linewithstarttimes.cs
+++NeighbouringStation.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\models\valueobjects\neighbouringstation.cs
 ++Station.cs
 i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\models\valueobjects\station.cs
-++Projects
-i:{d90189a7-b319-4237-9b8c-6035c9967d50}:projects
-i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:projects
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:projects
-++Microsoft.AspNetCore.Mvc.Analyzers
-i:{d90189a7-b319-4237-9b8c-6035c9967d50}:c:\users\micha\.nuget\packages\microsoft.aspnetcore.mvc.analyzers\2.2.0\analyzers\dotnet\cs\microsoft.aspnetcore.mvc.analyzers.dll
-i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:c:\users\micha\.nuget\packages\microsoft.aspnetcore.mvc.analyzers\2.2.0\analyzers\dotnet\cs\microsoft.aspnetcore.mvc.analyzers.dll
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.mvc.analyzers.dll
-++Microsoft.CodeAnalysis.Analyzers
-i:{d90189a7-b319-4237-9b8c-6035c9967d50}:c:\users\micha\.nuget\packages\microsoft.codeanalysis.analyzers\1.1.0\analyzers\dotnet\cs\microsoft.codeanalysis.analyzers.dll
-i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:c:\users\micha\.nuget\packages\microsoft.codeanalysis.analyzers\1.1.0\analyzers\dotnet\cs\microsoft.codeanalysis.analyzers.dll
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\users\micha\.nuget\packages\microsoft.codeanalysis.analyzers\1.1.0\analyzers\dotnet\cs\microsoft.codeanalysis.analyzers.dll
-++Microsoft.CodeAnalysis.CSharp.Analyzers
-i:{d90189a7-b319-4237-9b8c-6035c9967d50}:c:\users\micha\.nuget\packages\microsoft.codeanalysis.analyzers\1.1.0\analyzers\dotnet\cs\microsoft.codeanalysis.csharp.analyzers.dll
-i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:c:\users\micha\.nuget\packages\microsoft.codeanalysis.analyzers\1.1.0\analyzers\dotnet\cs\microsoft.codeanalysis.csharp.analyzers.dll
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\users\micha\.nuget\packages\microsoft.codeanalysis.analyzers\1.1.0\analyzers\dotnet\cs\microsoft.codeanalysis.csharp.analyzers.dll
-++Microsoft.AspNetCore.Mvc (2.2.0)
-i:{d90189a7-b319-4237-9b8c-6035c9967d50}:>809
-i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:>838
-++Application
-i:{00000000-0000-0000-0000-000000000000}:Application
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\application\bin\debug\net6.0\application.dll
-++CityController.cs
-i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:d:\repo-website\traingovernor\application\controllers\citycontroller.cs
-++TrainStationController.cs
-i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:d:\repo-website\traingovernor\application\controllers\trainstationcontroller.cs
+++Address.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\models\valueobjects\primitives\address.cs
+++StationTime.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\models\valueobjects\primitives\stationtime.cs
 ++Connected Services 
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:>780
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:>1270
+++Imports
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:>803
 ++Properties
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\properties\
 ++wwwroot
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\
+++bin
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\
+++obj
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\
 ++Pages
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\scopedcss\pages\
 ++Cities
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\cities\
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\js\cities\
+++Lines
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\lines\
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\js\lines\
+++Add.cshtml
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\lines\add.cshtml
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\stations\add.cshtml
+++Edit.cshtml
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\lines\edit.cshtml
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\stations\edit.cshtml
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\cities\edit.cshtml
 ++Index.cshtml
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\cities\index.cshtml
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\lines\index.cshtml
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\stations\index.cshtml
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\index.cshtml
-++Index.cshtml.cs
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\cities\index.cshtml.cs
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\index.cshtml.cs
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\cities\index.cshtml
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\reports\index.cshtml
+++Reports
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\reports\
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\js\reports\
 ++Shared
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\shared\
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\js\shared\
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\scopedcss\pages\shared\
 ++Stations
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\stations\
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\js\stations\
 ++_ViewImports.cshtml
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\_viewimports.cshtml
 ++_ViewStart.cshtml
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\_viewstart.cshtml
 ++Error.cshtml
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\error.cshtml
-++Error.cshtml.cs
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\error.cshtml.cs
 ++Privacy.cshtml
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\privacy.cshtml
 ++Styles
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\styles\
-++citiesMain.css
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\styles\citiesmain.css
-++stationsList.css
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\styles\stationslist.css
 ++appsettings.json
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\appsettings.json
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\appsettings.json
+++appsettings.Development.json
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\appsettings.development.json
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\appsettings.development.json
 ++HomeController.cs
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\homecontroller.cs
+++Infrastructure.csproj
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\infrastructure.csproj
 ++Program.cs
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\program.cs
 ++Startup.cs
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\startup.cs
 ++No service dependencies discovered
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:>781
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:>1271
+++Sdk.props
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.web\sdk\sdk.props
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.illink.tasks\sdk\sdk.props
+++Sdk.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.web\sdk\sdk.targets
 ++launchSettings.json
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\properties\launchsettings.json
 ++css
@@ -208,24 +359,59 @@ i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingove
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\lib\bootstrap\dist\js\
 ++lib
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\lib\
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\runtimes\unix\lib\
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\runtimes\win\lib\
 ++favicon.ico
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\favicon.ico
+++Debug
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\
+++Release
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\release\
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\release\
+++project.assets.json
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\project.assets.json
+++project.nuget.cache
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\project.nuget.cache
+++staticwebassets.pack.sentinel
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\staticwebassets.pack.sentinel
+++TrainGovernor.csproj.nuget.dgspec.json
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\traingovernor.csproj.nuget.dgspec.json
+++TrainGovernor.csproj.nuget.g.props
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\traingovernor.csproj.nuget.g.props
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\traingovernor.csproj.nuget.g.props
+++TrainGovernor.csproj.nuget.g.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\traingovernor.csproj.nuget.g.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\traingovernor.csproj.nuget.g.targets
+++Create.cshtml
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\cities\create.cshtml
+++Add.cshtml.cs
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\lines\add.cshtml.cs
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\stations\add.cshtml.cs
+++Edit.cshtml.cs
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\lines\edit.cshtml.cs
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\stations\edit.cshtml.cs
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\cities\edit.cshtml.cs
+++Index.cshtml.cs
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\lines\index.cshtml.cs
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\stations\index.cshtml.cs
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\index.cshtml.cs
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\cities\index.cshtml.cs
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\reports\index.cshtml.cs
 ++_Layout.cshtml
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\shared\_layout.cshtml
 ++_ValidationScriptsPartial.cshtml
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\shared\_validationscriptspartial.cshtml
-++List.cshtml
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\stations\list.cshtml
+++Error.cshtml.cs
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\error.cshtml.cs
 ++Privacy.cshtml.cs
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\privacy.cshtml.cs
-++appsettings.Development.json
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\appsettings.development.json
+++citiesMain.css
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\styles\citiesmain.css
+++stationsList.css
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\styles\stationslist.css
 ++Microsoft.AspNetCore.Analyzers
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
-++Microsoft.AspNetCore.App.Analyzers
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
-++Microsoft.AspNetCore.App.CodeFixes
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
 ++Microsoft.AspNetCore.Components.Analyzers
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.components.analyzers.dll
 ++Microsoft.AspNetCore.Razor.Internal.SourceGenerator.Transport
@@ -235,48 +421,527 @@ i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdk
 ++Microsoft.AspNetCore.App
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\microsoft.aspnetcore.app
 ++Microsoft.AspNet.Mvc (5.2.7)
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:>849
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:>1349
+++Microsoft.AspNetCore.Authentication.JwtBearer (6.0.8)
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:>1358
+++Microsoft.IdentityModel.Tokens (6.22.0)
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:>1356
+++System.IdentityModel.Tokens.Jwt (6.22.0)
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:>1357
+++Sdk.props (C:\Program Files\dotnet\sdk\6.0.101\Sdks\Microsoft.NET.Sdk\Sdk)
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\sdk\sdk.props
+++Sdk.props (C:\Program Files\dotnet\sdk\6.0.101\Sdks\Microsoft.NET.Sdk.Razor\Sdk)
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.razor\sdk\sdk.props
+++Sdk.props (C:\Program Files\dotnet\sdk\6.0.101\Sdks\Microsoft.NET.Sdk.Web.ProjectSystem\Sdk)
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.web.projectsystem\sdk\sdk.props
+++Sdk.props (C:\Program Files\dotnet\sdk\6.0.101\Sdks\Microsoft.NET.Sdk.Publish\Sdk)
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.publish\sdk\sdk.props
+++Sdk.targets (C:\Program Files\dotnet\sdk\6.0.101\Sdks\Microsoft.NET.Sdk\Sdk)
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\sdk\sdk.targets
+++Sdk.targets (C:\Program Files\dotnet\sdk\6.0.101\Sdks\Microsoft.NET.Sdk.Razor\Sdk)
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.razor\sdk\sdk.targets
+++Sdk.targets (C:\Program Files\dotnet\sdk\6.0.101\Sdks\Microsoft.NET.Sdk.Web.ProjectSystem\Sdk)
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.web.projectsystem\sdk\sdk.targets
+++Sdk.targets (C:\Program Files\dotnet\sdk\6.0.101\Sdks\Microsoft.NET.Sdk.Publish\Sdk)
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.publish\sdk\sdk.targets
+++City.css
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\css\city.css
+++Line.css
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\css\line.css
 ++navbar.css
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\css\navbar.css
+++Reports.css
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\css\reports.css
+++Shared.css
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\css\shared.css
 ++site.css
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\css\site.css
+++Station.css
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\css\station.css
 ++site.js
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\js\site.js
 ++bootstrap
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\lib\bootstrap\
-++jquery
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\lib\jquery\
-++jquery-validation
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\lib\jquery-validation\
-++jquery-validation-unobtrusive
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\lib\jquery-validation-unobtrusive\
+++net6.0
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\release\net6.0\
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\release\net6.0\
+++Create.cshtml.cs
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\cities\create.cshtml.cs
 ++_Layout.cshtml.css
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\shared\_layout.cshtml.css
-++List.cshtml.cs
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\pages\stations\list.cshtml.cs
+++Microsoft.Common.props
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\current\microsoft.common.props
+++Microsoft.NET.Sdk.props
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.props
+++Sdk.Razor.CurrentVersion.props
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.razor\targets\sdk.razor.currentversion.props
+++Microsoft.NET.Sdk.Web.ProjectSystem.props
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.web.projectsystem\targets\microsoft.net.sdk.web.projectsystem.props
+++Microsoft.NET.Sdk.Publish.props
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.publish\targets\microsoft.net.sdk.publish.props
+++Microsoft.NET.Sdk.BeforeCommon.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.beforecommon.targets
+++Microsoft.CSharp.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\current\bin\amd64\microsoft.csharp.targets
+++Microsoft.NET.Sdk.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.targets
+++Microsoft.NET.Compatibility.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.compatibility.targets
+++NuGet.Build.Tasks.Pack.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\nuget.build.tasks.pack\build\nuget.build.tasks.pack.targets
+++Sdk.Razor.CurrentVersion.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.razor\targets\sdk.razor.currentversion.targets
+++Microsoft.NET.Sdk.Web.ProjectSystem.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.web.projectsystem\targets\microsoft.net.sdk.web.projectsystem.targets
+++Microsoft.NET.Sdk.Publish.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.publish\targets\microsoft.net.sdk.publish.targets
 ++City.js
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\js\cities\city.js
+++Create.js
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\js\cities\create.js
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\js\lines\create.js
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\js\stations\create.js
+++Edit.js
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\js\cities\edit.js
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\js\lines\edit.js
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\js\stations\edit.js
+++Line.js
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\js\lines\line.js
+++Timetable.js
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\js\reports\timetable.js
+++HTMLElements
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\js\shared\htmlelements\
+++Calculations.js
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\js\shared\calculations.js
+++swalGenerator.js
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\js\shared\swalgenerator.js
+++Validation.js
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\js\shared\validation.js
+++Station.js
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\js\stations\station.js
 ++dist
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\lib\bootstrap\dist\
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\lib\jquery\dist\
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\lib\jquery-validation\dist\
 ++LICENSE
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\lib\bootstrap\license
-++LICENSE.txt
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\lib\jquery\license.txt
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\lib\jquery-validation-unobtrusive\license.txt
-++LICENSE.md
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\lib\jquery-validation\license.md
-++jquery.validate.unobtrusive.js
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
-++jquery.js
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\lib\jquery\dist\jquery.js
-++additional-methods.js
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\lib\jquery-validation\dist\additional-methods.js
-++jquery.validate.js
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\lib\jquery-validation\dist\jquery.validate.js
-++jquery.validate.unobtrusive.min.js
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
+++ref
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\ref\
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\release\net6.0\ref\
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\ref\
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\release\net6.0\ref\
+++runtimes
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\runtimes\
+++Application.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\application.dll
+++Application.pdb
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\application.pdb
+++AutoMapper.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\automapper.dll
+++AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\automapper.extensions.microsoft.dependencyinjection.dll
+++Domain.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\domain.dll
+++Domain.pdb
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\domain.pdb
+++EntityFramework.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\entityframework.dll
+++EntityFramework.SqlServer.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\entityframework.sqlserver.dll
+++Humanizer.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\humanizer.dll
+++Infrastructure.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\infrastructure.dll
+++Infrastructure.pdb
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\infrastructure.pdb
+++Microsoft.AspNetCore.Authentication.JwtBearer.dll
+++Microsoft.AspNetCore.JsonPatch.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\microsoft.aspnetcore.jsonpatch.dll
+++Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\microsoft.aspnetcore.mvc.razor.extensions.dll
+++Microsoft.AspNetCore.Razor.Language.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\microsoft.aspnetcore.razor.language.dll
+++Microsoft.CodeAnalysis.CSharp.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\microsoft.codeanalysis.csharp.dll
+++Microsoft.CodeAnalysis.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\microsoft.codeanalysis.dll
+++Microsoft.CodeAnalysis.Razor.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\microsoft.codeanalysis.razor.dll
+++Microsoft.Data.SqlClient.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\runtimes\win\lib\netcoreapp3.1\microsoft.data.sqlclient.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\runtimes\unix\lib\netcoreapp3.1\microsoft.data.sqlclient.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\microsoft.data.sqlclient.dll
+++Microsoft.DotNet.PlatformAbstractions.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\microsoft.dotnet.platformabstractions.dll
+++Microsoft.EntityFrameworkCore.Abstractions.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\microsoft.entityframeworkcore.abstractions.dll
+++Microsoft.EntityFrameworkCore.Design.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\microsoft.entityframeworkcore.design.dll
+++Microsoft.EntityFrameworkCore.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\microsoft.entityframeworkcore.dll
+++Microsoft.EntityFrameworkCore.Relational.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\microsoft.entityframeworkcore.relational.dll
+++Microsoft.EntityFrameworkCore.SqlServer.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\microsoft.entityframeworkcore.sqlserver.dll
+++Microsoft.Extensions.DependencyModel.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\microsoft.extensions.dependencymodel.dll
+++Microsoft.Identity.Client.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\microsoft.identity.client.dll
+++Microsoft.IdentityModel.Abstractions.dll
+++Microsoft.IdentityModel.JsonWebTokens.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\microsoft.identitymodel.jsonwebtokens.dll
+++Microsoft.IdentityModel.Logging.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\microsoft.identitymodel.logging.dll
+++Microsoft.IdentityModel.Protocols.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\microsoft.identitymodel.protocols.dll
+++Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\microsoft.identitymodel.protocols.openidconnect.dll
+++Microsoft.IdentityModel.Tokens.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\microsoft.identitymodel.tokens.dll
+++Microsoft.Web.Infrastructure.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\microsoft.web.infrastructure.dll
+++Microsoft.Win32.SystemEvents.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\runtimes\win\lib\netcoreapp3.0\microsoft.win32.systemevents.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\microsoft.win32.systemevents.dll
+++Newtonsoft.Json.Bson.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\newtonsoft.json.bson.dll
+++Newtonsoft.Json.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\newtonsoft.json.dll
+++NLog.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\nlog.dll
+++NLog.Extensions.Logging.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\nlog.extensions.logging.dll
+++NLog.Web.AspNetCore.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\nlog.web.aspnetcore.dll
+++System.CodeDom.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\system.codedom.dll
+++System.Configuration.ConfigurationManager.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\system.configuration.configurationmanager.dll
+++System.Data.SqlClient.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\runtimes\win\lib\netcoreapp2.1\system.data.sqlclient.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\runtimes\unix\lib\netcoreapp2.1\system.data.sqlclient.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\system.data.sqlclient.dll
+++System.Drawing.Common.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\runtimes\unix\lib\netcoreapp3.0\system.drawing.common.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\runtimes\win\lib\netcoreapp3.0\system.drawing.common.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\system.drawing.common.dll
+++System.IdentityModel.Tokens.Jwt.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\system.identitymodel.tokens.jwt.dll
+++System.Runtime.Caching.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\runtimes\win\lib\netstandard2.0\system.runtime.caching.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\system.runtime.caching.dll
+++System.Security.Cryptography.ProtectedData.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\runtimes\win\lib\netstandard2.0\system.security.cryptography.protecteddata.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\system.security.cryptography.protecteddata.dll
+++System.Security.Permissions.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\system.security.permissions.dll
+++System.Web.Helpers.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\system.web.helpers.dll
+++System.Web.Mvc.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\system.web.mvc.dll
+++System.Web.Razor.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\system.web.razor.dll
+++System.Web.WebPages.Deployment.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\system.web.webpages.deployment.dll
+++System.Web.WebPages.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\system.web.webpages.dll
+++System.Web.WebPages.Razor.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\system.web.webpages.razor.dll
+++System.Windows.Extensions.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\runtimes\win\lib\netcoreapp3.0\system.windows.extensions.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\system.windows.extensions.dll
+++TrainGovernor.deps.json
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\traingovernor.deps.json
+++TrainGovernor.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\traingovernor.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\ref\traingovernor.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\ref\traingovernor.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\traingovernor.dll
+++TrainGovernor.exe
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\traingovernor.exe
+++TrainGovernor.pdb
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\traingovernor.pdb
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\traingovernor.pdb
+++TrainGovernor.runtimeconfig.json
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\traingovernor.runtimeconfig.json
+++TrainGovernor.staticwebassets.runtime.json
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\traingovernor.staticwebassets.runtime.json
+++scopedcss
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\scopedcss\
+++staticwebassets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\staticwebassets\
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\release\net6.0\staticwebassets\
+++.NETCoreApp,Version=v6.0.AssemblyAttributes.cs
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\.netcoreapp,version=v6.0.assemblyattributes.cs
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\release\net6.0\.netcoreapp,version=v6.0.assemblyattributes.cs
+++apphost.exe
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\apphost.exe
+++Infrastructure.AssemblyInfo.cs
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\infrastructure.assemblyinfo.cs
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\release\net6.0\infrastructure.assemblyinfo.cs
+++Infrastructure.AssemblyInfoInputs.cache
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\infrastructure.assemblyinfoinputs.cache
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\release\net6.0\infrastructure.assemblyinfoinputs.cache
+++Infrastructure.assets.cache
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\infrastructure.assets.cache
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\release\net6.0\infrastructure.assets.cache
+++Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\infrastructure.generatedmsbuildeditorconfig.editorconfig
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\release\net6.0\infrastructure.generatedmsbuildeditorconfig.editorconfig
+++Infrastructure.GlobalUsings.g.cs
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\infrastructure.globalusings.g.cs
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\release\net6.0\infrastructure.globalusings.g.cs
+++project.razor.json
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\project.razor.json
+++staticwebassets.build.json
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\staticwebassets.build.json
+++staticwebassets.development.json
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\staticwebassets.development.json
+++TrainGovernor.AssemblyInfo.cs
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\release\net6.0\traingovernor.assemblyinfo.cs
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\traingovernor.assemblyinfo.cs
+++TrainGovernor.AssemblyInfoInputs.cache
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\release\net6.0\traingovernor.assemblyinfoinputs.cache
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\traingovernor.assemblyinfoinputs.cache
+++TrainGovernor.assets.cache
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\traingovernor.assets.cache
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\release\net6.0\traingovernor.assets.cache
+++TrainGovernor.csproj.AssemblyReference.cache
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\traingovernor.csproj.assemblyreference.cache
+++TrainGovernor.csproj.CopyComplete
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\traingovernor.csproj.copycomplete
+++TrainGovernor.csproj.CoreCompileInputs.cache
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\traingovernor.csproj.corecompileinputs.cache
+++TrainGovernor.csproj.FileListAbsolute.txt
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\traingovernor.csproj.filelistabsolute.txt
+++TrainGovernor.GeneratedMSBuildEditorConfig.editorconfig
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\release\net6.0\traingovernor.generatedmsbuildeditorconfig.editorconfig
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\traingovernor.generatedmsbuildeditorconfig.editorconfig
+++TrainGovernor.genruntimeconfig.cache
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\traingovernor.genruntimeconfig.cache
+++TrainGovernor.GlobalUsings.g.cs
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\traingovernor.globalusings.g.cs
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\release\net6.0\traingovernor.globalusings.g.cs
+++TrainGovernor.MvcApplicationPartsAssemblyInfo.cache
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\traingovernor.mvcapplicationpartsassemblyinfo.cache
+++TrainGovernor.MvcApplicationPartsAssemblyInfo.cs
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\traingovernor.mvcapplicationpartsassemblyinfo.cs
+++TrainGovernor.RazorAssemblyInfo.cache
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\release\net6.0\traingovernor.razorassemblyinfo.cache
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\traingovernor.razorassemblyinfo.cache
+++TrainGovernor.RazorAssemblyInfo.cs
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\release\net6.0\traingovernor.razorassemblyinfo.cs
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\traingovernor.razorassemblyinfo.cs
+++Microsoft.NuGet.ImportBefore.props
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\current\imports\microsoft.common.props\importbefore\microsoft.nuget.importbefore.props
+++NuGet.props
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\common7\ide\commonextensions\microsoft\nuget\nuget.props
+++Microsoft.NET.Sdk.DefaultItems.props
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.defaultitems.props
+++Microsoft.NET.Sdk.ImportWorkloads.props
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.importworkloads.props
+++Microsoft.NET.SupportedTargetFrameworks.props
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.supportedtargetframeworks.props
+++Microsoft.NET.SupportedPlatforms.props
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.supportedplatforms.props
+++Microsoft.NET.WindowsSdkSupportedTargetPlatforms.props
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.windowssdksupportedtargetplatforms.props
+++Microsoft.NET.Sdk.CSharp.props
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.csharp.props
+++Microsoft.NET.ILLink.props
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.illink.props
+++Microsoft.NET.Compatibility.props
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.compatibility.props
+++Microsoft.NET.PackTool.props
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.packtool.props
+++Microsoft.NET.PackProjectTool.props
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.packprojecttool.props
+++Microsoft.NET.Sdk.WindowsDesktop.props
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.windowsdesktop\targets\microsoft.net.sdk.windowsdesktop.props
+++Microsoft.NET.Windows.props
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.windows.props
+++Sdk.Razor.StaticAssets.ProjectSystem.props
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.razor\sdk\sdk.razor.staticassets.projectsystem.props
+++Microsoft.TypeScript.Default.props
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\microsoft\visualstudio\v17.0\typescript\microsoft.typescript.default.props
+++Microsoft.NET.Sdk.Web.DefaultItems.props
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.web.projectsystem\targets\microsoft.net.sdk.web.defaultitems.props
+++Microsoft.NET.DefaultAssemblyInfo.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.defaultassemblyinfo.targets
+++Microsoft.NET.DefaultOutputPaths.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.defaultoutputpaths.targets
+++Microsoft.NET.Sdk.ImportPublishProfile.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.importpublishprofile.targets
+++Microsoft.NET.TargetFrameworkInference.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.targetframeworkinference.targets
+++Microsoft.NET.Sdk.Razor.BeforeCommon.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.beforecommon.targets
+++Microsoft.NET.Sdk.ImportWorkloads.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.importworkloads.targets
+++Microsoft.NET.RuntimeIdentifierInference.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.runtimeidentifierinference.targets
+++Microsoft.NET.EolTargetFrameworks.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.eoltargetframeworks.targets
+++Microsoft.NET.NuGetOfflineCache.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.nugetofflinecache.targets
+++Microsoft.Managed.Before.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\current\bin\amd64\microsoft.managed.before.targets
+++Microsoft.CSharp.CurrentVersion.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\current\bin\amd64\microsoft.csharp.currentversion.targets
+++Microsoft.Managed.After.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\current\bin\amd64\microsoft.managed.after.targets
+++Microsoft.NET.Sdk.Common.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.common.targets
+++Microsoft.PackageDependencyResolution.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.packagedependencyresolution.targets
+++Microsoft.NET.Sdk.DefaultItems.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.defaultitems.targets
+++Microsoft.NET.Sdk.FrameworkReferenceResolution.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.frameworkreferenceresolution.targets
+++Microsoft.NET.Sdk.Shared.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.shared.targets
+++Microsoft.NET.DisableStandardFrameworkResolution.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.disablestandardframeworkresolution.targets
+++Microsoft.NET.DesignerSupport.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.designersupport.targets
+++Microsoft.NET.GenerateAssemblyInfo.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.generateassemblyinfo.targets
+++Microsoft.NET.GenerateGlobalUsings.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.generateglobalusings.targets
+++Microsoft.NET.GenerateSupportedRuntime.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.generatesupportedruntime.targets
+++Microsoft.NET.ComposeStore.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.composestore.targets
+++Microsoft.NET.CrossGen.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.crossgen.targets
+++Microsoft.NET.ObsoleteReferences.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.obsoletereferences.targets
+++Microsoft.NET.Publish.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.publish.targets
+++Microsoft.NET.PackTool.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.packtool.targets
+++Microsoft.NET.PackProjectTool.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.packprojecttool.targets
+++Microsoft.NET.PreserveCompilationContext.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.preservecompilationcontext.targets
+++Microsoft.NET.ConflictResolution.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.conflictresolution.targets
+++Microsoft.NET.Sdk.CSharp.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.csharp.targets
+++Microsoft.NET.ILLink.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.illink.targets
+++Microsoft.NET.Sdk.Analyzers.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.analyzers.targets
+++Microsoft.NET.Compatibility.Common.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.compatibility.common.targets
+++Microsoft.NET.Sdk.Razor.Configuration.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.configuration.targets
+++Microsoft.NET.Sdk.Razor.CodeGeneration.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.codegeneration.targets
+++Microsoft.NET.Sdk.Razor.SourceGenerators.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.sourcegenerators.targets
+++Microsoft.NET.Sdk.Razor.StaticWebAssets.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.staticwebassets.targets
+++Microsoft.NET.Sdk.Razor.ScopedCss.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.scopedcss.targets
+++Microsoft.NET.Sdk.Razor.JSModules.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.jsmodules.targets
+++Microsoft.NET.Sdk.Razor.GenerateAssemblyInfo.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.generateassemblyinfo.targets
+++Microsoft.NET.Sdk.Razor.MvcApplicationPartsDiscovery.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.mvcapplicationpartsdiscovery.targets
+++Microsoft.NET.Sdk.Razor.DesignTime.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\microsoft\visualstudio\razor\microsoft.net.sdk.razor.designtime.targets
+++Microsoft.TypeScript.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\microsoft\visualstudio\v17.0\typescript\microsoft.typescript.targets
+++Microsoft.TypeScript.DotNetCore.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\microsoft\visualstudio\v17.0\typescript\microsoft.typescript.dotnetcore.targets
+++Microsoft.Web.Designtime.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\microsoft\visualstudio\managed.web\microsoft.web.designtime.targets
+++Default.pubxml
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.publish\targets\publishprofiles\default.pubxml
+++Microsoft.NET.Sdk.Publish.ComputeFiles.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.publish\targets\computetargets\microsoft.net.sdk.publish.computefiles.targets
+++Microsoft.NET.Sdk.Publish.FilterFiles.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.publish\targets\copytargets\microsoft.net.sdk.publish.filterfiles.targets
+++Microsoft.NET.Sdk.Publish.CopyFiles.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.publish\targets\copytargets\microsoft.net.sdk.publish.copyfiles.targets
+++Microsoft.NET.Sdk.Publish.TransformFiles.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.publish\targets\transformtargets\microsoft.net.sdk.publish.transformfiles.targets
+++Microsoft.NET.Sdk.Publish.FileSystem.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.publish\targets\publishtargets\microsoft.net.sdk.publish.filesystem.targets
+++Microsoft.NET.Sdk.DotNetCLITool.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.publish\targets\dotnetclitooltargets\microsoft.net.sdk.dotnetclitool.targets
+++LineRelations.js
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\js\shared\htmlelements\linerelations.js
+++LineStartingTime.js
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\js\shared\htmlelements\linestartingtime.js
+++LineStartTimeObject.js
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\js\shared\models\linestarttimeobject.js
+++LineStationDto.js
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\js\shared\models\linestationdto.js
+++unix
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\runtimes\unix\
+++win
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\runtimes\win\
+++win-arm
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\runtimes\win-arm\
+++win-arm64
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\runtimes\win-arm64\
+++win-x64
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\runtimes\win-x64\
+++win-x86
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\runtimes\win-x86\
+++bundle
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\scopedcss\bundle\
+++projectbundle
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\scopedcss\projectbundle\
+++Microsoft.EntityFrameworkCore.Design.props
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\users\micha\.nuget\packages\microsoft.entityframeworkcore.design\6.0.1\build\net6.0\microsoft.entityframeworkcore.design.props
+++EntityFramework.props
+++Microsoft.NuGet.props
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\microsoft\nuget\17.0\microsoft.nuget.props
+++Microsoft.NETCoreSdk.BundledVersions.props
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\microsoft.netcoresdk.bundledversions.props
+++Microsoft.NET.Sdk.WindowsDesktop.WindowsForms.props
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.windowsdesktop\targets\microsoft.net.sdk.windowsdesktop.windowsforms.props
+++Microsoft.NET.Sdk.WindowsDesktop.WPF.props
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.windowsdesktop\targets\microsoft.net.sdk.windowsdesktop.wpf.props
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.100\microsoft.net.sdk.android)
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk-manifests\6.0.100\microsoft.net.sdk.android\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.100\microsoft.net.sdk.ios)
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk-manifests\6.0.100\microsoft.net.sdk.ios\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.100\microsoft.net.sdk.maccatalyst)
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk-manifests\6.0.100\microsoft.net.sdk.maccatalyst\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.100\microsoft.net.sdk.macos)
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk-manifests\6.0.100\microsoft.net.sdk.macos\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.100\microsoft.net.sdk.maui)
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk-manifests\6.0.100\microsoft.net.sdk.maui\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.100\microsoft.net.sdk.tvos)
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk-manifests\6.0.100\microsoft.net.sdk.tvos\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.100\microsoft.net.workload.emscripten)
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk-manifests\6.0.100\microsoft.net.workload.emscripten\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.100\microsoft.net.workload.mono.toolchain)
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk-manifests\6.0.100\microsoft.net.workload.mono.toolchain\workloadmanifest.targets
+++Microsoft.CSharp.Core.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\current\bin\roslyn\microsoft.csharp.core.targets
+++Microsoft.CSharp.DesignTime.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\microsoft\visualstudio\managed\microsoft.csharp.designtime.targets
+++Microsoft.Common.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\current\bin\amd64\microsoft.common.targets
+++Microsoft.ServiceModel.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\current\bin\amd64\microsoft.servicemodel.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\windows\microsoft.net\framework\v4.0.30319\microsoft.servicemodel.targets
+++Microsoft.NET.Sdk.DefaultItems.Shared.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.defaultitems.shared.targets
+++Microsoft.NETCoreSdk.BundledCliTools.props
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\microsoft.netcoresdk.bundledclitools.props
+++Microsoft.NET.DefaultPackageConflictOverrides.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.defaultpackageconflictoverrides.targets
+++Microsoft.CodeAnalysis.NetAnalyzers.props
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\build\microsoft.codeanalysis.netanalyzers.props
+++Microsoft.CodeAnalysis.NetAnalyzers.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\build\microsoft.codeanalysis.netanalyzers.targets
 ++bootstrap.css
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\lib\bootstrap\dist\css\bootstrap.css
 ++bootstrap-grid.css
@@ -287,12 +952,25 @@ i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingove
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
 ++bootstrap.js
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\lib\bootstrap\dist\js\bootstrap.js
-++jquery.min.js
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\lib\jquery\dist\jquery.min.js
-++additional-methods.min.js
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
-++jquery.validate.min.js
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+++native
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\runtimes\win-arm\native\
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\runtimes\win-arm64\native\
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\runtimes\win-x64\native\
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\runtimes\win-x86\native\
+++TrainGovernor.styles.css
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\scopedcss\bundle\traingovernor.styles.css
+++TrainGovernor.bundle.scp.css
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\scopedcss\projectbundle\traingovernor.bundle.scp.css
+++Microsoft.NET.ILLink.Tasks.props
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.illink.tasks\build\microsoft.net.illink.tasks.props
+++System.Windows.Forms.Analyzers.props
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.windowsdesktop\targets\system.windows.forms.analyzers.props
+++Microsoft.Managed.Core.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\current\bin\roslyn\microsoft.managed.core.targets
+++Microsoft.Managed.DesignTime.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\microsoft\visualstudio\managed\microsoft.managed.designtime.targets
+++Microsoft.Common.CurrentVersion.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\current\bin\amd64\microsoft.common.currentversion.targets
 ++bootstrap.css.map
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
 ++bootstrap.min.css
@@ -325,8 +1003,70 @@ i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingove
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
 ++bootstrap.min.js
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
-++jquery.min.map
-i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\lib\jquery\dist\jquery.min.map
+++netcoreapp2.1
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\runtimes\unix\lib\netcoreapp2.1\
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\runtimes\win\lib\netcoreapp2.1\
+++netcoreapp3.0
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\runtimes\unix\lib\netcoreapp3.0\
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\runtimes\win\lib\netcoreapp3.0\
+++netcoreapp3.1
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\runtimes\unix\lib\netcoreapp3.1\
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\runtimes\win\lib\netcoreapp3.1\
+++netstandard2.0
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\runtimes\win\lib\netstandard2.0\
+++Microsoft.Data.SqlClient.SNI.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\runtimes\win-x86\native\microsoft.data.sqlclient.sni.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\runtimes\win-x64\native\microsoft.data.sqlclient.sni.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\runtimes\win-arm64\native\microsoft.data.sqlclient.sni.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\runtimes\win-arm\native\microsoft.data.sqlclient.sni.dll
+++sni.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\runtimes\win-x86\native\sni.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\runtimes\win-x64\native\sni.dll
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\bin\debug\net6.0\runtimes\win-arm64\native\sni.dll
+++_Layout.cshtml.rz.scp.css
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\obj\debug\net6.0\scopedcss\pages\shared\_layout.cshtml.rz.scp.css
+++Microsoft.Managed.Core.CurrentVersions.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\current\bin\roslyn\microsoft.managed.core.currentversions.targets
+++Microsoft.Cpp.VCLibs120Universal.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\current\microsoft.common.targets\importbefore\microsoft.cpp.vclibs120universal.targets
+++Microsoft.Net.CoreRuntime.ImportBefore.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\current\microsoft.common.targets\importbefore\microsoft.net.coreruntime.importbefore.targets
+++Microsoft.NetNative.ImportBefore.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\current\microsoft.common.targets\importbefore\microsoft.netnative.importbefore.targets
+++TrainGovernor.csproj.user
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\traingovernor.csproj.user
+++Microsoft.NET.props
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\current\bin\amd64\microsoft.net.props
+++Microsoft.CodeAnalysis.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\microsoft\visualstudio\v17.0\codeanalysis\microsoft.codeanalysis.targets
+++Microsoft.Xaml.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\current\bin\amd64\microsoft.xaml.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\windows\microsoft.net\framework\v4.0.30319\microsoft.xaml.targets
+++Microsoft.WorkflowBuildExtensions.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\current\bin\amd64\microsoft.workflowbuildextensions.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:c:\windows\microsoft.net\framework\v4.0.30319\microsoft.workflowbuildextensions.targets
+++Microsoft.TeamTest.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\microsoft\visualstudio\v17.0\teamtest\microsoft.teamtest.targets
+++NuGet.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\common7\ide\commonextensions\microsoft\nuget\nuget.targets
+++Microsoft.DesktopBridge.ImportAfter.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\current\microsoft.common.targets\importafter\microsoft.desktopbridge.importafter.targets
+++Microsoft.Docker.ImportAfter.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\current\microsoft.common.targets\importafter\microsoft.docker.importafter.targets
+++Microsoft.NET.Build.Extensions.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\current\microsoft.common.targets\importafter\microsoft.net.build.extensions.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\microsoft\microsoft.net.build.extensions\microsoft.net.build.extensions.targets
+++Microsoft.Net.CoreRuntime.ImportAfter.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\current\microsoft.common.targets\importafter\microsoft.net.coreruntime.importafter.targets
+++Microsoft.NetNative.ImportAfter.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\current\microsoft.common.targets\importafter\microsoft.netnative.importafter.targets
+++Microsoft.NuGet.ImportAfter.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\current\microsoft.common.targets\importafter\microsoft.nuget.importafter.targets
+++Microsoft.Web.ImportAfter.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\current\microsoft.common.targets\importafter\microsoft.web.importafter.targets
+++Xamarin.Common.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\current\microsoft.common.targets\importafter\xamarin.common.targets
+++EntityFramework.targets
 ++bootstrap.min.css.map
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
 ++bootstrap.rtl.css.map
@@ -361,6 +1101,12 @@ i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingove
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
 ++bootstrap.min.js.map
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+++Microsoft.DesktopBridge.Common.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\microsoft\desktopbridge\microsoft.desktopbridge.common.targets
+++Microsoft.Docker.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\sdks\microsoft.docker.sdk\build\microsoft.docker.targets
+++Microsoft.Web.IISSupport.targets
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\program files\microsoft visual studio 2022\msbuild\microsoft\visualstudio\managed.web\microsoft.web.iissupport.targets
 ++bootstrap.rtl.min.css.map
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
 ++bootstrap-grid.rtl.min.css.map
@@ -373,3 +1119,15 @@ i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingove
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
 ++bootstrap.esm.min.js.map
 i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\traingovernor\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
+++NewFolder
+++Login
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\models\login\
+++UserModel.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\models\login\usermodel.cs
+++UserLogin.cs
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\domain\models\login\userlogin.cs
+++Persistence
+i:{00000000-0000-0000-0000-000000000000}:Persistence
+i:{8c191aea-e2de-4e5f-a831-03b7db66a171}:d:\repo-website\traingovernor\infrastructure\persistence.csproj
+i:{d90189a7-b319-4237-9b8c-6035c9967d50}:d:\repo-website\traingovernor\infrastructure\persistence.csproj
+i:{685d2175-6159-416b-ba6a-e524600dc2aa}:d:\repo-website\traingovernor\infrastructure\persistence.csproj
