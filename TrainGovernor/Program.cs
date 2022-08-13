@@ -30,10 +30,13 @@ namespace TrainGovernor
 
             builder.Services
                 .AddMvc()
+                .AddRazorPagesOptions(options => options.Conventions.AddPageRoute("/Login", ""))
                 .AddApplicationPart(Assembly.Load("Application"))
                 .AddControllersAsServices();
 
             builder.Services.AddScoped<ITrainGovernorContext, TrainGovernorContext>();
+            builder.Services.AddScoped<IUserAuthContext, UserAuthContext>();
+            builder.Services.AddScoped<ILoginController, LoginController>();
             builder.Services.AddScoped<ITrainStationController, TrainStationController>();
             builder.Services.AddScoped<ICityController, CityController>();
             builder.Services.AddScoped<ILineController, LineController>();

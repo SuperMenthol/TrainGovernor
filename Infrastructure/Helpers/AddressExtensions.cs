@@ -1,4 +1,4 @@
-﻿namespace Infrastructure.Extensions
+﻿namespace Infrastructure.Helpers
 {
     public static class AddressExtensions
     {

@@ -1,4 +1,4 @@
-﻿using Infrastructure.Extensions;
+﻿using Infrastructure.Helpers;
 
 namespace Infrastructure.Models.ValueObjects.Primitives
 {

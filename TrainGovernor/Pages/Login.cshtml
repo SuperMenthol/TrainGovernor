@@ -1,0 +1,29 @@
+﻿@page
+@model TrainGovernor.Pages.LoginModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="login-container">
+        <div class="app-container">
+            <p class="appname-header"></p>
+        </div>
+        <div class="form-bg">
+            <form class="login-container login-form" method="post">
+                <label class="input-label" for="loginInput">Login:</label>
+                <input class="input-bg" id="loginInput" type="text" maxlength="50" placeholder="Type login here..." asp-for="UserName" required />
+                <div class="separator-div-md"></div>
+                <label class="input-label" for="passInput">Password:</label>
+                <input class="input-bg" id="passInput" type="password" maxlength="20" placeholder="Type password here..." asp-for="Password" required />
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+            <div class="separator-div-md"></div>
+            @*<button class="login-btn" asp-action="Post">Login</button>*@
+        </div>
+    </div>
+</body>

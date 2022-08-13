@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wK6Uw0pNOmBdieyJ3axq5fCX+jy3ntA7qT99nxRJqu4=",
+  "Hash": "zP6wFWNtbAdb9e3Oae4DHq7zhz3apXzVu6QeQGWzDRQ=",
   "Source": "TrainGovernor",
   "BasePath": "_content/TrainGovernor",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Line.css"
+    },
+    {
+      "Identity": "D:\\Repo-website\\TrainGovernor\\TrainGovernor\\wwwroot\\css\\login.css",
+      "SourceId": "TrainGovernor",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Repo-website\\TrainGovernor\\TrainGovernor\\wwwroot\\",
+      "BasePath": "_content/TrainGovernor",
+      "RelativePath": "css/login.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\login.css"
     },
     {
       "Identity": "D:\\Repo-website\\TrainGovernor\\TrainGovernor\\wwwroot\\css\\navbar.css",
