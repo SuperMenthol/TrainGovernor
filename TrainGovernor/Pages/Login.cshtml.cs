@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Infrastructure.Models.Login;
 using Infrastructure.Interfaces.Controllers;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.Net.Http.Headers;
 
 namespace TrainGovernor.Pages
 {
@@ -29,6 +30,9 @@ namespace TrainGovernor.Pages
         {
             var modelToSend = new UserLogin(UserName, Password);
             var token = _loginController.Login(modelToSend);
+            HttpContext.Request.Headers[HeaderNames.Authorization] = (string)token.Value;
+            var a = HttpContext.Request.Headers[HeaderNames.Authorization];
+            Response.Cookies.Append("jwt", (string)token.Value);
 
             if (token.StatusCode == StatusCodes.Status200OK)
             {

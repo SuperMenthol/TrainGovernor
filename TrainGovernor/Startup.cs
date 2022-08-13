@@ -22,7 +22,8 @@ namespace TrainGovernor
                         ValidAudience = Configuration["Jwt:Audience"],
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Jwt:Key"]))
                     };
-                });
+                })
+                .AddCookie();
             services.AddMvc();
         }
     }

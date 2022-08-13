@@ -16,9 +16,11 @@ D:\Repo-website\TrainGovernor\Tests\bin\Debug\net6.0\ref\Tests.dll
 D:\Repo-website\TrainGovernor\Tests\bin\Debug\net6.0\Tests.pdb
 D:\Repo-website\TrainGovernor\Tests\bin\Debug\net6.0\AutoMapper.dll
 D:\Repo-website\TrainGovernor\Tests\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Repo-website\TrainGovernor\Tests\bin\Debug\net6.0\BCrypt.Net-Next.dll
 D:\Repo-website\TrainGovernor\Tests\bin\Debug\net6.0\Castle.Core.dll
 D:\Repo-website\TrainGovernor\Tests\bin\Debug\net6.0\EntityFramework.SqlServer.dll
 D:\Repo-website\TrainGovernor\Tests\bin\Debug\net6.0\EntityFramework.dll
+D:\Repo-website\TrainGovernor\Tests\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\Repo-website\TrainGovernor\Tests\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
 D:\Repo-website\TrainGovernor\Tests\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
 D:\Repo-website\TrainGovernor\Tests\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll

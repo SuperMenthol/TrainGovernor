@@ -34,6 +34,7 @@ namespace TrainGovernor
                 .AddApplicationPart(Assembly.Load("Application"))
                 .AddControllersAsServices();
 
+            builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             builder.Services.AddScoped<ITrainGovernorContext, TrainGovernorContext>();
             builder.Services.AddScoped<IUserAuthContext, UserAuthContext>();
             builder.Services.AddScoped<ILoginController, LoginController>();

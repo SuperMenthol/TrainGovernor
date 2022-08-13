@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
+using Domain.Interfaces.Context;
 using Infrastructure.Interfaces.Controllers;
 using Infrastructure.Models.Dto;
-using Domain.Interfaces.Context;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using Microsoft.AspNetCore.Authorization;
 
 namespace Application.Controllers
 {
@@ -60,8 +60,9 @@ namespace Application.Controllers
             }
         }
 
+        [HttpGet]
         [Authorize(Roles = "Guest")]
-        public async Task<CityOverviewDto> GetById(int id)
+        public async Task<CityOverviewDto> GetById([FromBody] int id)
         {
             try
             {

@@ -10,6 +10,7 @@ D:\Repo-website\TrainGovernor\TrainGovernor\bin\Debug\net6.0\ref\TrainGovernor.d
 D:\Repo-website\TrainGovernor\TrainGovernor\bin\Debug\net6.0\TrainGovernor.pdb
 D:\Repo-website\TrainGovernor\TrainGovernor\bin\Debug\net6.0\AutoMapper.dll
 D:\Repo-website\TrainGovernor\TrainGovernor\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Repo-website\TrainGovernor\TrainGovernor\bin\Debug\net6.0\BCrypt.Net-Next.dll
 D:\Repo-website\TrainGovernor\TrainGovernor\bin\Debug\net6.0\EntityFramework.SqlServer.dll
 D:\Repo-website\TrainGovernor\TrainGovernor\bin\Debug\net6.0\EntityFramework.dll
 D:\Repo-website\TrainGovernor\TrainGovernor\bin\Debug\net6.0\Humanizer.dll
@@ -99,4 +100,3 @@ D:\Repo-website\TrainGovernor\TrainGovernor\obj\Debug\net6.0\TrainGovernor.dll
 D:\Repo-website\TrainGovernor\TrainGovernor\obj\Debug\net6.0\ref\TrainGovernor.dll
 D:\Repo-website\TrainGovernor\TrainGovernor\obj\Debug\net6.0\TrainGovernor.pdb
 D:\Repo-website\TrainGovernor\TrainGovernor\obj\Debug\net6.0\TrainGovernor.genruntimeconfig.cache
-D:\Repo-website\TrainGovernor\TrainGovernor\bin\Debug\net6.0\BCrypt.Net-Next.dll
