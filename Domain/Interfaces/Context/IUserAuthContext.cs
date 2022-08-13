@@ -11,5 +11,7 @@ namespace Domain.Interfaces.Context
         DbSet<UserBaseInfo> UserBaseInfo { get; set; }
         DbSet<UserPersonalInfo> UserPersonalInfo { get; set; }
         DbSet<UsersRolesForApplications> UsersRolesForApplications { get; set; }
+
+        int SaveChanges();
     }
 }

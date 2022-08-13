@@ -5,6 +5,7 @@ using Domain.Interfaces.Context;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Application.Controllers
 {
@@ -59,6 +60,7 @@ namespace Application.Controllers
             }
         }
 
+        [Authorize(Roles = "Guest")]
         public async Task<CityOverviewDto> GetById(int id)
         {
             try

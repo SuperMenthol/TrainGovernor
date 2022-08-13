@@ -1,6 +1,4 @@
-﻿using Infrastructure.Helpers.Login;
-
-namespace Infrastructure.Models.Login
+﻿namespace Infrastructure.Models.Login
 {
     public class UserLogin
     {
@@ -10,7 +8,7 @@ namespace Infrastructure.Models.Login
         public UserLogin(string userName, string password)
         {
             UserName = userName;
-            Password = PasswordEncryptor.GetEncryptedPassword(password);
+            Password = password;
         }
     }
 }

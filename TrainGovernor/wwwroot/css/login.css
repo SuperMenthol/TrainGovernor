@@ -2,6 +2,16 @@
     background: #575757
 }
 
+.app-container {
+    text-align: center;
+}
+
+.appname-header {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+}
+
 .login-container {
     width: 100%;
     height: 100%;
@@ -25,6 +35,7 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
+    margin: 0 auto;
     width: 20%;
     max-width: 50%;
 }
@@ -34,6 +45,7 @@
     margin: 3px;
     font-size: 16px;
     font-weight: 400;
+    margin: 0 auto;
     width: 50%;
     max-width: 50%;
 }
@@ -41,6 +53,7 @@
 .input-bg {
     margin: 5px;
     background: #919191;
+    margin: 0 auto;
     width: 50%;
     max-width: 50%;
 }
@@ -48,7 +61,7 @@
 .login-btn {
     width: 50%;
     max-width: 50%;
-    margin: 5px;
+    margin: 0 auto;
 }
 
 .separator-div-md {

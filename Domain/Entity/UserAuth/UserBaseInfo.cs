@@ -10,6 +10,6 @@ namespace Domain.Entity.UserAuth
         public string Password { get; set; }
 
         public UserPersonalInfo PersonalInfo { get; set; }
-        public ICollection<UsersRolesForApplications> RolesForApplications { get; set; }
+        public ICollection<UsersRolesForApplications> UserRoles { get; set; }
     }
 }

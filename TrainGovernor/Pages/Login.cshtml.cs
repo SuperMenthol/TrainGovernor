@@ -8,8 +8,8 @@ namespace TrainGovernor.Pages
 {
     public class LoginModel : PageModel
     {
-        public const string APPLICATION_NAME = "Train Governor";
-        public const string APPLICATION_INTERNAL_NAME = "TrainGov";
+        public string APPLICATION_NAME;
+        public string APPLICATION_INTERNAL_NAME;
 
         [Required]
         public string UserName { get; set; }
@@ -18,15 +18,24 @@ namespace TrainGovernor.Pages
 
         private ILoginController _loginController;
 
-        public LoginModel(ILoginController controller)
+        public LoginModel(ILoginController controller, IConfiguration configuration)
         {
             _loginController = controller;
+            APPLICATION_NAME = configuration.GetSection("ApplicationInfo").GetSection("ApplicationName").Value;
+            APPLICATION_INTERNAL_NAME = configuration.GetSection("ApplicationInfo").GetSection("InternalAppName").Value;
         }
 
-        public void OnPost(string UserName, string Password)
+        public RedirectResult OnPost(string UserName, string Password)
         {
             var modelToSend = new UserLogin(UserName, Password);
-            _loginController.Login(modelToSend);
+            var token = _loginController.Login(modelToSend);
+
+            if (token.StatusCode == StatusCodes.Status200OK)
+            {
+                return Redirect("/Home");
+            }
+
+            return Redirect("/Login");
         }
     }
 }

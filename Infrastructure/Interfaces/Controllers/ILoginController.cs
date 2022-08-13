@@ -5,6 +5,6 @@ namespace Infrastructure.Interfaces.Controllers
 {
     public interface ILoginController
     {
-        JsonResult Login(UserLogin loginModel);
+        ObjectResult Login(UserLogin loginModel);
     }
 }
